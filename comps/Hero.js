@@ -2,13 +2,13 @@ import React from "react";
 import Image from "next/image";
 import src from "../public/hero-home.jpg";
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <div class="relative w-screen h-1/2 p-20">
       <div class="-z-1">
         <Image 
             priority 
-            src={src} 
+            src={props.img} 
             layout="fill" 
             objectFit="cover"
             objectPosition="center"

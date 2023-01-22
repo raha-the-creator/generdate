@@ -2,7 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Hero from "../comps/Hero";
-
+import heroImg from "../public/hero-home.jpg"
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
 
       <main class='w-full h-full'>
-        <Hero />
+        <Hero img={heroImg} />
       </main>
     </>
   );
