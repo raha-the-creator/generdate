@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "../public/logo.png";
 import Image from "next/image";
+import Link from "next/link";
 
 function NavLink({ to, children }) {
   return (
@@ -20,7 +21,7 @@ function MobileNav({ open, setOpen }) {
       <div className="flex items-center justify-center filter drop-shadow-md bg-white h-20">
         {" "}
         {/*logo container*/}
-        <a className="text-xl font-semibold" href="/">
+        <Link className="text-xl font-semibold" href="/">
           <Image
             alt="logo"
             src={logo}
@@ -31,10 +32,10 @@ function MobileNav({ open, setOpen }) {
               height: "auto",
             }}
           />
-        </a>
+        </Link>
       </div>
       <div className="flex flex-col ml-4">
-        <a
+        <Link
           className="text-xl font-medium my-4"
           href="/"
           onClick={() =>
@@ -44,8 +45,8 @@ function MobileNav({ open, setOpen }) {
           }
         >
           Home
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-xl font-medium my-4"
           href="/search"
           onClick={() =>
@@ -55,8 +56,8 @@ function MobileNav({ open, setOpen }) {
           }
         >
           Search
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-xl font-medium my-4"
           href="/saved"
           onClick={() =>
@@ -66,8 +67,8 @@ function MobileNav({ open, setOpen }) {
           }
         >
           Saved Ideas
-        </a>
-        <a
+        </Link>
+        <Link
           className="text-xl font-normal my-4"
           href="/about"
           onClick={() =>
@@ -77,7 +78,7 @@ function MobileNav({ open, setOpen }) {
           }
         >
           About
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -89,7 +90,7 @@ export default function Navbar() {
     <nav className="flex filter drop-shadow-md bg-white px-2 py-2 h-20 items-center">
       <MobileNav open={open} setOpen={setOpen} />
       <div className="w-3/12 flex items-center">
-        <a className="text-2xl font-semibold" href="/">
+        <Link className="text-2xl font-semibold" href="/">
           <Image
             alt="logo"
             src={logo}
@@ -100,7 +101,7 @@ export default function Navbar() {
               height: "auto",
             }}
           />
-        </a>
+        </Link>
       </div>
       <div className="w-9/12 flex justify-end items-center">
         <div
