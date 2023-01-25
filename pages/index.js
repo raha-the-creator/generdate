@@ -17,8 +17,9 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500&family=Russo+One&display=swap" rel="stylesheet"/>
       </Head>
 
-      <main class='w-full h-full'>
+      <main class='w-full h-full text-center'>
         <Hero img={heroImg} />
+        <h2>Map</h2>
       </main>
     </>
   );
