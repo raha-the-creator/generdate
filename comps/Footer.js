@@ -6,15 +6,15 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer
-      class="flex items-center justify-center flex-col p-4 bg-white border w-full bottom-0 left-0 md:px-6 md:py-8 dark:bg-white-900"
+      class="flex items-center justify-center flex-col p-4 bg-white border w-screen bottom-0 left-0 md:px-6 md:py-8 dark:bg-white-900"
     >
       <div class="sm:flex sm:items-center sm:justify-between">
         <Link href="/" class="flex items-center mb-4 sm:mb-0">
           <Image
             alt="logo"
             src={logo}
-            width={180}
-            height={180}
+            width={100}
+            height={100}
             style={{
               maxWidth: "100%",
               height: "auto",

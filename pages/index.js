@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Hero from "../comps/Hero";
 import heroImg from "../public/hero-home.jpg"
+import ArticleCard from "../comps/ArticleCard";
 
 export default function Home() {
   return (
@@ -17,9 +18,14 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500&family=Russo+One&display=swap" rel="stylesheet"/>
       </Head>
 
-      <main class='w-full h-full text-center'>
+      <main class='flex flex-col w-full h-full text-center justify-center items-center px-8 border-red-500'>
         <Hero img={heroImg} />
-        <h2>Map</h2>
+
+      <div class="flex w-5/6">
+        <ArticleCard />
+        <ArticleCard />
+      </div>
+
       </main>
     </>
   );
