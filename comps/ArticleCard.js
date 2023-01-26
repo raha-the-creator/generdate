@@ -5,7 +5,7 @@ import src from "../public/article-card.jpg";
 
 const ArticleCard = () => {
   return (
-    <div class="flex flex-row bg-white w-4/6 drop-shadow-md rounded-lg my-8 mx-4">
+    <div class="flex flex-row bg-white w-2/3 drop-shadow-md rounded-lg my-8 mx-4">
       <div class="flex flex-1 object-cover">
         <Image
           alt="article pic"

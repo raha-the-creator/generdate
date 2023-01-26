@@ -4,6 +4,7 @@ import styles from "../styles/Home.module.css";
 import Hero from "../comps/Hero";
 import heroImg from "../public/hero-home.jpg"
 import ArticleCard from "../comps/ArticleCard";
+import ActivityCard from "../comps/ActivityCard";
 
 export default function Home() {
   return (
@@ -21,11 +22,16 @@ export default function Home() {
       <main class='flex flex-col w-full h-full text-center justify-center items-center px-8 border-red-500'>
         <Hero img={heroImg} />
 
-      <div class="flex w-5/6">
         <ArticleCard />
-        <ArticleCard />
-      </div>
 
+        <div class="flex flex-col">
+          <h2 class="text-left">Popular places</h2>
+
+          <div class="flex flex-row ">  
+            <ActivityCard />  
+            {/* <ActivityCard />   */}
+          </div>
+        </div>
       </main>
     </>
   );
