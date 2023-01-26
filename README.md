@@ -6,5 +6,7 @@ Features will include:
 3. Managing list of selected activities (using drag & drop)
 4. Mb exporting to some format? (either converting JSON to PDF [“jsPDF”](http://raw.githack.com/MrRio/jsPDF/master/index.html); or printing page on button click) --> ctrl+P to print the page
 
+//
+
 ## 📫 Figma Mockup
 Link: https://www.figma.com/proto/om47tgtb9nNuojKgO98F8I/Personal?page-id=415%3A228&node-id=416%3A236&starting-point-node-id=416%3A236
