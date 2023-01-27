@@ -3,6 +3,7 @@ import Image from "next/image";
 import activityImg from "../public/recroom-hero.jpg";
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import autoprefixer from 'autoprefixer';
+import ActivityTypeTag from './ActivityTypeTag';
 
 const ActivityCard = () => {
     return (
@@ -37,8 +38,11 @@ const ActivityCard = () => {
             </div>
             {/* ///// DIVIDER ///// */}
             <div class="h-12 flex flex-col items-start">
-                <h3 class="font-roboto-mono text-2xl font-medium">Rec Room at Brentwood</h3>
-                <div>tags</div>
+                <h3 class="font-roboto-mono text-2xl font-medium mt-2">Rec Room at Brentwood</h3>
+                <div class="flex">
+                    <ActivityTypeTag tag={"Indoor"} />
+                    <ActivityTypeTag tag={"Indoor"} />
+                </div>
             </div>
         </div>
     )
