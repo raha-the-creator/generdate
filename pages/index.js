@@ -19,17 +19,23 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;500&family=Russo+One&display=swap" rel="stylesheet"/>
       </Head>
 
-      <main class='flex flex-col w-full h-full text-center justify-center items-left'>
+      <main class='flex flex-col w-full h-full text-center justify-center items-center'>
         <Hero img={heroImg} />
 
-        <ArticleCard />
+        <div class="px-12 flex justify-center items-center">
+          <ArticleCard />
+        </div>
 
-        <div class="flex flex-col px-12">
-          <h2 class="text-left text-3xl font-roboto-mono font-bold py-2">Popular places</h2>
+        <div class="flex flex-col px-12 bg-white rounded-lg w-11/12 justify-start">
+          <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">Popular places</h2>
 
-          <div class="flex flex-row">  
+          <div class="flex flex-row flex-wrap w-full justify-between">  
             <ActivityCard />  
-            {/* <ActivityCard />   */}
+            <ActivityCard />  
+            <ActivityCard />  
+            <ActivityCard />  
+            <ActivityCard />  
+            <ActivityCard />  
           </div>
         </div>
       </main>

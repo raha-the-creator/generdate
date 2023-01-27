@@ -7,7 +7,7 @@ import ActivityTypeTag from './ActivityTypeTag';
 
 const ActivityCard = () => {
     return (
-        <div class="flex flex-col w-96 h-auto">
+        <div class="flex flex-col w-auto h-auto mr-2 pb-20 ">
             <div class="h-48 relative">
                 <div class="z-0 absolute w-full h-full">
                     {/* background image */}
