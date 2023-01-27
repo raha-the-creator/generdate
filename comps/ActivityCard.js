@@ -6,34 +6,40 @@ import autoprefixer from 'autoprefixer';
 
 const ActivityCard = () => {
     return (
-        <div class="flex flex-col bg-white w-96 h-80">
-            <div class="relative">
-                <div class="z-0">
+        <div class="flex flex-col w-96 h-auto">
+            <div class="h-48 relative">
+                <div class="z-0 absolute w-full h-full">
                     {/* background image */}
                     <Image
                         src={activityImg}
                         alt="activity image"
-                        width={400}
-                        hight={400}
+                        layout="fill"
+                        objectFit='content'
+                        style={{ borderRadius: '12px' }}
                     />
                 </div>
 
-                <div class="z-10">
-                    <div>
-                        {/* stick everything to the top of parent */}
-                        <button>
-                            <AiOutlineHeart />
+                <div class="flex w-full h-full flex-col z-10 absolute">
+                    <div class="flex flex-1 items-start">
+                        <button class='p-3'>
+                            <AiOutlineHeart color="white" size={30} />
                         </button>
                     </div>
-                    <div>
-                        {/* stick to the bottom - align/justify */}
-                        <h3>$$$</h3>
-                        <h3>Burnaby</h3>
+                    <div class="flex flex-1 flex-row">
+                        <div class="flex flex-1 items-end p-3">
+                            <h3 class="text-white bg-emerald-500 p-2 rounded-md">$$$</h3>
+                        </div>
+                        <div class="flex flex-1 items-end justify-end p-3">
+                            <h3 class="text-white bg-pink-700 p-2 rounded-md">Burnaby</h3>
+                        </div>
                     </div>
                 </div>
             </div>
             {/* ///// DIVIDER ///// */}
-            <div>BOTTOM part - activity name, activity tags</div>
+            <div class="h-12 flex flex-col items-start">
+                <h3 class="font-roboto-mono text-2xl font-medium">Rec Room at Brentwood</h3>
+                <div>tags</div>
+            </div>
         </div>
     )
 }

@@ -9,6 +9,9 @@ module.exports = {
       fontFamily: {
         'roboto-mono': ["'Roboto Mono'", 'monospace'],
         'archivo': ["Archivo", 'sans-serif']
+      },
+      backgroundImage: {
+        'card-bg': "url('./recroom-hero.jpg')"
       }
     },
   },

@@ -4,7 +4,7 @@ import src from "../public/hero-home.jpg";
 
 const Hero = (props) => {
   return (
-    <div class="relative w-screen h-1/2 p-20">
+    <div class="relative w-full h-1/2 p-20">
       <div class="-z-1">
         <Image 
             priority 
