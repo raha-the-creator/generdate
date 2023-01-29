@@ -18,7 +18,7 @@ const ArticleCard = () => {
 
       <div class="flex flex-1 flex-col text-left p-10">
         <h1 class="font-archivo text-4xl font-semibold">Best "First Date" spots to check out in Vancouver</h1>
-        <Link href="/" class="font-archivo font-regular underline underline-offset-4 text-2xl">Learn more</Link>
+        <Link href="/articles" class="font-archivo font-regular underline underline-offset-4 text-2xl">Learn more</Link>
       </div>
     </div>
   )
