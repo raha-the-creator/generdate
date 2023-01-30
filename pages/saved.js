@@ -16,10 +16,8 @@ const Saved = () => {
       </Head>
 
       <main class="flex flex-col w-auto overflow-auto items-center justify-center bg-main border-2 border-red-500">
-        <div class="w-3/4 border-2 border-green-300">
+        <div class="w-3/4">
           <h1 class="text-3xl font-roboto-mono font-bold my-4">Saved Ideas</h1>
-          <SavedActivity />
-          <SavedActivity />
           <SavedActivity />
         </div>
       </main>

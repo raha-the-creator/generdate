@@ -12,6 +12,10 @@ module.exports = {
       },
       backgroundImage: {
         'card-bg': "url('./recroom-hero.jpg')"
+      },
+      flexGrow: {
+        1: '1',
+        2: '2'
       }
     },
   },
