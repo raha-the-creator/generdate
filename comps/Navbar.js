@@ -5,7 +5,7 @@ import Link from "next/link";
 
 function NavLink({ to, children }) {
   return (
-    <a href={to} className={`mx-4`}>
+    <a href={to} className={`mx-6 font-montserrat font-regular`}>
       {children}
     </a>
   );
@@ -36,7 +36,7 @@ function MobileNav({ open, setOpen }) {
       </div>
       <div className="flex flex-col ml-4">
         <Link
-          className="text-xl font-medium my-4"
+          className="text-xl font-montserrat font-semibold my-4"
           href="/"
           onClick={() =>
             setTimeout(() => {
@@ -44,7 +44,7 @@ function MobileNav({ open, setOpen }) {
             }, 100)
           }
         >
-          Home
+          Home 111
         </Link>
         <Link
           className="text-xl font-medium my-4"
@@ -55,7 +55,7 @@ function MobileNav({ open, setOpen }) {
             }, 100)
           }
         >
-          Search
+          Search 2222
         </Link>
         <Link
           className="text-xl font-medium my-4"
@@ -129,7 +129,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex">
-          <NavLink to="/">Home</NavLink>
+          <NavLink class="font-montserrat font-semibold" to="/">Home</NavLink>
           <NavLink to="/search">Search</NavLink>
           <NavLink to="/saved">Saved Ideas</NavLink>
           <NavLink to="/about">About</NavLink>

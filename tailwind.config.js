@@ -7,8 +7,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'roboto-mono': ["'Roboto Mono'", 'monospace'],
-        'archivo': ["Archivo", 'sans-serif']
+        'roboto-mono': ['Roboto Mono', 'monospace'],
+        'archivo': ['Archivo', 'sans-serif'],
+        'montserrat': ["Montserrat",'sans-serif']
       },
       backgroundImage: {
         'card-bg': "url('./recroom-hero.jpg')"
