@@ -46,6 +46,5 @@ export default function Post({ name, address, tags, price, location, feature }) 
 
         <img src={feature} width={600} height={600} alt="1111"/>
 
-        {/* <iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=4200+willingdon+ave+burnaby+bc&amp;z=14&amp;output=embed" width="300" height="300" style={{border:0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
     </article>
 }

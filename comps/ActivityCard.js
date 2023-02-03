@@ -6,9 +6,9 @@ import autoprefixer from 'autoprefixer';
 import ActivityTypeTag from './ActivityTypeTag';
 import Link from 'next/link';
 
-const ActivityCard = () => {
+const ActivityCard = (props) => {
     return (
-        <div class="flex flex-col w-auto h-auto mr-2 pb-20 ">
+        <div class="flex flex-col w-96 h-auto mr-2 pb-20 mb-5">
             <div class="h-48 relative">
                 <div class="z-0 absolute w-full h-full">
                     {/* background image */}
@@ -39,7 +39,7 @@ const ActivityCard = () => {
             </div>
             {/* ///// DIVIDER ///// */}
             <div class="h-12 flex flex-col items-start">
-                <Link href="/activities/[id].js" class="font-roboto-mono text-2xl font-medium mt-2">Rec Room at Brentwood</Link>
+                <Link href="/activities/[id].js" class="font-roboto-mono text-2xl font-medium mt-2 text-left">{props.header}</Link>
                 {/* <h3 class="font-roboto-mono text-2xl font-medium mt-2">Rec Room at Brentwood</h3> */}
                 <div class="flex">
                     <ActivityTypeTag tag={"Indoor"} />
