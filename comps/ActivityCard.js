@@ -39,7 +39,7 @@ const ActivityCard = () => {
             </div>
             {/* ///// DIVIDER ///// */}
             <div class="h-12 flex flex-col items-start">
-                <Link href="/activities" class="font-roboto-mono text-2xl font-medium mt-2">Rec Room at Brentwood</Link>
+                <Link href="/activities/[id].js" class="font-roboto-mono text-2xl font-medium mt-2">Rec Room at Brentwood</Link>
                 {/* <h3 class="font-roboto-mono text-2xl font-medium mt-2">Rec Room at Brentwood</h3> */}
                 <div class="flex">
                     <ActivityTypeTag tag={"Indoor"} />
