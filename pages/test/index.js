@@ -23,6 +23,7 @@ export async function getServerSideProps({ query }) {
 }
 
 export default function Post({ posts }) {
+  console.log(posts)
   return (
     <article>
       <h1 class="font-bold text-3xl">Data</h1>
