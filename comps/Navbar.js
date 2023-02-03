@@ -36,7 +36,7 @@ function MobileNav({ open, setOpen }) {
       </div>
       <div className="flex flex-col ml-4">
         <Link
-          className="text-xl font-montserrat font-semibold my-4"
+          className="text-xl font-montserrat font-normal my-4"
           href="/"
           onClick={() =>
             setTimeout(() => {
@@ -44,10 +44,10 @@ function MobileNav({ open, setOpen }) {
             }, 100)
           }
         >
-          Home 111
+          Home
         </Link>
         <Link
-          className="text-xl font-medium my-4"
+          className="text-xl font-normal my-4"
           href="/search"
           onClick={() =>
             setTimeout(() => {
@@ -55,10 +55,10 @@ function MobileNav({ open, setOpen }) {
             }, 100)
           }
         >
-          Search 2222
+          Search
         </Link>
         <Link
-          className="text-xl font-medium my-4"
+          className="text-xl font-normal my-4"
           href="/saved"
           onClick={() =>
             setTimeout(() => {

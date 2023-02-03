@@ -27,10 +27,14 @@ export default function Home() {
           <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">Popular places</h2>
 
           <div class="flex flex-row flex-wrap w-full justify-evenly">  
-            <ActivityCard />  
-            <ActivityCard />  
-            <ActivityCard />  
-            <ActivityCard />  
+            <ActivityCard header={"activity 1"} />  
+            <ActivityCard header={"Rec Room at Brentwood"} />  
+            <ActivityCard header={"Vancouver Harbour Flight Centre"} />  
+            <ActivityCard header={"Stanley Park - Lions Gate viewpoint"} />  
+            <ActivityCard header={"Stanley Park - Lions Gate viewpoint"}/>  
+            <ActivityCard header={"Capilano Suspension Bridge Park"}/>  
+            <ActivityCard header={"Capilano Suspension Bridge Park"}/>  
+            <ActivityCard header={"Capilano Suspension Bridge Park"}/>  
           </div>
         </div>
       </main>
