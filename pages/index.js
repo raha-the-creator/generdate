@@ -26,7 +26,7 @@ export default function Home() {
         <div class="flex flex-col px-12 bg-white rounded-lg w-11/12 justify-start">
           <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">Popular places</h2>
 
-          <div class="flex flex-row flex-wrap w-full justify-evenly">  
+          <div class="flex flex-row flex-wrap w-full justify-between border-2 border-green-500">  
             <ActivityCard header={"activity 1"} />  
             <ActivityCard header={"Rec Room at Brentwood"} />  
             <ActivityCard header={"Vancouver Harbour Flight Centre"} />  

@@ -5,13 +5,13 @@ import src from "../public/article-card.jpg";
 
 const ArticleCard = () => {
   return (
-    <div class="flex flex-row bg-white w-2/3 drop-shadow-md rounded-lg my-8">
+    <div class="flex flex-row bg-white w-3/4 drop-shadow-md rounded-lg my-8">
       <div class="flex flex-1 object-cover">
         <Image
           alt="article pic"
           src={src}
-          width="100%"
-          height="100%"
+          // layout="fill"
+          objectFit='content'
           class="rounded-l-lg"
         />
       </div>

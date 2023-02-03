@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 const ActivityCard = (props) => {
     return (
-        <div class="flex flex-col w-96 h-auto mr-2 pb-20 mb-5">
+        <div class="flex flex-col w-96 h-auto mr-2 pb-20 mb-5 border-2 border-red-400">
             <div class="h-48 relative">
                 <div class="z-0 absolute w-full h-full">
                     {/* background image */}
