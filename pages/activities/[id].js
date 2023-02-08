@@ -59,7 +59,8 @@ const ActivityPage = () => {
             </div>
 
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83327.51117460211!2d-123.123904!3d49.25773545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sVancouver%2C%20BC!5e0!3m2!1sen!2sca!4v1675211148040!5m2!1sen!2sca"
+              // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83327.51117460211!2d-123.123904!3d49.25773545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sVancouver%2C%20BC!5e0!3m2!1sen!2sca!4v1675211148040!5m2!1sen!2sca"
+              src={`https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d83327.51117460211!2d-123.123904!3d49.25773545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x548673f143a94fb3%3A0xbb9196ea9b81f38b!2sToronto%2C%20BC!5e0!3m2!1sen!2sca!4v1675211148040!5m2!1sen!2sca`}
               width="300"
               height="300"
               style={{ border: 0 }}

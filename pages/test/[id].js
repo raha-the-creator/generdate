@@ -9,7 +9,7 @@ export async function getServerSideProps({ query }) {
 
     // query
     const { id } = query
-    const range = `Sheet1!A${id}:F${id}`
+    const range = `Sheet1!A${id}:G${id}`
 
     const response = await sheets.spreadsheets.values.get({
         spreadsheetId: process.env.SHEET_ID,
@@ -18,12 +18,13 @@ export async function getServerSideProps({ query }) {
 
     // result
 
-    const [name, address, tags, price, location, feature] = response.data.values[0]
-    console.log(name, address, tags, price, location, feature)
+    const [activityid, name, address, tags, price, location, feature] = response.data.values[0]
+    console.log(activityid, name, address, tags, price, location, feature)
     console.log("1111")
 
     return {
         props: {
+            activityid,
             name,
             address,
             tags,
@@ -34,7 +35,7 @@ export async function getServerSideProps({ query }) {
     }
 }
 
-export default function Post({ name, address, tags, price, location, feature }) {
+export default function Post({ activityid, name, address, tags, price, location, feature }) {
     return <article>
         <h1>{name}</h1>
         {/* <div dangerouslySetInnerHTML={{ __html: address}}></div> */}
