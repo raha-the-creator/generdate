@@ -30,11 +30,11 @@ export default function Home() {
             <ActivityCard header={"activity 1"} />  
             <ActivityCard header={"Rec Room at Brentwood"} />  
             <ActivityCard header={"Vancouver Harbour Flight Centre"} />  
-            <ActivityCard header={"Stanley Park - Lions Gate viewpoint"} />  
+            <ActivityCard header={"Steveston Pizza Company (Richmond)"} />  
             <ActivityCard header={"Stanley Park - Lions Gate viewpoint"}/>  
             <ActivityCard header={"Capilano Suspension Bridge Park"}/>  
             <ActivityCard header={"Capilano Suspension Bridge Park"}/>  
-            <ActivityCard header={"Capilano Suspension Bridge Park"}/>  
+            <ActivityCard header={"Public Service Commission of Canada"}/>  
           </div>
         </div>
       </main>
