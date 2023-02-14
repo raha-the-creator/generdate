@@ -13,13 +13,14 @@ const ActivityCard = (props) => {
                 <div class="h-48 relative">
                     <div class="z-0 absolute w-full h-full">
                         {/* background image */}
-                        <Image
+                        {/* <Image
                             src={activityImg}
                             alt="activity image"
                             layout="fill"
                             objectFit='content'
                             style={{ borderRadius: '12px' }}
-                        />
+                        /> */}
+                        <img src={props.img} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     </div>
 
                     <div class="flex w-full h-full flex-col z-10 absolute">
@@ -30,17 +31,17 @@ const ActivityCard = (props) => {
                         </div>
                         <div class="flex flex-1 flex-row">
                             <div class="flex flex-1 items-end p-3">
-                                <h3 class="text-white bg-emerald-500 p-2 rounded-md">$$$</h3>
+                                <h3 class="text-white bg-emerald-500 p-2 rounded-md">{props.price}</h3>
                             </div>
                             <div class="flex flex-1 items-end justify-end p-3">
-                                <h3 class="text-white bg-pink-700 p-2 rounded-md">Burnaby</h3>
+                                <h3 class="text-white bg-pink-700 p-2 rounded-md">{props.city}</h3>
                             </div>
                         </div>
                     </div>
                 </div>
                 {/* ///// DIVIDER ///// */}
                 <div class="h-12 flex flex-col items-start">
-                    <Link href="/activities/[id].js" class="font-roboto-mono text-2xl font-medium mt-2 text-left">{props.header}</Link>
+                    <Link href={props.link} class="font-roboto-mono text-2xl font-medium mt-2 text-left">{props.header}</Link>
                     {/* <h3 class="font-roboto-mono text-2xl font-medium mt-2">Rec Room at Brentwood</h3> */}
                     <div class="flex">
                         <ActivityTypeTag tag={"Indoor"} />

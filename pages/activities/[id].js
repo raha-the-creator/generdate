@@ -71,8 +71,8 @@ const ActivityPage = ({
 
       {/* NEW HERO */}
       <div class="flex justify-center items-center relative w-full h-96 p-20">
-        <div class="absolute object-cover">
-          <img src={feature} style={{ width: 1263, height: 384, objectFit: 'cover' }} />
+        <div class="absolute object-cover w-full h-full">
+          <img src={feature} style={{ width: "100%", height: "100%", objectFit: 'cover' }} />
         </div>
 
         <div class="relative flex flex-col items-center">
