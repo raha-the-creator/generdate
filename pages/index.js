@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
 
       <main class='flex flex-col w-full h-full text-center justify-center items-center'>
-        <Hero img={heroImg} topText="Plan your dates easier" header="GenerDate"/>
+        <Hero img={heroImg} topText="Plan your dates easier with" header="GenerDate"/>
 
         <div class="px-12 flex justify-center items-center">
           <ArticleCard />
