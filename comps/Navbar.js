@@ -131,7 +131,7 @@ export default function Navbar() {
         <div className="hidden md:flex">
           <NavLink class="font-montserrat font-semibold" to="/">Home</NavLink>
           <NavLink to="/search">Search</NavLink>
-          <NavLink to="/saved">Saved Ideas</NavLink>
+          {/* <NavLink to="/saved">Saved Ideas</NavLink> */}
           <NavLink to="/about">About</NavLink>
         </div>
       </div>
