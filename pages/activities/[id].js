@@ -5,9 +5,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { google } from "googleapis";
 
-
 import src from "../../public/hero-home.jpg";
-
 
 export async function getServerSideProps({ query }) {
   // auth
@@ -56,6 +54,8 @@ const ActivityPage = ({
   // const ImgSrc = {feature}
   // console.log(feature)
 
+  const mapSrc = `https://maps.google.com/maps?&q="+${address}"&output=embed`;
+
   return (
     <>
       {/* <div> */}
@@ -72,16 +72,15 @@ const ActivityPage = ({
       {/* NEW HERO */}
       <div class="flex justify-center items-center relative w-full h-96 p-20">
         <div class="absolute object-cover w-full h-full">
-          <img src={feature} style={{ width: "100%", height: "100%", objectFit: 'cover' }} />
+          <img
+            src={feature}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+          />
         </div>
 
         <div class="relative flex flex-col items-center">
-          <h1 class="text-red-500 text-1xl font-roboto-mono font-extralight">
-            
-          </h1>
-          <p class="text-red-500 text-5xl font-medium font-roboto-mono">
-            
-          </p>
+          <h1 class="text-red-500 text-1xl font-roboto-mono font-extralight"></h1>
+          <p class="text-red-500 text-5xl font-medium font-roboto-mono"></p>
         </div>
       </div>
       {/* NEW HERO */}
@@ -138,7 +137,7 @@ const ActivityPage = ({
               scrolling="no"
               marginheight="0"
               marginwidth="0"
-              src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=4200 Willingdon Ave+()&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src={mapSrc}
             ></iframe>
 
             <button className="w-full bg-gray-400 py-3 mt-5">
