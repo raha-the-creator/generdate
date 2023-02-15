@@ -76,7 +76,6 @@ export default function Home({ posts }) {
             {posts.map((post, index) => (
                 <ActivityCard key={post.id} link={`activities/${index + 2}`} img={post.img} header={post.name} price={post.price} city={post.city} />
             ))}
-            {/* <ActivityCard header={"activity 1"} /> */}
           </div>
         </div>
       </main>

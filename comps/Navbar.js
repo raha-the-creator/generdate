@@ -48,7 +48,7 @@ function MobileNav({ open, setOpen }) {
         </Link>
         <Link
           className="text-xl font-normal my-4"
-          href="/search"
+          href="/activities"
           onClick={() =>
             setTimeout(() => {
               setOpen(!open);
@@ -56,6 +56,17 @@ function MobileNav({ open, setOpen }) {
           }
         >
           Search
+        </Link>
+        <Link
+          className="text-xl font-normal my-4"
+          href="/articles"
+          onClick={() =>
+            setTimeout(() => {
+              setOpen(!open);
+            }, 100)
+          }
+        >
+          Articles
         </Link>
         <Link
           className="text-xl font-normal my-4"
@@ -130,8 +141,9 @@ export default function Navbar() {
 
         <div className="hidden md:flex">
           <NavLink class="font-montserrat font-semibold" to="/">Home</NavLink>
-          <NavLink to="/search">Search</NavLink>
-          {/* <NavLink to="/saved">Saved Ideas</NavLink> */}
+          <NavLink to="/activities">Search</NavLink>
+          <NavLink to="/articles">Articles</NavLink>
+          <NavLink to="/saved">Saved Ideas</NavLink>
           <NavLink to="/about">About</NavLink>
         </div>
       </div>

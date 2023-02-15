@@ -9,7 +9,7 @@ import Link from 'next/link';
 const ActivityCard = (props) => {
     return (
         <div class="px-4 w-1/3">
-            <div class="flex flex-col w-full h-auto pb-20 mb-5 border-2 border-gray-300 rounded-lg p-4">
+            <div class="flex flex-col w-full h-auto pb-24 mb-5 border-2 border-gray-300 rounded-lg p-4">
                 <div class="h-48 relative">
                     <div class="z-0 absolute w-full h-full">
                         {/* background image */}
@@ -34,7 +34,7 @@ const ActivityCard = (props) => {
                                 <h3 class="text-white bg-emerald-500 p-2 rounded-md">{props.price}</h3>
                             </div>
                             <div class="flex flex-1 items-end justify-end p-3">
-                                <h3 class="text-white bg-pink-700 p-2 rounded-md">{props.city}</h3>
+                                <h3 class="text-white text-sm bg-pink-700 p-2 rounded-md">{props.city}</h3>
                             </div>
                         </div>
                     </div>
@@ -42,10 +42,8 @@ const ActivityCard = (props) => {
                 {/* ///// DIVIDER ///// */}
                 <div class="h-12 flex flex-col items-start">
                     <Link href={props.link} class="font-roboto-mono text-2xl font-medium mt-2 text-left">{props.header}</Link>
-                    {/* <h3 class="font-roboto-mono text-2xl font-medium mt-2">Rec Room at Brentwood</h3> */}
                     <div class="flex">
-                        <ActivityTypeTag tag={"Indoor"} />
-                        <ActivityTypeTag tag={"Indoor"} />
+                        <ActivityTypeTag tag={props.tag} />
                     </div>
                 </div>
             </div>

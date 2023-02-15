@@ -1,6 +1,7 @@
 import { google } from "googleapis";
 import Link from "next/link";
 import Head from "next/head";
+import ActivityCard from "../../comps/ActivityCard";
 
 export async function getServerSideProps({ query }) {
   const auth = await google.auth.getClient({
@@ -48,20 +49,20 @@ export default function Activities({ posts }) {
           rel="stylesheet"
         />
       </Head>
-      <h1 class="font-bold text-3xl">Activities</h1>
-      <ul>
-        {posts.map((post, index) => (
-          <li key={post.id} class="border-2 border-red-400 m-10">
-            <Link href={`activities/${index + 2}`}>
-              <p>{post.name}</p>
-              <p>{post.address}</p>
-              <p>{post.city}</p>
-              <img src={post.img} alt="111" class="w-40 h-40" />
-              <p>{index}</p>
-            </Link>
-          </li>
-        ))}
-      </ul>
+
+      <main class="flex flex-col w-full h-full text-center justify-center items-center">  
+      <div class="flex flex-col px-12 bg-white rounded-lg w-11/12 justify-start my-6 ">
+          <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">
+            Activities to explore
+          </h2>
+
+          <div class="flex flex-row flex-wrap w-full -mx-4">
+            {posts.map((post, index) => (
+                <ActivityCard key={post.id} link={`activities/${index + 2}`} img={post.img} header={post.name} price={post.price} city={post.city} tag={post.tag}/>
+            ))}
+          </div>
+        </div>
+      </main>
     </>
   );
 }
