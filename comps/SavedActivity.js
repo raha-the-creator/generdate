@@ -3,7 +3,7 @@ import Image from "next/image";
 import { MdDragIndicator } from "react-icons/md";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import activityImg from "../public/activity_image.jpg";
-import ActivityTypeTag from "./ActivityTypeTag";
+// import ActivityTypeTag from "./ActivityTypeTag";
 import ActivityPriceTag from "./ActivityPriceTag";
 import ActivityLocationTag from "./ActivityLocationTag";
 
@@ -18,7 +18,7 @@ const SavedActivity = () => {
           alt="activity image"
           // height={200}
           layout="cover"
-          objectFit='content'
+          objectFit="content"
           style={{ borderRadius: "12px" }}
         />
       </div>
@@ -38,14 +38,15 @@ const SavedActivity = () => {
           </div>
         </div>
 
-
         {/* BOTTOM_CONTENT */}
         <div class="flex flex-none flex-row items-center justify-start ">
           <ActivityPriceTag price="$$" />
-          <ActivityTypeTag tag="Outdoor" />
           <ActivityLocationTag location="Downtown" />
+          <div class="border-solid border-2 border-gray-400 p-2 mr-2 mt-2 rounded-md">
+            <p class="">Outdoor</p>
+          </div>
+          {/* <ActivityTypeTag tag="Outdoor" /> */}
         </div>
-
       </div>
     </div>
   );

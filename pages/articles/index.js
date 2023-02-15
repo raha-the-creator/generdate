@@ -5,7 +5,8 @@ import Head from "next/head";
 import Image from "next/image";
 import author from "../../public/author.png";
 
-import ArticleActivityCard from "../../comps/ArticleActivityCard";
+import FeatureArticleCard from "../../comps/FeatureArticleCard";
+
 
 const Article = () => {
   return (
@@ -20,11 +21,10 @@ const Article = () => {
         />
       </Head>
 
-      <Hero img={heroImg} />
+      <div class="px-12 flex justify-center items-center">
+        <FeatureArticleCard />
+      </div>
 
-      <h2>Articles</h2>
-      <h2>Articles</h2>
-      <h2>Articles</h2>
 
     </div>
   );

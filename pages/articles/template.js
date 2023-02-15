@@ -24,7 +24,7 @@ const Article = () => {
 
       <div class="flex flex-col w-2/4 mt-10 sm:my-0 ">
         <h2 class="font-archivo font-semibold text-4xl my-5">The standard Lorem Ipsum passage, used since the 1500s</h2>
-        <hr></hr>
+        <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
         <div class="flex flex-row">
           <div class="flex items-center p-2">

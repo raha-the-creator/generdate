@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import Hero from "../comps/Hero";
 import heroImg from "../public/hero-home.jpg";
-import ArticleCard from "../comps/ArticleCard";
+import ArticleCard from "../comps/FeatureArticleCard";
 import ActivityCard from "../comps/ActivityCard";
 
 import { google } from "googleapis";
@@ -57,13 +57,13 @@ export default function Home({ posts }) {
       </Head>
 
       <main class="flex flex-col w-full h-full text-center justify-center items-center">
-        <Hero
+        {/* <Hero
           img={heroImg}
           topText="Plan your dates easier with"
           header="GenerDate"
-        />
+        /> */}
 
-        <div class="px-12 flex justify-center items-center">
+        <div class="flex w-11/12 justify-center items-center ">
           <ArticleCard />
         </div>
 
@@ -74,7 +74,7 @@ export default function Home({ posts }) {
 
           <div class="flex flex-row flex-wrap w-full -mx-4">
             {posts.map((post, index) => (
-                <ActivityCard key={post.id} link={`activities/${index + 2}`} img={post.img} header={post.name} price={post.price} city={post.city} />
+                <ActivityCard key={post.id} link={`activities/${index + 2}`} img={post.img} header={post.name} price={post.price} city={post.city} tag={post.tag}/>
             ))}
           </div>
         </div>
