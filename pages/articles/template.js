@@ -3,7 +3,7 @@ import Hero from "../../comps/Hero";
 import heroImg from "../../public/article-hero.jpg";
 import Head from "next/head";
 import Image from "next/image";
-import author from "../../public/author.png";
+import author from "../../public/author.jpg";
 
 import ArticleActivityCard from "../../comps/ArticleActivityCard";
 
@@ -26,20 +26,17 @@ const Article = () => {
         <h2 class="font-archivo font-semibold text-4xl my-5">The standard Lorem Ipsum passage, used since the 1500s</h2>
         <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
-        <div class="flex flex-row">
-          <div class="flex items-center p-2">
-            <Image
-              src={author}
-              width={42}
-              height={42}
-              alt="author image"
-            />
+        <a href="https://google.com">
+          <div class="flex flex-row py-2 items-center">
+            <div class="flex items-center p-2 rounded-full">
+              <Image src={author} width={50} height={50} alt="author image" className="rounded-full"/>
+            </div>
+            <div>
+              <h2 class="font-archivo font-bold p-0 text-md">Raha</h2>
+              <p>The creator</p>
+            </div>
           </div>
-          <div>
-            <h2 class="font-archivo font-bold p-0 text-md">Raha</h2>
-            <p>The creator</p>
-          </div>
-        </div>
+        </a>
 
         <p class="font-archivo leading-7">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 

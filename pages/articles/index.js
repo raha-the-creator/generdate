@@ -3,7 +3,6 @@ import Hero from "../../comps/Hero";
 import heroImg from "../../public/article-hero.jpg";
 import Head from "next/head";
 import Image from "next/image";
-import author from "../../public/author.png";
 
 import FeatureArticleCard from "../../comps/FeatureArticleCard";
 
