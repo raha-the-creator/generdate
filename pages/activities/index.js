@@ -1,7 +1,10 @@
 import { google } from "googleapis";
 import Link from "next/link";
 import Head from "next/head";
+import { useState } from "react";
+import Pagination from "../../comps/Pagination";
 import ActivityCard from "../../comps/ActivityCard";
+import { paginate } from "../../helpers/paginate";
 
 export async function getServerSideProps({ query }) {
   const auth = await google.auth.getClient({
@@ -37,6 +40,15 @@ export async function getServerSideProps({ query }) {
 }
 
 export default function Activities({ posts }) {
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 9;
+
+  const onPageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const paginatedPosts = paginate(posts, currentPage, pageSize);
+
   console.log(posts);
   return (
     <>
@@ -50,17 +62,52 @@ export default function Activities({ posts }) {
         />
       </Head>
 
-      <main class="flex flex-col w-full h-full text-center justify-center items-center">  
-      <div class="flex flex-col px-12 bg-white rounded-lg w-11/12 justify-start my-6 ">
-          <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">
-            Activities to explore
-          </h2>
+      <main class="flex flex-col w-full h-full text-center justify-center items-center">
+        <div class="flex flex-col px-12 bg-white rounded-lg w-11/12 justify-start items-center my-6 ">
+          <div>
+            <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">
+              Activities to explore
+            </h2>
 
-          <div class="flex flex-row flex-wrap w-full -mx-4">
-            {posts.map((post, index) => (
-                <ActivityCard key={post.id} link={`activities/${index + 2}`} img={post.img} header={post.name} price={post.price} city={post.city} tag={post.tag}/>
-            ))}
+            <div class="flex flex-row flex-wrap w-full -mx-4">
+              {paginatedPosts.map((post, index) => {
+                return (
+                  <ActivityCard
+                    key={post.id}
+                    link={`activities/${index + 2}`}
+                    img={post.img}
+                    header={post.name}
+                    price={post.price}
+                    city={post.city}
+                    tag={post.tag}
+                  />
+                );
+              })}
+            </div>
           </div>
+
+          <hr></hr>
+          <Pagination
+            items={posts.length} // 49
+            currentPage={currentPage}
+            pageSize={pageSize}
+            onPageChange={onPageChange}
+          />
+          <br />
+
+          {/* <div class="flex flex-row flex-wrap w-full -mx-4">
+            {posts.map((post, index) => (
+              <ActivityCard
+                key={post.id}
+                link={`activities/${index + 2}`}
+                img={post.img}
+                header={post.name}
+                price={post.price}
+                city={post.city}
+                tag={post.tag}
+              />
+            ))}
+          </div> */}
         </div>
       </main>
     </>

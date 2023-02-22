@@ -11,14 +11,6 @@ const ActivityCard = (props) => {
       <div class="flex flex-col w-full h-auto pb-24 mb-5 border-2 border-gray-300 rounded-lg p-4">
         <div class="h-48 relative">
           <div class="z-0 absolute w-full h-full">
-            {/* background image */}
-            {/* <Image
-                            src={activityImg}
-                            alt="activity image"
-                            layout="fill"
-                            objectFit='content'
-                            style={{ borderRadius: '12px' }}
-                        /> */}
             <img
               src={props.img}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}

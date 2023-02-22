@@ -3,10 +3,10 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ActivityImg from "../public/PNE.jpg"
 
-const ArticleActivityCard = () => {
+const ArticleActivityCard = (props) => {
     return (
         <div class="w-full h-auto mt-10 mb-12">
-            <Link href="/articles" class="font-archivo font-bold underline underline-offset-4 text-2xl text-pink-700">PNE Vancouver</Link>
+            <Link href={props.link} class="font-archivo font-bold underline underline-offset-4 text-2xl text-pink-700">PNE Vancouver</Link>
             <Image
                 src={ActivityImg}
                 alt="activity image"
