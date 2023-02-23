@@ -30,9 +30,18 @@ const ActivityCard = (props) => {
                 </h3>
               </div>
               <div class="flex flex-1 items-end justify-end p-3">
-                <h3 class="text-white text-sm bg-pink-700 p-2 rounded-md">
+                <h3
+                  className={
+                    props.city === "Burnaby" || props.city === "Coquitlam"
+                      ? "text-white text-sm bg-pink-700 p-2 rounded-md"
+                      : "text-white text-sm bg-blue-700 p-2 rounded-md"
+                  }
+                >
                   {props.city}
                 </h3>
+                {/* <h3 class="text-white text-sm bg-pink-700 p-2 rounded-md">
+                  {props.city}
+                </h3> */}
               </div>
             </div>
           </div>
