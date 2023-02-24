@@ -18,24 +18,17 @@ export default function Heroku({ activities }) {
   const [query, setQuery] = useState("");
 
   //Function for multiple search filter
-  const multipleSearch = (array) => {
+  const search = (array) => {
     return array.filter((el) =>
-      Object.keys(el).some((parameter) =>
-        el[parameter].toString().toLowerCase().includes(query)
+      Object.keys(el).some((name, location) =>
+        el[name].toString().toLowerCase().includes(query) || el[location]?.toString().toLowerCase().includes(query)
       )
     );
   };
 
+
   //Applying our search filter function to our array of countries recieved from the API
-  const filtered = multipleSearch(activities);
-
-  // //Our search filter function
-  // const searchFilter = (array) => {
-  //   return array.filter((el) => el.name.common?.toLowerCase().includes(query));
-  // };
-
-  // //Applying our search filter function to our array of countries recieved from the API
-  // const filtered = searchFilter(activities);
+  const filtered = search(activities);
 
   // set the value of our useState query anytime the user types on our input
   const handleChange = (e) => {
@@ -78,7 +71,7 @@ export default function Heroku({ activities }) {
                     header={activity.name}
                     price={activity.price}
                     city={activity.location}
-                    tag={activity.tags}
+                    tags={activity.tags}
                   />
                 );
               })}
