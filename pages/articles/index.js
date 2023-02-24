@@ -4,8 +4,8 @@ import heroImg from "../../public/article-hero.jpg";
 import Head from "next/head";
 import Image from "next/image";
 
+import ArticleCard from "../../comps/ArticleCard";
 import FeatureArticleCard from "../../comps/FeatureArticleCard";
-
 
 const Article = () => {
   return (
@@ -20,11 +20,23 @@ const Article = () => {
         />
       </Head>
 
-      <div class="px-12 flex justify-center items-center">
+      <div class="px-12 flex justify-center items-center flex-col">
         <FeatureArticleCard />
+
+        <hr class="h-px w-full my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+
+        <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">
+          Latest articles
+        </h2>
+
+        <div className="flex flex-row flex-wrap w-full -mx-4">
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+          <ArticleCard />
+        </div>
       </div>
-
-
     </div>
   );
 };

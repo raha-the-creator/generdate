@@ -7,10 +7,9 @@ import Link from "next/link";
 
 const ActivityCard = (props) => {
   const tags = props.tags;
-  console.log(tags);
 
   return (
-    <div class="px-4 border-red-500 border-2 w-full md:w-1/2 lg:w-1/3">
+    <div class="px-4 w-full md:w-1/2 lg:w-1/3">
       <div class="flex flex-col w-full h-auto pb-24 mb-5 border-2 border-gray-300 rounded-lg p-4">
         <div class="h-48 relative">
           <div class="z-0 absolute w-full h-full">
@@ -42,9 +41,6 @@ const ActivityCard = (props) => {
                 >
                   {props.city}
                 </h3>
-                {/* <h3 class="text-white text-sm bg-pink-700 p-2 rounded-md">
-                  {props.city}
-                </h3> */}
               </div>
             </div>
           </div>
