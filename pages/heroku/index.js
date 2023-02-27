@@ -2,6 +2,31 @@ import React from "react";
 import Head from "next/head";
 import ActivityCard from "../../comps/ActivityCard";
 import { useState } from "react";
+import Select from "react-select";
+import makeAnimated from "react-select/animated";
+
+const animatedComponents = makeAnimated();
+
+const options = [
+  { value: "indoor", label: "Indoor" },
+  { value: "outdoor", label: "Outdoor" },
+  { value: "eating", label: "Eating" },
+  { value: "park", label: "Park" },
+  { value: "entertainment", label: "Entertainment" },
+  { value: "shopping", label: "Shopping" },
+  { value: "pictures", label: "Pictures" },
+  { value: "beach", label: "Beach" },
+  { value: "exploring", label: "Exploring" },
+  { value: "view", label: "View" },
+  { value: "arcade", label: "Entertainment" },
+];
+
+const options2 = [
+  { value: "free", label: "Free" },
+  { value: "$", label: "$" },
+  { value: "$$", label: "$$" },
+  { value: "$$$", label: "$$$" },
+];
 
 export async function getServerSideProps({}) {
   const data = await fetch("https://generdate-api.herokuapp.com/activities");
@@ -20,12 +45,13 @@ export default function Heroku({ activities }) {
   //Function for multiple search filter
   const search = (array) => {
     return array.filter((el) =>
-      Object.keys(el).some((name, location) =>
-        el[name].toString().toLowerCase().includes(query) || el[location]?.toString().toLowerCase().includes(query)
+      Object.keys(el).some(
+        (name, location) =>
+          el[name].toString().toLowerCase().includes(query) ||
+          el[location]?.toString().toLowerCase().includes(query)
       )
     );
   };
-
 
   //Applying our search filter function to our array of countries recieved from the API
   const filtered = search(activities);
@@ -52,13 +78,37 @@ export default function Heroku({ activities }) {
               Activities to explore
             </h2>
 
-            <div className="w-11/12 m-4 bg-red flex flex-col md:flex-row justify-between items-start md:items-center gap-5 md:gap-0">
+            <div className="w-11/12 relative m-4 bg-red flex flex-col md:flex-row justify-between items-start md:items-center gap-5 md:gap-0">
               <input
                 onChange={handleChange}
                 type="text"
                 placeholder="Type your activity"
-                className="w-full inline-block rounded box-border border-solid border-2 border-gray-400 p-2"
+                className="w-auto inline-block rounded box-border border-solid border-2 border-gray-400 p-2"
               />
+              <div>
+                <Select
+                  closeMenuOnSelect={false}
+                  components={animatedComponents}
+                  isMulti
+                  options={options}
+                />
+              </div>
+              <div>
+                <Select
+                  closeMenuOnSelect={false}
+                  components={animatedComponents}
+                  isMulti
+                  options={options}
+                />
+              </div>
+              <div>
+                <Select
+                  closeMenuOnSelect={false}
+                  components={animatedComponents}
+                  isMulti
+                  options={options}
+                />
+              </div>
             </div>
 
             <div class="flex flex-row flex-wrap w-full -mx-4">
