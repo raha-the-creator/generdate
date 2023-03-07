@@ -28,6 +28,13 @@ const options2 = [
   { value: "$$$", label: "$$$" },
 ];
 
+const options3 = [
+  { value: "vancouver", label: "Vancouver" },
+  { value: "north vancouver", label: "North Vancouver" },
+  { value: "coquitlam", label: "Coquitlam" },
+  { value: "richmond", label: "Richmond" },
+];
+
 export async function getServerSideProps({}) {
   const data = await fetch("https://generdate-api.herokuapp.com/activities");
   const activities = await data.json();
@@ -85,7 +92,8 @@ export default function Heroku({ activities }) {
                 placeholder="Type your activity"
                 className="w-auto inline-block rounded box-border border-solid border-2 border-gray-400 p-2"
               />
-              <div>
+              <div className="flex items-center">
+                <p>Activity type</p>
                 <Select
                   closeMenuOnSelect={false}
                   components={animatedComponents}
@@ -93,20 +101,22 @@ export default function Heroku({ activities }) {
                   options={options}
                 />
               </div>
-              <div>
+              <div className="flex items-center">
+                <p>Price</p>
                 <Select
                   closeMenuOnSelect={false}
                   components={animatedComponents}
                   isMulti
-                  options={options}
+                  options={options2}
                 />
               </div>
-              <div>
+              <div className="flex items-center">
+                <p>Location</p>
                 <Select
                   closeMenuOnSelect={false}
                   components={animatedComponents}
                   isMulti
-                  options={options}
+                  options={options3}
                 />
               </div>
             </div>
