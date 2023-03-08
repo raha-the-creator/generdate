@@ -2,38 +2,7 @@ import React from "react";
 import Head from "next/head";
 import ActivityCard from "../../comps/ActivityCard";
 import { useState } from "react";
-import Select from "react-select";
-import makeAnimated from "react-select/animated";
-
-const animatedComponents = makeAnimated();
-
-const options = [
-  { value: "indoor", label: "Indoor" },
-  { value: "outdoor", label: "Outdoor" },
-  { value: "eating", label: "Eating" },
-  { value: "park", label: "Park" },
-  { value: "entertainment", label: "Entertainment" },
-  { value: "shopping", label: "Shopping" },
-  { value: "pictures", label: "Pictures" },
-  { value: "beach", label: "Beach" },
-  { value: "exploring", label: "Exploring" },
-  { value: "view", label: "View" },
-  { value: "arcade", label: "Entertainment" },
-];
-
-const options2 = [
-  { value: "free", label: "Free" },
-  { value: "$", label: "$" },
-  { value: "$$", label: "$$" },
-  { value: "$$$", label: "$$$" },
-];
-
-const options3 = [
-  { value: "vancouver", label: "Vancouver" },
-  { value: "north vancouver", label: "North Vancouver" },
-  { value: "coquitlam", label: "Coquitlam" },
-  { value: "richmond", label: "Richmond" },
-];
+import MultiSelect from "multiselect-react-dropdown";
 
 export async function getServerSideProps({}) {
   const data = await fetch("https://generdate-api.herokuapp.com/activities");
@@ -48,6 +17,23 @@ export async function getServerSideProps({}) {
 
 export default function Heroku({ activities }) {
   const [query, setQuery] = useState("");
+  const [selectedTags, setSelectedTags] = useState([]);
+
+  const handleTagSelect = (selectedList, selectedItem) => {
+    setSelectedTags(selectedList);
+  };
+
+  const filterActivitiesByTags = () => {
+    if (selectedTags.length === 0) {
+      return activities;
+    }
+
+    const filteredActivities = activities.filter((activity) =>
+      selectedTags.every((tag) => activity.tags.includes(tag))
+    );
+
+    return filteredActivities;
+  };
 
   //Function for multiple search filter
   const search = (array) => {
@@ -68,8 +54,6 @@ export default function Heroku({ activities }) {
     setQuery(e.target.value);
   };
 
-  console.log(filtered);
-
   return (
     <>
       <Head>
@@ -85,6 +69,17 @@ export default function Heroku({ activities }) {
               Activities to explore
             </h2>
 
+            <MultiSelect
+              options={Array.from(
+                new Set(activities.flatMap((activity) => activity.tags))
+              )}
+              selectedValues={selectedTags}
+              onSelect={handleTagSelect}
+              onRemove={handleTagSelect}
+              displayValue="tag"
+              placeholder="Select tags"
+            />
+
             <div className="w-11/12 relative m-4 bg-red flex flex-col md:flex-row justify-between items-start md:items-center gap-5 md:gap-0">
               <input
                 onChange={handleChange}
@@ -92,37 +87,10 @@ export default function Heroku({ activities }) {
                 placeholder="Type your activity"
                 className="w-auto inline-block rounded box-border border-solid border-2 border-gray-400 p-2"
               />
-              <div className="flex items-center">
-                <p>Activity type</p>
-                <Select
-                  closeMenuOnSelect={false}
-                  components={animatedComponents}
-                  isMulti
-                  options={options}
-                />
-              </div>
-              <div className="flex items-center">
-                <p>Price</p>
-                <Select
-                  closeMenuOnSelect={false}
-                  components={animatedComponents}
-                  isMulti
-                  options={options2}
-                />
-              </div>
-              <div className="flex items-center">
-                <p>Location</p>
-                <Select
-                  closeMenuOnSelect={false}
-                  components={animatedComponents}
-                  isMulti
-                  options={options3}
-                />
-              </div>
             </div>
 
             <div class="flex flex-row flex-wrap w-full -mx-4">
-              {filtered.map((activity, index) => {
+              {/* {filtered.map((activity, index) => {
                 return (
                   <ActivityCard
                     key={activity.id}
@@ -134,7 +102,19 @@ export default function Heroku({ activities }) {
                     tags={activity.tags}
                   />
                 );
-              })}
+              })} */}
+
+              {filterActivitiesByTags().map((activity, index) => (
+                <ActivityCard
+                  key={activity.id}
+                  link={`activities/${activity.id + 1}`}
+                  img={activity.feature}
+                  header={activity.name}
+                  price={activity.price}
+                  city={activity.location}
+                  tags={activity.tags}
+                />
+              ))}
             </div>
           </div>
         </div>
