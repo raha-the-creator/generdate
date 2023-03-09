@@ -34,7 +34,7 @@ const ActivityCard = (props) => {
               </div>
               <div class="flex flex-1 items-end justify-end p-3">
                 <h3
-                  className={`text-white text-sm p-2 rounded-md ${
+                  className={`text-white text-sm font-roboto-mono p-2 rounded-md ${
                     props.city === "Squamish"
                       ? "bg-red-600"
                       : props.city === "Richmond"

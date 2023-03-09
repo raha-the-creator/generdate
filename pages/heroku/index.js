@@ -24,17 +24,17 @@ export default function Heroku({ activities }) {
   };
 
   const tags = [
-    { name: 'Outdoor', id: 1 },
-    { name: 'Indoor', id: 2 },
-    { name: 'Eating', id: 3 },
-    { name: 'Park', id: 4 },
-    { name: 'Entertainment', id: 5 },
-    { name: 'Shopping', id: 6 },
-    { name: 'Pictures', id: 7 },
-    { name: 'Beach', id: 8 },
-    { name: 'Exploring', id: 9 },
-    { name: 'Arcade', id: 10 },
-    { name: 'View', id: 11 },
+    { name: "Outdoor", id: 1 },
+    { name: "Indoor", id: 2 },
+    { name: "Eating", id: 3 },
+    { name: "Park", id: 4 },
+    { name: "Entertainment", id: 5 },
+    { name: "Shopping", id: 6 },
+    { name: "Pictures", id: 7 },
+    { name: "Beach", id: 8 },
+    { name: "Exploring", id: 9 },
+    { name: "Arcade", id: 10 },
+    { name: "View", id: 11 },
   ];
 
   const filterActivitiesByTags = () => {
@@ -54,10 +54,9 @@ export default function Heroku({ activities }) {
     return array.filter((el) =>
       Object.keys(el).some(
         (name, location) =>
-          el[name] && 
-          el[name].toString().toLowerCase().includes(query) ||
-          el[location] &&
-          el[location]?.toString().toLowerCase().includes(query)
+          (el[name] && el[name].toString().toLowerCase().includes(query)) ||
+          (el[location] &&
+            el[location]?.toString().toLowerCase().includes(query))
       )
     );
   };
@@ -79,24 +78,96 @@ export default function Heroku({ activities }) {
       </Head>
 
       <main class="flex flex-col w-full h-full text-center justify-center items-center">
-        <div class="flex flex-col px-12 bg-white rounded-lg w-11/12 justify-start items-center my-6 ">
+        <div class="flex flex-col px-12 bg-white rounded-lg w-11/12 justify-start items-center my-1 ">
           <div className="w-full">
-            <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">
-              Activities to explore
-            </h2>
+            {/* FILTERS */}
+            <div className="z-50 sticky top-20 p-2 bg-red-500">
+              <div className="flex items-center border-2 border-green-500">
+                <h2 class="text-left text-2xl font-roboto-mono font-bold my-4">
+                  Activities to explore
+                </h2>
+              </div>
+              <div class="w-full flex flex-row border-2 border-red-500">
+                <div class="w-1/3 flex-grow-0 flex-shrink-0 bg-gray-300">
+                  <input
+                    onChange={handleChange}
+                    type="text"
+                    placeholder="Search by name"
+                    className="w-full inline-block rounded box-border border-solid border-2 border-gray-400 p-2"
+                  />
+                </div>
+                <div class="flex flex-row w-2/3">
+                  <div class="flex-grow flex-shrink-0 bg-gray-100">
+                    {/* First third of second child div */}
+                    <MultiSelect
+                      options={tags}
+                      selectedValues={selectedTags}
+                      onSelect={handleTagSelect}
+                      onRemove={handleTagSelect}
+                      displayValue="name"
+                      placeholder="Activity type"
+                      style={{
+                        chips: { background: "#C42455" },
+                        "&:hover": { background: "#fad" },
+                      }}
+                      className="text-sm"
+                    />
+                  </div>
+                  <div class="flex-grow flex-shrink-0 bg-gray-500">
+                    {/* Second third of second child div */}
+                    <MultiSelect
+                      options={tags}
+                      selectedValues={selectedTags}
+                      onSelect={handleTagSelect}
+                      onRemove={handleTagSelect}
+                      displayValue="name"
+                      placeholder="Price"
+                      style={{
+                        chips: { background: "#C42455" },
+                        "&:hover": { background: "#fad" },
+                      }}
+                      className="text-sm"
+                    />
+                  </div>
+                  <div class="flex-grow flex-shrink-0 bg-gray-600">
+                    {/* Third third of second child div */}
+                    <MultiSelect
+                      options={tags}
+                      selectedValues={selectedTags}
+                      onSelect={handleTagSelect}
+                      onRemove={handleTagSelect}
+                      displayValue="name"
+                      placeholder="Location"
+                      style={{
+                        chips: { background: "#C42455" },
+                        "&:hover": { background: "#fad" },
+                      }}
+                      className="text-sm"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
 
-          <div className="w-full flex-row">
-            <MultiSelect
-              options={tags}
-              selectedValues={selectedTags}
-              onSelect={handleTagSelect}
-              onRemove={handleTagSelect}
-              displayValue="name"
-              placeholder="Select activity type"
-              style={{chips: { background: "#C42455" }, "&:hover": {background: "#fad" }}}
-            />
-          </div>
+            <br></br>
 
+            {/* # Filter by activity tag
+            <div className="w-full flex-row">
+              <MultiSelect
+                options={tags}
+                selectedValues={selectedTags}
+                onSelect={handleTagSelect}
+                onRemove={handleTagSelect}
+                displayValue="name"
+                placeholder="Select activity type"
+                style={{
+                  chips: { background: "#C42455" },
+                  "&:hover": { background: "#fad" },
+                }}
+              />
+            </div> */}
+
+            {/* # Filter with search box (by all fields and content)
             <div className="w-11/12 relative m-4 bg-red flex flex-col md:flex-row justify-between items-start md:items-center gap-5 md:gap-0">
               <input
                 onChange={handleChange}
@@ -104,7 +175,7 @@ export default function Heroku({ activities }) {
                 placeholder="Type your activity"
                 className="w-auto inline-block rounded box-border border-solid border-2 border-gray-400 p-2"
               />
-            </div>
+            </div> */}
 
             <div class="flex flex-row flex-wrap w-full -mx-4">
               {/* {filtered.map((activity, index) => {
