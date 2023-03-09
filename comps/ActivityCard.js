@@ -9,21 +9,22 @@ const ActivityCard = (props) => {
   const tags = props.tags;
 
   return (
-    <div class="px-4 w-full border-2 border-red-500 md:w-1/2 lg:w-1/3">
-      <div class="flex flex-col w-full h-auto pb-24 mb-5 border-2 border-gray-300 rounded-lg p-4">
+    <div class="px-4 w-full md:w-1/2 lg:w-1/3">
+      <div class="flex flex-col w-full h-auto pb-24 mb-5 border-2 border-gray-300 rounded-lg">
         <div class="h-48 relative">
-          <div class="z-0 absolute w-full h-full">
+          <div class="z-0 absolute w-full h-full ">
             <img
               src={props.img}
               style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              className="rounded-tr-lg rounded-tl-lg"
             />
           </div>
 
           <div class="flex w-full h-full flex-col z-10 absolute">
             <div class="flex flex-1 items-start">
-              <button class="p-3">
+              {/* <button class="p-3">
                 <AiOutlineHeart color="white" size={30} />
-              </button>
+              </button> */}
             </div>
             <div class="flex flex-1 flex-row">
               <div class="flex flex-1 items-end p-3">
@@ -48,7 +49,7 @@ const ActivityCard = (props) => {
 
         {/* ///// DIVIDER ///// */}
 
-        <div class="h-12 flex flex-col items-start">
+        <div class="h-12 flex flex-col items-start p-4">
           <Link
             href={props.link}
             class="font-roboto-mono text-xl font-medium mt-2 text-left"

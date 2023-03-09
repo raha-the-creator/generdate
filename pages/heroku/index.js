@@ -23,13 +23,27 @@ export default function Heroku({ activities }) {
     setSelectedTags(selectedList);
   };
 
+  const tags = [
+    { name: 'Outdoor', id: 1 },
+    { name: 'Indoor', id: 2 },
+    { name: 'Eating', id: 3 },
+    { name: 'Park', id: 4 },
+    { name: 'Entertainment', id: 5 },
+    { name: 'Shopping', id: 6 },
+    { name: 'Pictures', id: 7 },
+    { name: 'Beach', id: 8 },
+    { name: 'Exploring', id: 9 },
+    { name: 'Arcade', id: 10 },
+    { name: 'View', id: 11 },
+  ];
+
   const filterActivitiesByTags = () => {
     if (selectedTags.length === 0) {
       return activities;
     }
 
     const filteredActivities = activities.filter((activity) =>
-      selectedTags.every((tag) => activity.tags.includes(tag))
+      selectedTags.every((tag) => activity.tags.includes(tag.name))
     );
 
     return filteredActivities;
@@ -40,7 +54,9 @@ export default function Heroku({ activities }) {
     return array.filter((el) =>
       Object.keys(el).some(
         (name, location) =>
+          el[name] && 
           el[name].toString().toLowerCase().includes(query) ||
+          el[location] &&
           el[location]?.toString().toLowerCase().includes(query)
       )
     );
@@ -64,20 +80,19 @@ export default function Heroku({ activities }) {
 
       <main class="flex flex-col w-full h-full text-center justify-center items-center">
         <div class="flex flex-col px-12 bg-white rounded-lg w-11/12 justify-start items-center my-6 ">
-          <div>
+          <div className="w-full">
             <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">
               Activities to explore
             </h2>
 
             <MultiSelect
-              options={Array.from(
-                new Set(activities.flatMap((activity) => activity.tags))
-              )}
+              options={tags}
               selectedValues={selectedTags}
               onSelect={handleTagSelect}
               onRemove={handleTagSelect}
-              displayValue="tag"
-              placeholder="Select tags"
+              displayValue="name"
+              placeholder="Select activity type"
+              style={{chips: { background: "#C42455" }, "&:hover": {background: "#fad" }}}
             />
 
             <div className="w-11/12 relative m-4 bg-red flex flex-col md:flex-row justify-between items-start md:items-center gap-5 md:gap-0">
@@ -107,7 +122,7 @@ export default function Heroku({ activities }) {
               {filterActivitiesByTags().map((activity, index) => (
                 <ActivityCard
                   key={activity.id}
-                  link={`activities/${activity.id + 1}`}
+                  link={`activities/${index + 2}`}
                   img={activity.feature}
                   header={activity.name}
                   price={activity.price}
