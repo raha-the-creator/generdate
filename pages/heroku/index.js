@@ -85,6 +85,7 @@ export default function Heroku({ activities }) {
               Activities to explore
             </h2>
 
+          <div className="w-full flex-row">
             <MultiSelect
               options={tags}
               selectedValues={selectedTags}
@@ -94,6 +95,7 @@ export default function Heroku({ activities }) {
               placeholder="Select activity type"
               style={{chips: { background: "#C42455" }, "&:hover": {background: "#fad" }}}
             />
+          </div>
 
             <div className="w-11/12 relative m-4 bg-red flex flex-col md:flex-row justify-between items-start md:items-center gap-5 md:gap-0">
               <input

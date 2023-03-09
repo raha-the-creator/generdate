@@ -34,11 +34,27 @@ const ActivityCard = (props) => {
               </div>
               <div class="flex flex-1 items-end justify-end p-3">
                 <h3
-                  className={
-                    props.city === "Burnaby"
-                      ? "text-white text-sm bg-pink-700 p-2 rounded-md"
-                      : "text-white text-sm bg-blue-700 p-2 rounded-md"
-                  }
+                  className={`text-white text-sm p-2 rounded-md ${
+                    props.city === "Squamish"
+                      ? "bg-red-600"
+                      : props.city === "Richmond"
+                      ? "bg-yellow-600"
+                      : props.city === "Vancouver"
+                      ? "bg-yellow-800"
+                      : props.city === "North Vancouver"
+                      ? "bg-green-600"
+                      : props.city === "West Vancouver"
+                      ? "bg-blue-500"
+                      : props.city === "Burnaby"
+                      ? "bg-red-700"
+                      : props.city === "Coquitlam"
+                      ? "bg-purple-700"
+                      : props.city === "New Westminster"
+                      ? "bg-teal-500"
+                      : props.city === "Port Moody"
+                      ? "bg-indigo-500"
+                      : "bg-gray-500"
+                  }`}
                 >
                   {props.city}
                 </h3>
