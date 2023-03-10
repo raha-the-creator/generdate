@@ -105,8 +105,8 @@ export default function Navbar() {
           <Image
             alt="logo"
             src={logo}
-            width={80}
-            height={80}
+            width={70}
+            height={70}
             style={{
               maxWidth: "100%",
               height: "auto",
