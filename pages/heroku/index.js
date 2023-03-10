@@ -37,6 +37,26 @@ export default function Heroku({ activities }) {
     { name: "View", id: 11 },
   ];
 
+  const prices = [
+    { name: "FREE", id: 1 },
+    { name: "$", id: 2 },
+    { name: "$$", id: 3 },
+    { name: "$$$", id: 4 },
+  ]
+  
+  const locations = [
+    { name: "Squamish", id: 1 },
+    { name: "Richmond", id: 2 },
+    { name: "Vancouver", id: 3 },
+    { name: "North Vancouver", id: 4 },
+    { name: "West Vancouver", id: 5 },
+    { name: "Burnaby", id: 6 },
+    { name: "Coquitlam", id: 7 },
+    { name: "New Westminster", id: 8 },
+    { name: "Port Moody", id: 9 },
+    { name: "other", id: 10 },
+  ]
+
   const filterActivitiesByTags = () => {
     if (selectedTags.length === 0) {
       return activities;
@@ -78,7 +98,7 @@ export default function Heroku({ activities }) {
       </Head>
 
       <main class="flex flex-col w-full h-full text-center justify-center items-center">
-        <div class="flex flex-col bg-white rounded-lg w-11/12 justify-start items-center my-1 ">
+        <div class="flex flex-col bg-white rounded-lg w-11/12 justify-start items-center my-1">
           <div className="w-full">
             {/* FILTERS */}
             <div className="z-50 sticky top-16 p-2 bg-white">
@@ -116,7 +136,7 @@ export default function Heroku({ activities }) {
                   <div class="flex-1 h-10 w-1/3 px-2">
                     {/* Second third of second child div */}
                     <MultiSelect
-                      options={tags}
+                      options={prices}
                       selectedValues={selectedTags}
                       onSelect={handleTagSelect}
                       onRemove={handleTagSelect}
@@ -132,7 +152,7 @@ export default function Heroku({ activities }) {
                   <div class="flex-1 h-10 w-1/3 px-2">
                     {/* Third third of second child div */}
                     <MultiSelect
-                      options={tags}
+                      options={locations}
                       selectedValues={selectedTags}
                       onSelect={handleTagSelect}
                       onRemove={handleTagSelect}
@@ -148,23 +168,6 @@ export default function Heroku({ activities }) {
                 </div>
               </div>
             </div>
-
-            {/* <div class="flex flex-col md:flex-row">
-              <div class="bg-gray-100 h-32 md:h-auto md:w-1/2">
-                <p class="text-center font-bold text-lg mt-4">Child 1</p>
-              </div>
-              <div class="bg-gray-200 h-32 md:h-auto md:w-1/2 flex">
-                <div class="bg-gray-300 flex-1 h-full">
-                  <p class="text-center font-bold text-lg mt-4">Sub Child 1</p>
-                </div>
-                <div class="bg-gray-400 flex-1 h-full">
-                  <p class="text-center font-bold text-lg mt-4">Sub Child 2</p>
-                </div>
-                <div class="bg-gray-500 flex-1 h-full">
-                  <p class="text-center font-bold text-lg mt-4">Sub Child 3</p>
-                </div>
-              </div>
-            </div> */}
 
             <br></br>
 
