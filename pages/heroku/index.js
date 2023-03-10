@@ -63,7 +63,7 @@ export default function Heroku({ activities }) {
     }
 
     const filteredActivities = activities.filter((activity) =>
-      selectedTags.every((tag) => activity.tags.includes(tag.name))
+      selectedTags.every((tag) => activity.tags.includes(tag.name) || activity.price.includes(tag.name) || activity.location.includes(tag.name))
     );
 
     return filteredActivities;
