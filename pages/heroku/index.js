@@ -24,54 +24,54 @@ export default function Heroku({ activities }) {
   };
 
   const filterTags = [
-    { cat: 'Activity Type', name: "Outdoor" },
-    { cat: 'Activity Type', name: "Indoor" },
-    { cat: 'Activity Type', name: "Eating" },
-    { cat: 'Activity Type', name: "Park" },
-    { cat: 'Activity Type', name: "Entertainment" },
-    { cat: 'Activity Type', name: "Shopping" },
-    { cat: 'Activity Type', name: "Pictures" },
-    { cat: 'Activity Type', name: "Beach" },
-    { cat: 'Activity Type', name: "Exploring" },
-    { cat: 'Activity Type', name: "Arcade" },
-    { cat: 'Activity Type', name: "View" },
-    { cat: 'Price', name: "FREE" },
-    { cat: 'Price', name: "$" },
-    { cat: 'Price', name: "$$" },
-    { cat: 'Price', name: "$$$" },
-    { cat: 'Location', name: "Squamish" },
-    { cat: 'Location', name: "Richmond" },
-    { cat: 'Location', name: "Vancouver" },
-    { cat: 'Location', name: "North Vancouver" },
-    { cat: 'Location', name: "West Vancouver" },
-    { cat: 'Location', name: "Burnaby" },
-    { cat: 'Location', name: "Coquitlam" },
-    { cat: 'Location', name: "New Westminster" },
-    { cat: 'Location', name: "Port Moody" },
-    { cat: 'Location', name: "Other" },
-  ]
+    { cat: "Activity Type", name: "Outdoor" },
+    { cat: "Activity Type", name: "Indoor" },
+    { cat: "Activity Type", name: "Eating" },
+    { cat: "Activity Type", name: "Park" },
+    { cat: "Activity Type", name: "Entertainment" },
+    { cat: "Activity Type", name: "Shopping" },
+    { cat: "Activity Type", name: "Pictures" },
+    { cat: "Activity Type", name: "Beach" },
+    { cat: "Activity Type", name: "Exploring" },
+    { cat: "Activity Type", name: "Arcade" },
+    { cat: "Activity Type", name: "View" },
+    { cat: "Price", name: "FREE" },
+    { cat: "Price", name: "$" },
+    { cat: "Price", name: "$$" },
+    { cat: "Price", name: "$$$" },
+    { cat: "Location", name: "Squamish" },
+    { cat: "Location", name: "Richmond" },
+    { cat: "Location", name: "Vancouver" },
+    { cat: "Location", name: "North Vancouver" },
+    { cat: "Location", name: "West Vancouver" },
+    { cat: "Location", name: "Burnaby" },
+    { cat: "Location", name: "Coquitlam" },
+    { cat: "Location", name: "New Westminster" },
+    { cat: "Location", name: "Port Moody" },
+    { cat: "Location", name: "Other" },
+  ];
 
   const filterActivitiesByTagsAndQuery = () => {
     let filteredActivities = activities;
 
     // Filter by tags
     if (selectedTags.length > 0) {
-      filteredActivities = filteredActivities.filter(
-        (activity) =>
-          selectedTags.every(
-            (tag) =>
-              activity.tags.includes(tag.name) ||
-              activity.price.includes(tag.name) ||
-              activity.location.includes(tag.name)
-          )
+      filteredActivities = filteredActivities.filter((activity) =>
+        selectedTags.every(
+          (tag) =>
+            activity.tags.includes(tag.name) ||
+            (tag.name === "$" && activity.price === tag.name) ||
+            (tag.name === "$$" && activity.price === tag.name) ||
+            (tag.name === "$$$" && activity.price === tag.name) ||
+            activity.location.includes(tag.name)
+        )
       );
     }
 
     // Filter by query
     if (query) {
-      filteredActivities = filteredActivities.filter(
-        (activity) =>
-          activity.name.toLowerCase().includes(query.toLowerCase())
+      filteredActivities = filteredActivities.filter((activity) =>
+        activity.name.toLowerCase().includes(query.toLowerCase())
       );
     }
 
@@ -115,7 +115,7 @@ export default function Heroku({ activities }) {
                       onSelect={handleTagSelect}
                       onRemove={handleTagSelect}
                       displayValue="name"
-                      placeholder="Filter"
+                      placeholder="Filter by other parameters"
                       style={{
                         chips: { background: "#C42455" },
                         "&:hover": { background: "#fad" },
