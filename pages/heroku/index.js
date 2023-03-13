@@ -23,39 +23,33 @@ export default function Heroku({ activities }) {
     setSelectedTags(selectedList);
   };
 
-  const tags = [
-    { name: "Outdoor", id: 1 },
-    { name: "Indoor", id: 2 },
-    { name: "Eating", id: 3 },
-    { name: "Park", id: 4 },
-    { name: "Entertainment", id: 5 },
-    { name: "Shopping", id: 6 },
-    { name: "Pictures", id: 7 },
-    { name: "Beach", id: 8 },
-    { name: "Exploring", id: 9 },
-    { name: "Arcade", id: 10 },
-    { name: "View", id: 11 },
-  ];
-
-  const prices = [
-    { name: "FREE", id: 1 },
-    { name: "$", id: 2 },
-    { name: "$$", id: 3 },
-    { name: "$$$", id: 4 },
-  ];
-
-  const locations = [
-    { name: "Squamish", id: 1 },
-    { name: "Richmond", id: 2 },
-    { name: "Vancouver", id: 3 },
-    { name: "North Vancouver", id: 4 },
-    { name: "West Vancouver", id: 5 },
-    { name: "Burnaby", id: 6 },
-    { name: "Coquitlam", id: 7 },
-    { name: "New Westminster", id: 8 },
-    { name: "Port Moody", id: 9 },
-    { name: "other", id: 10 },
-  ];
+  const filterTags = [
+    { cat: 'Activity Type', name: "Outdoor" },
+    { cat: 'Activity Type', name: "Indoor" },
+    { cat: 'Activity Type', name: "Eating" },
+    { cat: 'Activity Type', name: "Park" },
+    { cat: 'Activity Type', name: "Entertainment" },
+    { cat: 'Activity Type', name: "Shopping" },
+    { cat: 'Activity Type', name: "Pictures" },
+    { cat: 'Activity Type', name: "Beach" },
+    { cat: 'Activity Type', name: "Exploring" },
+    { cat: 'Activity Type', name: "Arcade" },
+    { cat: 'Activity Type', name: "View" },
+    { cat: 'Price', name: "FREE" },
+    { cat: 'Price', name: "$" },
+    { cat: 'Price', name: "$$" },
+    { cat: 'Price', name: "$$$" },
+    { cat: 'Location', name: "Squamish" },
+    { cat: 'Location', name: "Richmond" },
+    { cat: 'Location', name: "Vancouver" },
+    { cat: 'Location', name: "North Vancouver" },
+    { cat: 'Location', name: "West Vancouver" },
+    { cat: 'Location', name: "Burnaby" },
+    { cat: 'Location', name: "Coquitlam" },
+    { cat: 'Location', name: "New Westminster" },
+    { cat: 'Location', name: "Port Moody" },
+    { cat: 'Location', name: "Other" },
+  ]
 
   const filterActivitiesByTags = () => {
     if (selectedTags.length === 0) {
@@ -130,52 +124,18 @@ export default function Heroku({ activities }) {
                   </div>
                 </div>
                 <div class="flex items-center justify-center w-full h-16 md:w-1/2 md:h-10">
-                  <div class="flex-1 h-10 w-1/3 px-2">
-                    {/* First third of second child div */}
+                  <div class="flex-1 h-10 w-full px-2">
                     <MultiSelect
-                      options={tags.filter((tag) => !selectedTags.includes(tag))}
+                      options={filterTags}
                       selectedValues={selectedTags}
+                      groupBy="cat"
                       onSelect={handleTagSelect}
                       onRemove={handleTagSelect}
                       displayValue="name"
-                      placeholder="Activity type"
+                      placeholder="Filter"
                       style={{
                         chips: { background: "#C42455" },
                         "&:hover": { background: "#fad" },
-                      }}
-                      className="text-sm"
-                      closeIcon={false}
-                    />
-                  </div>
-                  <div class="flex-1 h-10 w-1/3 px-2">
-                    {/* Second third of second child div */}
-                    <MultiSelect
-                      options={prices.filter((price) => !selectedTags.includes(price))}
-                      selectedValues={selectedTags}
-                      onSelect={handleTagSelect}
-                      onRemove={handleTagSelect}
-                      displayValue="name"
-                      placeholder="Price"
-                      style={{
-                        chips: { background: "#C42455" },
-                        "&:hover": { background: "#fad" },
-                      }}
-                      className="text-sm"
-                      closeIcon={false}
-                    />
-                  </div>
-                  <div class="flex-1 h-10 w-1/3 px-2">
-                    {/* Third third of second child div */}
-                    <MultiSelect
-                      options={locations.filter((location) => !selectedTags.includes(location))}
-                      selectedValues={selectedTags}
-                      onSelect={handleTagSelect}
-                      onRemove={handleTagSelect}
-                      displayValue="name"
-                      placeholder="Location"
-                      style={{
-                        chips: { background: "#C42455" },
-                        "&:hover": { background: "#000" },
                       }}
                       className="text-sm"
                       closeIcon={false}
