@@ -21,7 +21,7 @@ const ArticleCard = (props) => {
           <h3>
             Check out this new activity this upcoming weekends fadsfadsfa sfdsaf
           </h3>
-          <p className="text-pink-700 font-archivo font-regular underline underline-offset-4 text-2xl">
+          <p className="text-pink-700 font-archivo font-regular underline underline-offset-4 text-xl">
             Read
           </p>
         </div>

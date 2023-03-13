@@ -42,8 +42,8 @@ export default function Heroku({ activities }) {
     { name: "$", id: 2 },
     { name: "$$", id: 3 },
     { name: "$$$", id: 4 },
-  ]
-  
+  ];
+
   const locations = [
     { name: "Squamish", id: 1 },
     { name: "Richmond", id: 2 },
@@ -55,14 +55,15 @@ export default function Heroku({ activities }) {
     { name: "New Westminster", id: 8 },
     { name: "Port Moody", id: 9 },
     { name: "other", id: 10 },
-  ]
+  ];
 
   const filterActivitiesByTags = () => {
     if (selectedTags.length === 0) {
       return activities;
     }
 
-    const filteredActivities = activities.filter((activity) =>
+    const filteredActivities = activities.filter(
+      (activity) =>
       selectedTags.every((tag) => activity.tags.includes(tag.name) || activity.price.includes(tag.name) || activity.location.includes(tag.name))
     );
 
@@ -88,6 +89,8 @@ export default function Heroku({ activities }) {
   const handleChange = (e) => {
     setQuery(e.target.value);
   };
+
+  console.log(selectedTags);
 
   return (
     <>
@@ -115,12 +118,22 @@ export default function Heroku({ activities }) {
                     placeholder="Search by name"
                     className="w-full inline-block rounded box-border border-solid border-2 border-gray-400 p-2 text-sm"
                   />
+                  <div id="selTagsDiv" className="flex flex-wrap mt-2">
+                    {selectedTags.map((tag) => (
+                      <span
+                        key={tag.id}
+                        className="chip"
+                      >
+                        {tag.name}
+                      </span>
+                    ))}
+                  </div>
                 </div>
                 <div class="flex items-center justify-center w-full h-16 md:w-1/2 md:h-10">
                   <div class="flex-1 h-10 w-1/3 px-2">
                     {/* First third of second child div */}
                     <MultiSelect
-                      options={tags}
+                      options={tags.filter((tag) => !selectedTags.includes(tag))}
                       selectedValues={selectedTags}
                       onSelect={handleTagSelect}
                       onRemove={handleTagSelect}
@@ -131,12 +144,13 @@ export default function Heroku({ activities }) {
                         "&:hover": { background: "#fad" },
                       }}
                       className="text-sm"
+                      closeIcon={false}
                     />
                   </div>
                   <div class="flex-1 h-10 w-1/3 px-2">
                     {/* Second third of second child div */}
                     <MultiSelect
-                      options={prices}
+                      options={prices.filter((price) => !selectedTags.includes(price))}
                       selectedValues={selectedTags}
                       onSelect={handleTagSelect}
                       onRemove={handleTagSelect}
@@ -147,12 +161,13 @@ export default function Heroku({ activities }) {
                         "&:hover": { background: "#fad" },
                       }}
                       className="text-sm"
+                      closeIcon={false}
                     />
                   </div>
                   <div class="flex-1 h-10 w-1/3 px-2">
                     {/* Third third of second child div */}
                     <MultiSelect
-                      options={locations}
+                      options={locations.filter((location) => !selectedTags.includes(location))}
                       selectedValues={selectedTags}
                       onSelect={handleTagSelect}
                       onRemove={handleTagSelect}
@@ -160,9 +175,10 @@ export default function Heroku({ activities }) {
                       placeholder="Location"
                       style={{
                         chips: { background: "#C42455" },
-                        "&:hover": { background: "#fad" },
+                        "&:hover": { background: "#000" },
                       }}
                       className="text-sm"
+                      closeIcon={false}
                     />
                   </div>
                 </div>

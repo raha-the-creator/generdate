@@ -102,7 +102,7 @@ const ActivityPage = ({
               sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <h2 className="font-montserrat font-bold text-2xl leading-7 mt-10">
-              Subheader
+              Why go here?
             </h2>
             <p className="font-montserrat text-md leading-7">
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -118,6 +118,11 @@ const ActivityPage = ({
                 <h3 className="font-bold">Activity Type:</h3>
                 <p>{tags}</p>
               </div>
+              
+              <div className="my-2">
+                <h3 className="font-bold">Best time to visit:</h3>
+                <p>{tags}</p>
+              </div>
 
               <div className="my-2">
                 <h3 className="font-bold">City:</h3>
@@ -126,7 +131,7 @@ const ActivityPage = ({
 
               <div className="my-2">
                 <h3 className="font-bold">Address:</h3>
-                <p>{address}</p>
+                <p>Daytime, evening</p>
               </div>
             </div>
 
@@ -141,7 +146,7 @@ const ActivityPage = ({
             ></iframe>
 
             <button className="w-full bg-gray-400 py-3 mt-5">
-              Add to list
+              Check in Google Maps
             </button>
           </div>
         </div>
