@@ -88,10 +88,10 @@ const ActivityPage = ({
       {/* <Hero img={ImgSrc} /> */}
 
       <div className="flex justify-center w-full">
-        <div className="flex w-3/4 p-5 border-2 border-red-500">
+        <div className="flex flex-col md:flex-row w-3/4 p-5">
           {/* 2 columns of activity data */}
-          <div className="leftDiv flex flex-grow flex-col p-4 px-24 border-2 border-purple-300">
-            <h1 className="text-2xl font-montserrat font-bold">{name}</h1>
+          <div className="flex flex-grow flex-col p-4 px-12 md:order-1 md:px-24">
+            <h1 className="text-3xl font-montserrat font-bold">{name}</h1>
             <p className="font-montserrat text-md leading-8">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -112,13 +112,13 @@ const ActivityPage = ({
             </p>
           </div>
 
-          <div className="rightDiv flex flex-col">
+          <div className="flex flex-col md:order-2">
             <div className="flex flex-col p-10 bg-gray-300 mb-5">
               <div className="my-2">
                 <h3 className="font-bold">Activity Type:</h3>
                 <p>{tags}</p>
               </div>
-              
+
               <div className="my-2">
                 <h3 className="font-bold">Best time to visit:</h3>
                 <p>{tags}</p>
@@ -145,14 +145,18 @@ const ActivityPage = ({
               src={mapSrc}
             ></iframe>
 
-            <button className="w-full bg-gray-400 py-3 mt-5">
-              Check in Google Maps
-            </button>
+            <a
+              target="_blank"
+              className="w-full bg-gray-400 py-3 mt-5 flex justify-center"
+              href={"https://www.google.com/maps"}
+              rel="noopener noreferrer"
+            >
+              <p>Check in Google Maps</p>
+            </a>
           </div>
         </div>
       </div>
     </>
-    // </div>
   );
 };
 
