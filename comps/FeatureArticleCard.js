@@ -10,7 +10,9 @@ const FeatureArticleCard = () => {
         <Image
           alt="article pic"
           src={src}
-          layout="cover"
+          width={500}
+          height={500}
+          layout="responsive"
           objectFit='content'
           className="rounded-t-lg lg:rounded-l-lg lg:rounded-t-none lg:rounded-r-lg"
         />

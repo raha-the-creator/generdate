@@ -3,6 +3,8 @@ import Head from "next/head";
 import ActivityCard from "../../comps/ActivityCard";
 import { useState } from "react";
 import MultiSelect from "multiselect-react-dropdown";
+import NoResults from "../../public/noresults.gif";
+import Image from "next/image";
 
 export async function getServerSideProps({}) {
   const data = await fetch("https://generdate-api.herokuapp.com/activities");
@@ -63,6 +65,7 @@ export default function Heroku({ activities }) {
             (tag.name === "$" && activity.price === tag.name) ||
             (tag.name === "$$" && activity.price === tag.name) ||
             (tag.name === "$$$" && activity.price === tag.name) ||
+            (tag.name === "FREE" && activity.price === tag.name) ||
             activity.location.includes(tag.name)
         )
       );
@@ -90,7 +93,7 @@ export default function Heroku({ activities }) {
         <div class="flex flex-col bg-white rounded-lg w-11/12 justify-start items-center my-1">
           <div className="w-full">
             {/* FILTERS */}
-            <div className="z-50 sticky top-16 p-2 bg-white">
+            <div className="z-40 sticky top-16 p-2 bg-white">
               <div className="flex items-center">
                 <h2 class="text-left text-xl font-roboto-mono font-bold my-2">
                   Activities to explore
@@ -130,19 +133,26 @@ export default function Heroku({ activities }) {
 
             <br></br>
 
-            <div class="flex flex-row flex-wrap w-full">
-              {filterActivitiesByTagsAndQuery().map((activity, index) => (
-                <ActivityCard
-                  key={activity.id}
-                  link={`activities/${index + 2}`}
-                  img={activity.feature}
-                  header={activity.name}
-                  price={activity.price}
-                  city={activity.location}
-                  tags={activity.tags}
-                />
-              ))}
-            </div>
+            {filterActivitiesByTagsAndQuery().length === 0 ? (
+              <div id="noresults" className="flex flex-col items-center p-3">
+                <Image src={NoResults} alt="No results found" width={120} height={120} />
+                <p>Hmm... No results found...</p>
+              </div>
+            ) : (
+              <div class="flex flex-row flex-wrap w-full">
+                {filterActivitiesByTagsAndQuery().map((activity, index) => (
+                  <ActivityCard
+                    key={activity.id}
+                    link={`activities/${index + 2}`}
+                    img={activity.feature}
+                    header={activity.name}
+                    price={activity.price}
+                    city={activity.location}
+                    tags={activity.tags}
+                  />
+                ))}
+              </div>
+            )}
           </div>
         </div>
       </main>
