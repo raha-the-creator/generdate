@@ -51,40 +51,32 @@ export default function Heroku({ activities }) {
     { cat: 'Location', name: "Other" },
   ]
 
-  const filterActivitiesByTags = () => {
-    if (selectedTags.length === 0) {
-      return activities;
+  const filterActivitiesByTagsAndQuery = () => {
+    let filteredActivities = activities;
+
+    // Filter by tags
+    if (selectedTags.length > 0) {
+      filteredActivities = filteredActivities.filter(
+        (activity) =>
+          selectedTags.every(
+            (tag) =>
+              activity.tags.includes(tag.name) ||
+              activity.price.includes(tag.name) ||
+              activity.location.includes(tag.name)
+          )
+      );
     }
 
-    const filteredActivities = activities.filter(
-      (activity) =>
-      selectedTags.every((tag) => activity.tags.includes(tag.name) || activity.price.includes(tag.name) || activity.location.includes(tag.name))
-    );
+    // Filter by query
+    if (query) {
+      filteredActivities = filteredActivities.filter(
+        (activity) =>
+          activity.name.toLowerCase().includes(query.toLowerCase())
+      );
+    }
 
     return filteredActivities;
   };
-
-  //Function for multiple search filter
-  const search = (array) => {
-    return array.filter((el) =>
-      Object.keys(el).some(
-        (name, location) =>
-          (el[name] && el[name].toString().toLowerCase().includes(query)) ||
-          (el[location] &&
-            el[location]?.toString().toLowerCase().includes(query))
-      )
-    );
-  };
-
-  //Applying our search filter function to our array of countries recieved from the API
-  const filtered = search(activities);
-
-  // set the value of our useState query anytime the user types on our input
-  const handleChange = (e) => {
-    setQuery(e.target.value);
-  };
-
-  console.log(selectedTags);
 
   return (
     <>
@@ -107,21 +99,12 @@ export default function Heroku({ activities }) {
               <div class="flex flex-col md:flex-row items-center justify-center">
                 <div class="w-full flex-grow-0 flex-shrink-0 md:w-1/2">
                   <input
-                    onChange={handleChange}
                     type="text"
-                    placeholder="Search by name"
+                    value={query}
+                    onChange={(e) => setQuery(e.target.value)}
+                    placeholder="Search by activity name"
                     className="w-full inline-block rounded box-border border-solid border-2 border-gray-400 p-2 text-sm"
                   />
-                  <div id="selTagsDiv" className="flex flex-wrap mt-2">
-                    {selectedTags.map((tag) => (
-                      <span
-                        key={tag.id}
-                        className="chip"
-                      >
-                        {tag.name}
-                      </span>
-                    ))}
-                  </div>
                 </div>
                 <div class="flex items-center justify-center w-full h-16 md:w-1/2 md:h-10">
                   <div class="flex-1 h-10 w-full px-2">
@@ -147,48 +130,8 @@ export default function Heroku({ activities }) {
 
             <br></br>
 
-            {/* # Filter by activity tag
-            <div className="w-full flex-row">
-              <MultiSelect
-                options={tags}
-                selectedValues={selectedTags}
-                onSelect={handleTagSelect}
-                onRemove={handleTagSelect}
-                displayValue="name"
-                placeholder="Select activity type"
-                style={{
-                  chips: { background: "#C42455" },
-                  "&:hover": { background: "#fad" },
-                }}
-              />
-            </div> */}
-
-            {/* # Filter with search box (by all fields and content)
-            <div className="w-11/12 relative m-4 bg-red flex flex-col md:flex-row justify-between items-start md:items-center gap-5 md:gap-0">
-              <input
-                onChange={handleChange}
-                type="text"
-                placeholder="Type your activity"
-                className="w-auto inline-block rounded box-border border-solid border-2 border-gray-400 p-2"
-              />
-            </div> */}
-
             <div class="flex flex-row flex-wrap w-full">
-              {/* {filtered.map((activity, index) => {
-                return (
-                  <ActivityCard
-                    key={activity.id}
-                    link={`activities/${index + 2}`}
-                    img={activity.feature}
-                    header={activity.name}
-                    price={activity.price}
-                    city={activity.location}
-                    tags={activity.tags}
-                  />
-                );
-              })} */}
-
-              {filterActivitiesByTags().map((activity, index) => (
+              {filterActivitiesByTagsAndQuery().map((activity, index) => (
                 <ActivityCard
                   key={activity.id}
                   link={`activities/${index + 2}`}
