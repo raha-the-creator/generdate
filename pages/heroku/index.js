@@ -99,8 +99,8 @@ export default function Heroku({ activities }) {
                   Activities to explore
                 </h2>
               </div>
-              <div class="flex flex-col md:flex-row items-center justify-center">
-                <div class="w-full flex-grow-0 flex-shrink-0 md:w-1/2">
+              <div class="flex flex-col md:flex-row">
+                <div class="flex w-full flex-grow-0 flex-shrink-0 md:w-1/2">
                   <input
                     type="text"
                     value={query}
@@ -110,7 +110,7 @@ export default function Heroku({ activities }) {
                   />
                 </div>
                 <div class="flex items-center justify-center w-full h-16 md:w-1/2 md:h-10">
-                  <div class="flex-1 h-10 w-full px-2">
+                  <div class="w-full flex-1 h-10 px-2 pt-1">
                     <MultiSelect
                       options={filterTags}
                       selectedValues={selectedTags}
@@ -123,7 +123,7 @@ export default function Heroku({ activities }) {
                         chips: { background: "#C42455" },
                         "&:hover": { background: "#fad" },
                       }}
-                      className="text-sm"
+                      className="text-sm w-full"
                       closeIcon={false}
                     />
                   </div>
@@ -143,7 +143,7 @@ export default function Heroku({ activities }) {
                 {filterActivitiesByTagsAndQuery().map((activity, index) => (
                   <ActivityCard
                     key={activity.id}
-                    link={`activities/${index + 2}`}
+                    link={`heroku/${activity.id}`}
                     img={activity.feature}
                     header={activity.name}
                     price={activity.price}

@@ -22,7 +22,7 @@ export default function Home({ activities }) {
       </Head>
 
       <main className="flex flex-col w-full h-auto text-center justify-center items-center">
-        <div class="flex flex-col h-screen bg-white rounded-lg w-11/12 justify-center items-center my-1">
+        <div class="flex flex-col bg-white rounded-lg w-11/12 justify-center items-center my-1 p-10">
           <h1 className="text-5xl font-bold text-center">
             Random Activities Generator
           </h1>
@@ -37,7 +37,7 @@ export default function Home({ activities }) {
 
             <div class="flex flex-row flex-wrap overflow-x-auto">
               {randomActivities.length > 0 && (
-                <ul className="flex mt-8 space-y-4">
+                <ul className="flex flex-wrap mt-8 space-y-4">
                   {randomActivities.map((activity, index) => (
                     <ActivityCard
                       key={activity.id}

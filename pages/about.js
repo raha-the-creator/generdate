@@ -48,7 +48,7 @@ const About = () => {
         </a>
 
         <p class="font-archivo leading-7 mb-4">
-          2020, I just moved to Vancouver."
+          2020, I just moved to Vancouver.
         </p>
 
         <p class="font-archivo leading-7 mb-4">

@@ -121,7 +121,7 @@ const ActivityPage = ({
 
               <div className="my-2">
                 <h3 className="font-bold">Best time to visit:</h3>
-                <p>{tags}</p>
+                <p>Daytime, close to sunset</p>
               </div>
 
               <div className="my-2">
@@ -131,7 +131,7 @@ const ActivityPage = ({
 
               <div className="my-2">
                 <h3 className="font-bold">Address:</h3>
-                <p>Daytime, evening</p>
+                <p>{address}</p>
               </div>
             </div>
 
