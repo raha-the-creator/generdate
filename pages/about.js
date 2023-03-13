@@ -107,7 +107,7 @@ const About = () => {
           may be then added in here.
         </p>
 
-        <p class="font-archivo leading-7 mb-4">- Raha</p>
+        <p class="font-archivo leading-7 mb-4">- yours truly Raha</p>
       </div>
 
       <div className="fixed bottom-10 right-10">
