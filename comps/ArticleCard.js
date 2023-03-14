@@ -4,28 +4,30 @@ import imglink from "../public/article-img.jpg";
 
 const ArticleCard = (props) => {
   return (
-    <div className="flex flex-col w-auto h-auto pb-20 mb-5 border-2 border-gray-300 rounded-lg md:w-1/2 lg:w-1/4">
-      <Link href="/articles/template">
-        <div className="h-48 relative ">
-          <div className="z-0 absolute w-full h-full">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
+    <div className="flex-grow mb-5 m-2 w-full md:w-1/2 lg:w-1/4">
+      <div className="flex flex-col h-auto w-full border-2 border-gray-200 rounded-lg">
+        <Link href="/articles/template">
+          <div className="h-auto relative ">
+            <div className="w-full h-full">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"
+                style={{ width: "100%", height: "250px", objectFit: "cover" }}
+              />
+            </div>
           </div>
-        </div>
 
-        {/* ///// DIVIDER ///// */}
+          {/* ///// DIVIDER ///// */}
 
-        <div className="h-12 flex flex-col p-5 justify-start">
-          <h3>
-            Check out this new activity this upcoming weekends fadsfadsfa sfdsaf
-          </h3>
-          <p className="text-pink-700 font-archivo font-regular underline underline-offset-4 text-md mt-1">
-            Read
-          </p>
-        </div>
-      </Link>
+          <div className="h-auto flex flex-col p-5 justify-start">
+            <h3 className="text-sm md:text-sm lg:text-xl">
+              Check out this new activity
+            </h3>
+            <p className="text-pink-700 font-archivo font-regular underline underline-offset-4 text-md mt-1 md:text-lg lg:text-xl">
+              Read
+            </p>
+          </div>
+        </Link>
+      </div>
     </div>
   );
 };

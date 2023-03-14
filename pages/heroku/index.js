@@ -7,14 +7,25 @@ import NoResults from "../../public/noresults.gif";
 import Image from "next/image";
 
 export async function getServerSideProps({}) {
-  const data = await fetch("https://generdate-api.herokuapp.com/activities");
-  const activities = await data.json();
+  try {
+    const data = await fetch("https://generdate-api.herokuapp.com/activities");
+    const activities = await data.json();
 
-  return {
-    props: {
-      activities,
-    },
-  };
+    return {
+      props: {
+        activities,
+      },
+    };
+  } catch (error) {
+    // Handle the error by returning an error page or a fallback component
+    return {
+      props: {
+        error: {
+          message: "Failed to fetch activities data",
+        },
+      },
+    };
+  }
 }
 
 export default function Heroku({ activities }) {
@@ -135,7 +146,12 @@ export default function Heroku({ activities }) {
 
             {filterActivitiesByTagsAndQuery().length === 0 ? (
               <div id="noresults" className="flex flex-col items-center p-3">
-                <Image src={NoResults} alt="No results found" width={120} height={120} />
+                <Image
+                  src={NoResults}
+                  alt="No results found"
+                  width={120}
+                  height={120}
+                />
                 <p>Hmm... No results found...</p>
               </div>
             ) : (
@@ -144,6 +160,7 @@ export default function Heroku({ activities }) {
                   <ActivityCard
                     key={activity.id}
                     link={`heroku/${activity.id}`}
+                    as={`/activities/${activity.id}`}
                     img={activity.feature}
                     header={activity.name}
                     price={activity.price}

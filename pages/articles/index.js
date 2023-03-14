@@ -30,7 +30,8 @@ const Article = () => {
           Latest articles
         </h2>
 
-        <div className="flex flex-wrap justify-between">
+        <div className="flex flew-row flex-wrap">
+          <ArticleCard />
           <ArticleCard />
           <ArticleCard />
           <ArticleCard />
