@@ -19,11 +19,14 @@ export async function getServerSideProps({ query }) {
   });
 
   const posts = response.data.values.map((item) => {
+    var strTags = item[3];
+    var tagsArr = strTags.split(",");
+
     return {
       id: item[0],
       name: item[1],
       address: item[2],
-      tag: item[3],
+      tags: tagsArr,
       price: item[4],
       city: item[5],
       img: item[6],
@@ -79,7 +82,7 @@ export default function Activities({ posts }) {
                     header={post.name}
                     price={post.price}
                     city={post.city}
-                    tag={post.tag}
+                    tags={post.tags}
                   />
                 );
               })}

@@ -23,11 +23,14 @@ export async function getServerSideProps({ query }) {
   });
 
   const posts = response.data.values.map((item) => {
+    var strTags = item[3];
+    var tagsArr = strTags.split(",");
+
     return {
       id: item[0],
       name: item[1],
       address: item[2],
-      tag: item[3],
+      tags: tagsArr,
       price: item[4],
       city: item[5],
       img: item[6],
@@ -57,11 +60,11 @@ export default function Home({ posts }) {
       </Head>
 
       <main class="flex flex-col w-full h-full text-center justify-center items-center">
-        {/* <Hero
+        <Hero
           img={heroImg}
           topText="Plan your dates easier with"
           header="GenerDate"
-        /> */}
+        />
 
         <div class="flex w-11/12 justify-center items-center ">
           <ArticleCard />
@@ -74,8 +77,9 @@ export default function Home({ posts }) {
 
           <div class="flex flex-row flex-wrap w-full -mx-4">
             {posts.map((post, index) => (
-                <ActivityCard key={post.id} link={`activities/${index + 2}`} img={post.img} header={post.name} price={post.price} city={post.city} tag={post.tag}/>
+                <ActivityCard key={post.id} link={`activities/${index + 2}`} img={post.img} header={post.name} price={post.price} city={post.city} tags={post.tags}/>
             ))}
+            
           </div>
         </div>
       </main>

@@ -1,10 +1,13 @@
 import React from "react";
 import Head from "next/head";
 import ActivityCard from "../../comps/ActivityCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MultiSelect from "multiselect-react-dropdown";
 import NoResults from "../../public/noresults.gif";
 import Image from "next/image";
+
+import Pagination from "../../comps/Pagination";
+import { paginate } from "../../helpers/paginate";
 
 export async function getServerSideProps({}) {
   try {
@@ -31,6 +34,55 @@ export async function getServerSideProps({}) {
 export default function Heroku({ activities }) {
   const [query, setQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState([]);
+  const [filteredActivities, setFilteredActivities] = useState(activities);
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 9;
+
+  // Pagination
+  const onPageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  const paginatedPosts = paginate(filteredActivities, currentPage, pageSize);
+
+  useEffect(() => {
+    const filtered = filterActivitiesByTagsAndQuery(
+      activities,
+      selectedTags,
+      query
+    );
+    setFilteredActivities(filtered);
+    setCurrentPage(1); // reset current page to 1 when filter changes
+  }, [activities, selectedTags, query]);
+
+  // Filtering
+  const filterActivitiesByTagsAndQuery = (activities, selectedTags, query) => {
+    let filteredActivities = activities;
+
+    // Filter by tags
+    if (selectedTags.length > 0) {
+      filteredActivities = filteredActivities.filter((activity) =>
+        selectedTags.every(
+          (tag) =>
+            activity.tags.includes(tag.name) ||
+            (tag.name === "$" && activity.price === tag.name) ||
+            (tag.name === "$$" && activity.price === tag.name) ||
+            (tag.name === "$$$" && activity.price === tag.name) ||
+            (tag.name === "FREE" && activity.price === tag.name) ||
+            activity.location.includes(tag.name)
+        )
+      );
+    }
+
+    // Filter by query
+    if (query) {
+      filteredActivities = filteredActivities.filter((activity) =>
+        activity.name.toLowerCase().includes(query.toLowerCase())
+      );
+    }
+
+    return filteredActivities;
+  };
 
   const handleTagSelect = (selectedList, selectedItem) => {
     setSelectedTags(selectedList);
@@ -63,34 +115,6 @@ export default function Heroku({ activities }) {
     { cat: "Location", name: "Port Moody" },
     { cat: "Location", name: "Other" },
   ];
-
-  const filterActivitiesByTagsAndQuery = () => {
-    let filteredActivities = activities;
-
-    // Filter by tags
-    if (selectedTags.length > 0) {
-      filteredActivities = filteredActivities.filter((activity) =>
-        selectedTags.every(
-          (tag) =>
-            activity.tags.includes(tag.name) ||
-            (tag.name === "$" && activity.price === tag.name) ||
-            (tag.name === "$$" && activity.price === tag.name) ||
-            (tag.name === "$$$" && activity.price === tag.name) ||
-            (tag.name === "FREE" && activity.price === tag.name) ||
-            activity.location.includes(tag.name)
-        )
-      );
-    }
-
-    // Filter by query
-    if (query) {
-      filteredActivities = filteredActivities.filter((activity) =>
-        activity.name.toLowerCase().includes(query.toLowerCase())
-      );
-    }
-
-    return filteredActivities;
-  };
 
   return (
     <>
@@ -144,22 +168,12 @@ export default function Heroku({ activities }) {
 
             <br></br>
 
-            {filterActivitiesByTagsAndQuery().length === 0 ? (
-              <div id="noresults" className="flex flex-col items-center p-3">
-                <Image
-                  src={NoResults}
-                  alt="No results found"
-                  width={120}
-                  height={120}
-                />
-                <p>Hmm... No results found...</p>
-              </div>
-            ) : (
+            {paginatedPosts.length > 0 ? (
               <div class="flex flex-row flex-wrap w-full">
-                {filterActivitiesByTagsAndQuery().map((activity, index) => (
+                {paginatedPosts.map((activity) => (
                   <ActivityCard
                     key={activity.id}
-                    link={`heroku/${activity.id}`}
+                    link={`/activities/${activity.id}`}
                     as={`/activities/${activity.id}`}
                     img={activity.feature}
                     header={activity.name}
@@ -169,7 +183,26 @@ export default function Heroku({ activities }) {
                   />
                 ))}
               </div>
+            ) : (
+              <div className="w-full h-96 flex flex-col items-center justify-center">
+                <Image
+                  src={NoResults}
+                  alt="No results found"
+                  width={120}
+                  height={120}
+                />
+                <p className="text-xl font-bold">No results found</p>
+              </div>
             )}
+
+            <div className="flex w-auto justify-center">
+              <Pagination
+                items={filteredActivities.length} // 49
+                currentPage={currentPage}
+                pageSize={pageSize}
+                onPageChange={onPageChange}
+              />
+            </div>
           </div>
         </div>
       </main>

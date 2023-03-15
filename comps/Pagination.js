@@ -6,21 +6,21 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange }) => {
   if (pagesCount === 1) return null;
 
   const pages = Array.from({ length: pagesCount }, (_, i) => i + 1);
-  console.log(pages);
 
   return (
-    <div className="w-1/4">
-      <ul className="flex justify-between items-center list-none">
+    <div className="flex flex-col items-center justify-center">
+        <p className="text-xl my-2">Pages</p>
+      <ul className="flex rounded-md border border-gray-300 divide-x divide-gray-300">
         {pages.map((page) => (
           <li
             key={page}
             className={
-              page === currentPage ? "flex justify-center items-center w-8 h-8 cursor-pointer bg-gray-500 text-white rounded-full" : "flex justify-center items-center w-8 h-8 rounded-lg cursor-pointer "
+              page === currentPage
+                ? "px-3 py-2 font-medium text-gray-700 bg-gray-200 cursor-pointer"
+                : "px-3 py-2 font-medium text-gray-500 cursor-pointer hover:text-gray-700 hover:bg-gray-100"
             }
           >
-            <a className="cursor-pointer" onClick={() => onPageChange(page)}>
-              {page}
-            </a>
+            <a onClick={() => onPageChange(page)}>{page}</a>
           </li>
         ))}
       </ul>
