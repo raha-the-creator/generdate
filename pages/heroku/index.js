@@ -41,6 +41,7 @@ export default function Heroku({ activities }) {
   // Pagination
   const onPageChange = (page) => {
     setCurrentPage(page);
+    window.scrollTo(0, 0);
   };
 
   const paginatedPosts = paginate(filteredActivities, currentPage, pageSize);
@@ -195,14 +196,16 @@ export default function Heroku({ activities }) {
               </div>
             )}
 
-            <div className="flex w-auto justify-center">
-              <Pagination
-                items={filteredActivities.length} // 49
-                currentPage={currentPage}
-                pageSize={pageSize}
-                onPageChange={onPageChange}
-              />
-            </div>
+            {paginatedPosts.length > 0 && (
+              <div className="flex w-auto justify-center">
+                <Pagination
+                  items={filteredActivities.length} // 49
+                  currentPage={currentPage}
+                  pageSize={pageSize}
+                  onPageChange={onPageChange}
+                />
+              </div>
+            )}
           </div>
         </div>
       </main>
