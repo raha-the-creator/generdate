@@ -115,7 +115,7 @@ const About = () => {
 
         <p class="font-archivo leading-7 mb-4">- yours truly Raha</p>
 
-        <a target="_blank" href={"https://forms.gle/2E4e1QnbsR54CxS48"}>
+        <a target="_blank" rel="noreferrer" href={"https://forms.gle/2E4e1QnbsR54CxS48"}>
           <p className="inline-block px-6 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600">
             Fill Out the Google Form
           </p>
