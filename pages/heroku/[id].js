@@ -89,13 +89,13 @@ export default function ActivityPage({ activity }) {
             <h1 className="text-3xl font-bold font-roboto-mono">
               {activity.name}
             </h1>
-            <p className="font-roboto-mono text-md leading-8 mt-2">
+            <p className="font-archivo text-md leading-8 mt-2">
               {activity.about}
             </p>
             <h2 className="font-roboto-mono font-bold text-2xl leading-7 mt-10">
               Why go here?
             </h2>
-            <p className="font-roboto-mono text-md leading-7 mt-2">
+            <p className="font-archivo text-md leading-7 mt-2">
               {activity.notes}
             </p>
           </div>
