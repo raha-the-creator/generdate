@@ -57,6 +57,14 @@ export default function ActivityPage({ activity }) {
       {/* NEW HERO */}
       <div class="flex justify-center items-center relative w-full h-96 p-20">
         <div class="absolute object-cover w-full h-full">
+          {/* <Image
+            src={activity.feature}
+            style={{ width: "100%", height: "100%", objectFit: "cover" }}
+            width={1920}
+            height={1080}
+            alt="feature image"
+            loading="lazy"
+          /> */}
           <img
             src={activity.feature}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
@@ -96,8 +104,8 @@ export default function ActivityPage({ activity }) {
             <div className="flex flex-col p-10 bg-gray-300 mb-5">
               <div className="my-2">
                 <h3 className="font-bold">Activity Type:</h3>
-                {activity.tags.map((tag) => {
-                  return <p>{tag}</p>;
+                {activity.tags.map((tag, index) => {
+                  return <p key={index}>{tag}</p>;
                 })}
               </div>
 
@@ -141,4 +149,3 @@ export default function ActivityPage({ activity }) {
     </>
   );
 }
-
