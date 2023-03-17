@@ -61,6 +61,7 @@ export default function ActivityPage({ activity }) {
             src={activity.feature}
             style={{ width: "100%", height: "100%", objectFit: "cover" }}
             alt="feature image"
+            loading="lazy"
           />
         </div>
 
