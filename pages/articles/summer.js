@@ -29,7 +29,7 @@ const SummerActivities = () => {
         </h2>
         <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
-        <a href="https://google.com">
+        <a href="https://www.instagram.com/rah0nty/">
           <div class="flex flex-row py-2 items-center">
             <div class="flex items-center p-2 rounded-full">
               <Image

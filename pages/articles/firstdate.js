@@ -27,7 +27,7 @@ const Article = () => {
         <h2 class="font-archivo font-semibold text-4xl my-5">Best "First Date" spots to check out in Vancouver</h2>
         <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
-        <a href="https://google.com">
+        <a href="https://www.instagram.com/rah0nty/">
           <div class="flex flex-row py-2 items-center">
             <div class="flex items-center p-2 rounded-full">
               <Image src={author} width={50} height={50} alt="author image" className="rounded-full"/>

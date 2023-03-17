@@ -29,16 +29,22 @@ const About = () => {
         header="GenerDate"
       />
 
-      <div class="flex flex-col w-2/4 mt-4 sm:my-0 ">
+      <div class="flex flex-col w-3/4 mt-4 sm:my-0 lg:w-1/2">
         <h2 class="font-archivo font-semibold text-4xl mt-8">
           How I came up with this app idea?
         </h2>
         <hr class="h-px my-2 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
-        <a href="https://google.com">
+        <a href="https://www.instagram.com/rah0nty/">
           <div class="flex flex-row py-2 items-center">
             <div class="flex items-center p-2 rounded-full">
-              <Image src={author} width={50} height={50} alt="author image" className="rounded-full"/>
+              <Image
+                src={author}
+                width={50}
+                height={50}
+                alt="author image"
+                className="rounded-full"
+              />
             </div>
             <div>
               <h2 class="font-archivo font-bold p-0 text-md">Raha</h2>
@@ -48,7 +54,7 @@ const About = () => {
         </a>
 
         <p class="font-archivo leading-7 mb-4">
-          2020, I just moved to Vancouver.
+          December, 2020. I just moved to Vancouver.
         </p>
 
         <p class="font-archivo leading-7 mb-4">
@@ -76,10 +82,10 @@ const About = () => {
 
         <p class="font-archivo leading-7 mb-4">
           Recently I was thinking "Hey, why don't I create a web app that will
-          let me to create a list of saved ideas and being able to see them?". I
-          looked online for date ideas generators and found forms that gives you
-          ideas after setting filters. Most of them didn't have any interface
-          and would be just regular questionary form. Few only did have a decent
+          let me to look for date idea according to my filters?". I looked
+          online for date ideas generators and found forms that gives you ideas
+          after setting filters. Most of them didn't have any interface and
+          would be just regular questionary form. Few only did have a decent
           interface. BUT all of them had something in common. The ideas were too
           general, and you still had to research those places yourself (let's
           say after completing the form, it tells you to go to a park. Which
@@ -94,9 +100,8 @@ const About = () => {
           Then, I started to think about my app more thoroughly. Any time me and
           my friends would talk about dates and give each other some tips, I
           would try to keep them in my head or even write them down. In
-          GenerDate, you will be able to see articles of selected activities,
-          general tips for choosing the right activity with someone, or just
-          funny stuff.
+          GenerDate, you will be able to filter activities, get general tips for
+          choosing the right activity with someone, or just funny stuff.
         </p>
 
         <p class="font-archivo leading-7 mb-4">
@@ -104,10 +109,17 @@ const About = () => {
           from "Where should I take out /name of someone/ on the date?". The
           data shown in here is my own selection of checked places. Please be
           more than welcomed to suggest your places and activities. Your ideas
-          may be then added in here.
+          may be then added in here if you fill out my Google Form with
+          suggested place (find the link below)
         </p>
 
         <p class="font-archivo leading-7 mb-4">- yours truly Raha</p>
+
+        <a target="_blank" href={"https://forms.gle/2E4e1QnbsR54CxS48"}>
+          <p className="inline-block px-6 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600">
+            Fill Out the Google Form
+          </p>
+        </a>
       </div>
 
       <div className="fixed bottom-10 right-10">

@@ -6,6 +6,7 @@ import Hero from "../comps/Hero";
 import heroImg from "../public/hero-home.jpg";
 import ArticleCard from "../comps/FeatureArticleCard";
 import ActivityCard from "../comps/ActivityCard";
+import ArticleCardComp from "../comps/ArticleCard";
 
 import { google } from "googleapis";
 import postcss from "postcss";
@@ -36,8 +37,6 @@ export async function getServerSideProps({ query }) {
       img: item[6],
     };
   });
-
-  console.log(posts);
 
   return {
     props: {
@@ -72,14 +71,35 @@ export default function Home({ posts }) {
 
         <div class="flex flex-col px-12 bg-white rounded-lg w-11/12 justify-start mb-6">
           <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">
-            Popular places
+            Popular articles
           </h2>
 
           <div class="flex flex-row flex-wrap w-full -mx-4">
-            {posts.map((post, index) => (
+            {/* {posts.map((post, index) => (
                 <ActivityCard key={post.id} link={`activities/${index + 2}`} img={post.img} header={post.name} price={post.price} city={post.city} tags={post.tags}/>
-            ))}
-            
+            ))} */}
+
+            <ArticleCardComp
+              title={"Best summer activities"}
+              img={
+                "https://media.istockphoto.com/id/610864024/photo/couple-kayaking-together.jpg?s=612x612&w=0&k=20&c=zeioetaU5WM6uUnZAGoWBHnkilMeK1pexGX1ZitPU1o="
+              }
+              link={"/articles/summer"}
+            />
+            <ArticleCardComp
+              title={"Article"}
+              img={
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"
+              }
+              link={"/articles/"}
+            />
+            <ArticleCardComp
+              title={"Article"}
+              img={
+                "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"
+              }
+              link={"/articles/"}
+            />
           </div>
         </div>
       </main>
