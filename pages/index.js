@@ -8,44 +8,44 @@ import ArticleCard from "../comps/FeatureArticleCard";
 import ActivityCard from "../comps/ActivityCard";
 import ArticleCardComp from "../comps/ArticleCard";
 
-import { google } from "googleapis";
-import postcss from "postcss";
+// import { google } from "googleapis";
+// import postcss from "postcss";
 
-export async function getServerSideProps({ query }) {
-  const auth = await google.auth.getClient({
-    scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
-  });
+// export async function getServerSideProps({ query }) {
+//   const auth = await google.auth.getClient({
+//     scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
+//   });
 
-  const sheets = google.sheets({ version: "v4", auth });
+//   const sheets = google.sheets({ version: "v4", auth });
 
-  const response = await sheets.spreadsheets.values.get({
-    spreadsheetId: process.env.SHEET_ID,
-    range: "Sheet1!A2:G7",
-  });
+//   const response = await sheets.spreadsheets.values.get({
+//     spreadsheetId: process.env.SHEET_ID,
+//     range: "Sheet1!A2:G7",
+//   });
 
-  const posts = response.data.values.map((item) => {
-    var strTags = item[3];
-    var tagsArr = strTags.split(",");
+//   const posts = response.data.values.map((item) => {
+//     var strTags = item[3];
+//     var tagsArr = strTags.split(",");
 
-    return {
-      id: item[0],
-      name: item[1],
-      address: item[2],
-      tags: tagsArr,
-      price: item[4],
-      city: item[5],
-      img: item[6],
-    };
-  });
+//     return {
+//       id: item[0],
+//       name: item[1],
+//       address: item[2],
+//       tags: tagsArr,
+//       price: item[4],
+//       city: item[5],
+//       img: item[6],
+//     };
+//   });
 
-  return {
-    props: {
-      posts,
-    },
-  };
-}
+//   return {
+//     props: {
+//       posts,
+//     },
+//   };
+// }
 
-export default function Home({ posts }) {
+export default function Home({ }) {
   return (
     <>
       <Head>
