@@ -41,7 +41,8 @@ export default function Home({ activities }) {
                   {randomActivities.map((activity, index) => (
                     <ActivityCard
                       key={activity.id}
-                      link={`activities/${index + 2}`}
+                      link={`/heroku/${activity.id}`}
+                      as={`/heroku/${activity.id}`}
                       img={activity.feature}
                       header={activity.name}
                       price={activity.price}
