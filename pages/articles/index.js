@@ -6,6 +6,8 @@ import FeatureArticleCard from "../../comps/FeatureArticleCard";
 import heroImg from "../../public/article-hero.jpg";
 import Hero from "../../comps/Hero";
 
+// https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg
+
 const Article = () => {
   return (
     <div className="bg-red-white">
@@ -31,12 +33,9 @@ const Article = () => {
         </h2>
 
         <div className="flex flew-row flex-wrap">
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
-          <ArticleCard />
+          <ArticleCard title={"Best summer activities"} img={"https://media.istockphoto.com/id/610864024/photo/couple-kayaking-together.jpg?s=612x612&w=0&k=20&c=zeioetaU5WM6uUnZAGoWBHnkilMeK1pexGX1ZitPU1o="} link={"/articles/summer"} />
+          <ArticleCard title={"Article"} img={"https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"} link={"/articles/"} />
+          <ArticleCard title={"Article"} img={"https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"} link={"/articles/"} />
         </div>
       </div>
     </div>
