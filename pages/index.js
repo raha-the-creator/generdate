@@ -45,7 +45,7 @@ import ArticleCardComp from "../comps/ArticleCard";
 //   };
 // }
 
-export default function Home({ }) {
+export default function Home({}) {
   return (
     <>
       <Head>
@@ -65,13 +65,56 @@ export default function Home({ }) {
           header="GenerDate"
         />
 
-        <div class="flex w-11/12 justify-center items-center ">
+        {/* <div class="flex w-11/12 justify-center items-center ">
           <ArticleCard />
+        </div> */}
+
+        <div class="flex flex-col bg-white mb-4 w-full justify-center items-center px-12 lg:px-32">
+          <section className="flex flex-wrap items-center bg-white">
+            <div className="w-full lg:w-1/2 text-left py-4">
+              <h2 className="text-3xl font-bold mb-4">About GenerDate</h2>
+              <p className="mb-4 text-lg">
+                Tired of the same old dinner-and-a-movie routine? Look no
+                further than GenerDate, where it offers a wide range of unique
+                and exciting date ideas to help you and your partner create
+                unforgettable memories.
+              </p>
+              <p className="mb-4 text-lg">
+                This easy-to-use web app allows you to filter your search for
+                date ideas based on your preferred location, budget, and
+                interests. Whether you're looking for a romantic night out or a
+                fun-filled adventure, we have plenty of options to choose from.
+              </p>
+              <p className="mb-4 text-lg">
+                But that's not all – our blog is full of helpful articles and
+                tips to make your date planning experience even better. From
+                choosing the perfect spot for a first date to navigating the
+                different seasons in Vancouver, this blog has everything you
+                need to know to plan the perfect date.
+              </p>
+              <p className="mb-4 text-lg">
+                Check out GenerDate and start exploring all the amazing date
+                ideas that Vancouver has to offer!
+              </p>
+            </div>
+            <div className="w-full flex items-center p-4 lg:w-1/2 mb-8 lg:mb-0 lg:pr-8 sm:items-center sm:justify-center">
+              <div className="h-full lg:px-4">
+                <Image
+                  src="/features.jpg"
+                  alt="About Us Image"
+                  width={750}
+                  height={800}
+                  objectFit="cover"
+                />
+                <p>Features</p>
+              </div>
+            </div>
+          </section>
         </div>
 
         <div class="flex flex-col px-12 bg-white rounded-lg w-11/12 justify-start mb-6">
           <h2 class="text-left text-3xl font-roboto-mono font-bold my-4">
-            Popular articles
+            Popular activities
           </h2>
 
           <div class="flex flex-row flex-wrap w-full -mx-4">
@@ -79,26 +122,35 @@ export default function Home({ }) {
                 <ActivityCard key={post.id} link={`activities/${index + 2}`} img={post.img} header={post.name} price={post.price} city={post.city} tags={post.tags}/>
             ))} */}
 
-            <ArticleCardComp
-              title={"Best summer activities"}
+            <ActivityCard
+              link={"/heroku/0"}
               img={
-                "https://media.istockphoto.com/id/610864024/photo/couple-kayaking-together.jpg?s=612x612&w=0&k=20&c=zeioetaU5WM6uUnZAGoWBHnkilMeK1pexGX1ZitPU1o="
+                "https://www.vancouverplanner.com/wp-content/uploads/2019/04/sea-to-sky-lookout.jpg"
               }
-              link={"/articles/summer"}
+              header={"Sea to Sky Gondola"}
+              price={"$$$"}
+              city={"Squamish"}
+              tags={["Outdoor", "View"]}
             />
-            <ArticleCardComp
-              title={"Article"}
+            <ActivityCard
+              link={"/heroku/1"}
               img={
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"
+                "https://ssmscdn.yp.ca/image/resize/15b2b515-8ed2-478c-b60f-99eb418e77dc/ypui-d-mp-pic-gal-lg/steveston-pizza-co-ltd-4.jpg"
               }
-              link={"/articles/"}
+              header={"Steveston Pizza Company (Richmond)"}
+              price={"$$"}
+              city={"Richmond"}
+              tags={["Indoor", "Eating"]}
             />
-            <ArticleCardComp
-              title={"Article"}
+            <ActivityCard
+              link={"/heroku/2"}
               img={
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"
+                "https://tryhiddengems.com/wp-content/uploads/2017/11/PerSeSocialCorner2-1024x768.jpg"
               }
-              link={"/articles/"}
+              header={"per se Social Corner"}
+              price={"$$"}
+              city={"Vancouver"}
+              tags={["Indoor", "Eating"]}
             />
           </div>
         </div>
