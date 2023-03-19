@@ -69,7 +69,7 @@ const ActivityCard = (props) => {
           {/* ///// DIVIDER ///// */}
 
           <div class="h-12 flex flex-col items-start p-4">
-            <p class="font-roboto-mono text-xl font-medium mt-2 text-left">
+            <p class="font-roboto-mono text-base font-medium mt-2 text-left lg:text-xl">
               {props.header}
             </p>
             <div class="flex ">
