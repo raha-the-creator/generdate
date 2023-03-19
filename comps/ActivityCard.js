@@ -14,7 +14,7 @@ const ActivityCard = (props) => {
         href={props.link}
       >
         <div class="flex flex-col w-full h-auto pb-24 mb-5 border-2 border-gray-300 rounded-lg">
-          <div class="h-48 sm:h-64 relative">
+          <div class="h-52 sm:h-64 relative">
             <div class="z-0 absolute w-full h-full ">
               <img
                 src={props.img}
