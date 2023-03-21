@@ -36,7 +36,7 @@ function MobileNav({ open, setOpen }) {
       </div>
       <div className="flex flex-col ml-4">
         <Link
-          className="text-xl font-montserrat font-normal my-4"
+          className="text-xl font-montserrat font-regular my-4"
           href="/"
           onClick={() =>
             setTimeout(() => {
@@ -47,7 +47,7 @@ function MobileNav({ open, setOpen }) {
           Home
         </Link>
         <Link
-          className="text-xl font-normal my-4"
+          className="text-xl font-montserrat font-regular my-4"
           href="/heroku"
           onClick={() =>
             setTimeout(() => {
@@ -58,7 +58,7 @@ function MobileNav({ open, setOpen }) {
           Search
         </Link>
         <Link
-          className="text-xl font-normal my-4"
+          className="text-xl font-montserrat font-regular my-4"
           href="/articles"
           onClick={() =>
             setTimeout(() => {
@@ -69,7 +69,7 @@ function MobileNav({ open, setOpen }) {
           Articles
         </Link>
         <Link
-          className="text-xl font-normal my-4"
+          className="text-xl font-montserrat font-regular my-4"
           href="/random"
           onClick={() =>
             setTimeout(() => {
@@ -80,7 +80,7 @@ function MobileNav({ open, setOpen }) {
           Generate Ideas
         </Link>
         <Link
-          className="text-xl font-normal my-4"
+          className="text-xl font-montserrat font-regular my-4"
           href="/about"
           onClick={() =>
             setTimeout(() => {
