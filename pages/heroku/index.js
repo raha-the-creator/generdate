@@ -1,7 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import ActivityCard from "../../comps/ActivityCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import MultiSelect from "multiselect-react-dropdown";
 import NoResults from "../../public/noresults.gif";
 import Image from "next/image";
@@ -44,7 +44,9 @@ export default function Heroku({ activities }) {
     window.scrollTo(0, 0);
   };
 
-  const paginatedPosts = paginate(filteredActivities, currentPage, pageSize);
+  const paginatedPosts = useMemo(() => {
+    return paginate(filteredActivities, currentPage, pageSize);
+  }, [filteredActivities, currentPage, pageSize]);
 
   useEffect(() => {
     const filtered = filterActivitiesByTagsAndQuery(
@@ -57,7 +59,7 @@ export default function Heroku({ activities }) {
   }, [activities, selectedTags, query]);
 
   // Filtering
-  const filterActivitiesByTagsAndQuery = (activities, selectedTags, query) => {
+  const filterActivitiesByTagsAndQuery = useCallback(() => {
     let filteredActivities = activities;
 
     // Filter by tags
@@ -83,7 +85,7 @@ export default function Heroku({ activities }) {
     }
 
     return filteredActivities;
-  };
+  }, [activities, selectedTags, query]);
 
   const handleTagSelect = (selectedList, selectedItem) => {
     setSelectedTags(selectedList);
@@ -117,7 +119,7 @@ export default function Heroku({ activities }) {
     { cat: "Location", name: "Other" },
   ];
 
-  console.log(paginatedPosts)
+  console.log(paginatedPosts);
 
   return (
     <>
