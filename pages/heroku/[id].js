@@ -33,7 +33,8 @@ export async function getServerSideProps({ params }) {
 
 export default function ActivityPage({ activity }) {
   const router = useRouter();
-  const mapSrc = `https://maps.google.com/maps?&q="+${activity.address}"&output=embed`;
+  const mapSrc = `https://maps.google.com/maps?&q=4200 Willingdon Ave&output=embed`;
+  // const mapSrc = `https://maps.google.com/maps?&q="+${activity.address}"&output=embed`;
 
   if (router.isFallback) {
     return <div>Loading...</div>;

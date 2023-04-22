@@ -1,3 +1,5 @@
+New contribitor!
+
 ## GenerDate🍒
 # How I came up with this idea?
 
