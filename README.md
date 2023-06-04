@@ -18,8 +18,4 @@ I hope you find my app very usefull and it will give you less headache from "Whe
 
 
 -Raha
-
 //
-
-## 📫 Figma Mockup
-Link: https://www.figma.com/proto/om47tgtb9nNuojKgO98F8I/Personal?page-id=415%3A228&node-id=416%3A236&starting-point-node-id=416%3A236
