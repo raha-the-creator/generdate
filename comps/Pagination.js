@@ -19,8 +19,9 @@ const Pagination = ({ items, pageSize, currentPage, onPageChange }) => {
                 ? "px-3 py-2 font-medium text-gray-700 bg-gray-300 cursor-pointer"
                 : "px-3 py-2 font-medium text-gray-500 cursor-pointer hover:text-gray-700 hover:bg-gray-100"
             }
+            onClick={() => onPageChange(page)}
           >
-            <a onClick={() => onPageChange(page)}>{page}</a>
+            <a>{page}</a>
           </li>
         ))}
       </ul>
