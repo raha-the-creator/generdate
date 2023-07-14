@@ -91,6 +91,12 @@ export default function Heroku({ activities }) {
     setSelectedTags(selectedList);
   };
 
+  // Clear filters
+  const clearFilters = () => {
+    setSelectedTags([]);
+    setQuery("")
+  };
+
   const filterTags = [
     { cat: "Activity Type", name: "Outdoor" },
     { cat: "Activity Type", name: "Indoor" },
@@ -119,7 +125,7 @@ export default function Heroku({ activities }) {
     { cat: "Location", name: "Other" },
   ];
 
-  console.log(paginatedPosts);
+  // console.log(paginatedPosts);
 
   return (
     <>
@@ -146,7 +152,7 @@ export default function Heroku({ activities }) {
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                     placeholder="Search by activity name"
-                    className="w-full inline-block rounded box-border border-solid border-2 border-gray-400 p-2 text-sm"
+                    className="w-full inline-block rounded box-border border-solid border border-gray-300 p-2 text-sm"
                   />
                 </div>
                 <div class="flex items-center justify-center w-full h-16 md:w-1/2 md:h-10">
@@ -168,6 +174,13 @@ export default function Heroku({ activities }) {
                     />
                   </div>
                 </div>
+
+                <button
+                  className="box-border border-solid border bg-pink-700 text-sm font-medium text-white rounded mx-1 px-3 "
+                  onClick={clearFilters}
+                >
+                  Clear filters
+                </button>
               </div>
             </div>
 
