@@ -108,6 +108,11 @@ export default function ActivityPage({ location }) {
                   return <p key={index}>{tag}</p>;
                 })}
               </div>
+              
+              <div className="my-2">
+                <h3 className="font-bold">Activity Price:</h3>
+                <p>{location.fields.price}</p>
+              </div>
 
               <div className="my-2">
                 <h3 className="font-bold">Best time to visit:</h3>
