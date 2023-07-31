@@ -21,6 +21,7 @@ export async function getStaticProps() {
   return {
     props: {
       locations: res.items,
+      revalidate: 5
     },
   };
 }
