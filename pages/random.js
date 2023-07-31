@@ -1,17 +1,32 @@
 import Head from "next/head";
+import { createClient } from "contentful";
 import { useState } from "react";
 import axios from "axios";
 import ActivityCard from "../comps/ActivityCard";
 
-export default function Home({ activities }) {
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
+
+  const res = await client.getEntries({ content_type: "locations" });
+
+  return {
+    props: {
+      locations: res.items,
+      revalidate: 5
+    },
+  };
+}
+
+export default function Home({ locations }) {
   const [randomActivities, setRandomActivities] = useState([]);
 
   const handleRandomizeClick = () => {
-    const shuffledActivities = [...activities].sort(() => 0.5 - Math.random());
+    const shuffledActivities = [...locations].sort(() => 0.5 - Math.random());
     setRandomActivities(shuffledActivities.slice(0, 5));
   };
-
-  console.log(randomActivities);
 
   return (
     <>
@@ -38,16 +53,18 @@ export default function Home({ activities }) {
             <div class="flex flex-row flex-wrap overflow-x-auto">
               {randomActivities.length > 0 && (
                 <ul className="flex flex-wrap mt-8 space-y-4">
-                  {randomActivities.map((activity, index) => (
+                  {randomActivities.map((location, index) => (
                     <ActivityCard
-                      key={activity.id}
-                      link={`/heroku/${activity.id}`}
-                      as={`/heroku/${activity.id}`}
-                      img={activity.feature}
-                      header={activity.name}
-                      price={activity.price}
-                      city={activity.location}
-                      tags={activity.tags}
+                      key={location.sys.id}
+                      link={`/activities/${location.fields.slug}`}
+                      as={`/activities/${location.fields.slug}`}
+                      img={
+                        "https:" + location.fields.featureImage.fields.file.url
+                      }
+                      header={location.fields.name}
+                      price={location.fields.price}
+                      city={location.fields.city}
+                      tags={location.fields.tags}
                     />
                   ))}
                 </ul>
@@ -58,15 +75,4 @@ export default function Home({ activities }) {
       </main>
     </>
   );
-}
-
-export async function getServerSideProps({}) {
-  const data = await fetch("https://generdate-api.herokuapp.com/activities");
-  const activities = await data.json();
-
-  return {
-    props: {
-      activities,
-    },
-  };
 }

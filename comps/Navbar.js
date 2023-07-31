@@ -48,7 +48,7 @@ function MobileNav({ open, setOpen }) {
         </Link>
         <Link
           className="text-xl font-montserrat font-regular my-4"
-          href="/heroku"
+          href="/activities"
           onClick={() =>
             setTimeout(() => {
               setOpen(!open);
@@ -141,7 +141,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex">
           <NavLink class="font-montserrat font-semibold" to="/">Home</NavLink>
-          <NavLink to="/heroku">Search</NavLink>
+          <NavLink to="/activities">Search</NavLink>
           <NavLink to="/random">Generate Ideas</NavLink>
           <NavLink to="/articles">Articles</NavLink>
           <NavLink to="/about">About</NavLink>

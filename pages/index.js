@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { createClient } from "contentful";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -8,44 +9,23 @@ import ArticleCard from "../comps/FeatureArticleCard";
 import ActivityCard from "../comps/ActivityCard";
 import ArticleCardComp from "../comps/ArticleCard";
 
-// import { google } from "googleapis";
-// import postcss from "postcss";
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
 
-// export async function getServerSideProps({ query }) {
-//   const auth = await google.auth.getClient({
-//     scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"],
-//   });
+  const res = await client.getEntries({ content_type: "locations" });
 
-//   const sheets = google.sheets({ version: "v4", auth });
+  return {
+    props: {
+      locations: res.items.slice(0, 3),
+      revalidate: 5
+    },
+  };
+}
 
-//   const response = await sheets.spreadsheets.values.get({
-//     spreadsheetId: process.env.SHEET_ID,
-//     range: "Sheet1!A2:G7",
-//   });
-
-//   const posts = response.data.values.map((item) => {
-//     var strTags = item[3];
-//     var tagsArr = strTags.split(",");
-
-//     return {
-//       id: item[0],
-//       name: item[1],
-//       address: item[2],
-//       tags: tagsArr,
-//       price: item[4],
-//       city: item[5],
-//       img: item[6],
-//     };
-//   });
-
-//   return {
-//     props: {
-//       posts,
-//     },
-//   };
-// }
-
-export default function Home({}) {
+export default function Home({ locations }) {
   return (
     <>
       <Head>
@@ -64,10 +44,6 @@ export default function Home({}) {
           topText="Plan your dates easier with"
           header="GenerDate"
         />
-
-        {/* <div class="flex w-11/12 justify-center items-center ">
-          <ArticleCard />
-        </div> */}
 
         <div class="flex flex-col bg-white mb-4 w-full justify-center items-center px-12 lg:px-32">
           <section className="flex flex-wrap items-center bg-white">
@@ -118,40 +94,18 @@ export default function Home({}) {
           </h2>
 
           <div class="flex flex-row flex-wrap w-full -mx-4">
-            {/* {posts.map((post, index) => (
-                <ActivityCard key={post.id} link={`activities/${index + 2}`} img={post.img} header={post.name} price={post.price} city={post.city} tags={post.tags}/>
-            ))} */}
-
-            <ActivityCard
-              link={"/heroku/0"}
-              img={
-                "https://www.vancouverplanner.com/wp-content/uploads/2019/04/sea-to-sky-lookout.jpg"
-              }
-              header={"Sea to Sky Gondola"}
-              price={"$$$"}
-              city={"Squamish"}
-              tags={["Outdoor", "View"]}
-            />
-            <ActivityCard
-              link={"/heroku/1"}
-              img={
-                "https://ssmscdn.yp.ca/image/resize/15b2b515-8ed2-478c-b60f-99eb418e77dc/ypui-d-mp-pic-gal-lg/steveston-pizza-co-ltd-4.jpg"
-              }
-              header={"Steveston Pizza Company (Richmond)"}
-              price={"$$"}
-              city={"Richmond"}
-              tags={["Indoor", "Eating"]}
-            />
-            <ActivityCard
-              link={"/heroku/2"}
-              img={
-                "https://tryhiddengems.com/wp-content/uploads/2017/11/PerSeSocialCorner2-1024x768.jpg"
-              }
-              header={"per se Social Corner"}
-              price={"$$"}
-              city={"Vancouver"}
-              tags={["Indoor", "Eating"]}
-            />
+            {locations.map((location) => (
+              <ActivityCard
+                key={location.sys.id}
+                link={`/activities/${location.fields.slug}`}
+                as={`/activities/${location.fields.slug}`}
+                img={"https:" + location.fields.featureImage.fields.file.url}
+                header={location.fields.name}
+                price={location.fields.price}
+                city={location.fields.city}
+                tags={location.fields.tags}
+              />
+            ))}
           </div>
         </div>
       </main>

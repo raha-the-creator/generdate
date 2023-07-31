@@ -1,4 +1,5 @@
 import React from "react";
+import { createClient } from "contentful";
 import Head from "next/head";
 import ActivityCard from "../../comps/ActivityCard";
 import { useState, useEffect, useMemo, useCallback } from "react";
@@ -9,32 +10,26 @@ import Image from "next/image";
 import Pagination from "../../comps/Pagination";
 import { paginate } from "../../helpers/paginate";
 
-export async function getServerSideProps({}) {
-  try {
-    const data = await fetch("https://generdate-api.herokuapp.com/activities");
-    const activities = await data.json();
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
 
-    return {
-      props: {
-        activities,
-      },
-    };
-  } catch (error) {
-    // Handle the error by returning an error page or a fallback component
-    return {
-      props: {
-        error: {
-          message: "Failed to fetch activities data",
-        },
-      },
-    };
-  }
+  const res = await client.getEntries({ content_type: "locations" });
+
+  return {
+    props: {
+      locations: res.items,
+      revalidate: 5
+    },
+  };
 }
 
-export default function Heroku({ activities }) {
+export default function Locations({ locations }) {
   const [query, setQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState([]);
-  const [filteredActivities, setFilteredActivities] = useState(activities);
+  const [filteredLocations, setFilteredLocations] = useState(locations);
   const [currentPage, setCurrentPage] = useState(1);
   const pageSize = 9;
 
@@ -45,47 +40,47 @@ export default function Heroku({ activities }) {
   };
 
   const paginatedPosts = useMemo(() => {
-    return paginate(filteredActivities, currentPage, pageSize);
-  }, [filteredActivities, currentPage, pageSize]);
+    return paginate(filteredLocations, currentPage, pageSize);
+  }, [filteredLocations, currentPage, pageSize]);
 
   useEffect(() => {
-    const filtered = filterActivitiesByTagsAndQuery(
-      activities,
+    const filtered = filterLocationsByTagsAndQuery(
+      locations,
       selectedTags,
       query
     );
-    setFilteredActivities(filtered);
+    setFilteredLocations(filtered);
     setCurrentPage(1); // reset current page to 1 when filter changes
-  }, [activities, selectedTags, query]);
+  }, [locations, selectedTags, query]);
 
   // Filtering
-  const filterActivitiesByTagsAndQuery = useCallback(() => {
-    let filteredActivities = activities;
+  const filterLocationsByTagsAndQuery = useCallback(() => {
+    let filteredLocations = locations;
 
     // Filter by tags
     if (selectedTags.length > 0) {
-      filteredActivities = filteredActivities.filter((activity) =>
+      filteredLocations = filteredLocations.filter((location) =>
         selectedTags.every(
           (tag) =>
-            activity.tags.includes(tag.name) ||
-            (tag.name === "$" && activity.price === tag.name) ||
-            (tag.name === "$$" && activity.price === tag.name) ||
-            (tag.name === "$$$" && activity.price === tag.name) ||
-            (tag.name === "FREE" && activity.price === tag.name) ||
-            activity.location.includes(tag.name)
+            location.fields.tags.includes(tag.name) ||
+            (tag.name === "$" && location.fields.price === tag.name) ||
+            (tag.name === "$$" && location.fields.price === tag.name) ||
+            (tag.name === "$$$" && location.fields.price === tag.name) ||
+            (tag.name === "FREE" && location.fields.price === tag.name) ||
+            location.fields.city.includes(tag.name)
         )
       );
     }
 
     // Filter by query
     if (query) {
-      filteredActivities = filteredActivities.filter((activity) =>
-        activity.name.toLowerCase().includes(query.toLowerCase())
+      filteredLocations = filteredLocations.filter((location) =>
+        location.fields.name.toLowerCase().includes(query.toLowerCase())
       );
     }
 
-    return filteredActivities;
-  }, [activities, selectedTags, query]);
+    return filteredLocations;
+  }, [locations, selectedTags, query]);
 
   const handleTagSelect = (selectedList, selectedItem) => {
     setSelectedTags(selectedList);
@@ -94,7 +89,7 @@ export default function Heroku({ activities }) {
   // Clear filters
   const clearFilters = () => {
     setSelectedTags([]);
-    setQuery("")
+    setQuery("");
   };
 
   const filterTags = [
@@ -124,8 +119,6 @@ export default function Heroku({ activities }) {
     { cat: "Location", name: "Port Moody" },
     { cat: "Location", name: "Other" },
   ];
-
-  // console.log(paginatedPosts);
 
   return (
     <>
@@ -188,16 +181,18 @@ export default function Heroku({ activities }) {
 
             {paginatedPosts.length > 0 ? (
               <div class="flex flex-row flex-wrap w-full">
-                {paginatedPosts.map((activity) => (
+                {paginatedPosts.map((location) => (
                   <ActivityCard
-                    key={activity.id}
-                    link={`/heroku/${activity.id}`}
-                    as={`/heroku/${activity.id}`}
-                    img={activity.feature}
-                    header={activity.name}
-                    price={activity.price}
-                    city={activity.location}
-                    tags={activity.tags}
+                    key={location.sys.id}
+                    link={`/activities/${location.fields.slug}`}
+                    as={`/activities/${location.fields.slug}`}
+                    img={
+                      "https:" + location.fields.featureImage.fields.file.url
+                    }
+                    header={location.fields.name}
+                    price={location.fields.price}
+                    city={location.fields.city}
+                    tags={location.fields.tags}
                   />
                 ))}
               </div>
@@ -216,7 +211,7 @@ export default function Heroku({ activities }) {
             {paginatedPosts.length > 0 && (
               <div className="flex w-auto justify-center">
                 <Pagination
-                  items={filteredActivities.length} // 49
+                  items={filteredLocations.length} // 49
                   currentPage={currentPage}
                   pageSize={pageSize}
                   onPageChange={onPageChange}
