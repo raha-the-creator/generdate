@@ -1,4 +1,5 @@
 import React from "react";
+import { createClient } from "contentful";
 import Head from "next/head";
 import Image from "next/image";
 import ArticleCard from "../../comps/ArticleCard";
@@ -6,9 +7,23 @@ import FeatureArticleCard from "../../comps/FeatureArticleCard";
 import heroImg from "../../public/article-hero.jpg";
 import Hero from "../../comps/Hero";
 
-// https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg
+export async function getStaticProps() {
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+  });
 
-const Article = () => {
+  const res = await client.getEntries({ content_type: "blogPosts" });
+
+  return {
+    props: {
+      articles: res.items,
+    },
+  };
+}
+
+export default function Article ({ articles }) {
+
   return (
     <div className="bg-red-white">
       <Head>
@@ -21,10 +36,10 @@ const Article = () => {
         />
       </Head>
 
-      {/* <Hero image={heroImg} /> */}
-
       <div className="px-4 md:px-12">
-        <FeatureArticleCard />
+        <FeatureArticleCard 
+          title={articles[1].fields.title}
+        />
 
         <hr className="my-4 border-t-2 border-gray-300" />
 
@@ -33,13 +48,31 @@ const Article = () => {
         </h2>
 
         <div className="flex flew-row flex-wrap">
-          <ArticleCard title={"Best summer activities"} img={"https://media.istockphoto.com/id/610864024/photo/couple-kayaking-together.jpg?s=612x612&w=0&k=20&c=zeioetaU5WM6uUnZAGoWBHnkilMeK1pexGX1ZitPU1o="} link={"/articles/summer"} />
-          <ArticleCard title={"Article"} img={"https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"} link={"/articles/"} />
-          <ArticleCard title={"Article"} img={"https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"} link={"/articles/"} />
+          <ArticleCard
+            title={"Best summer activities"}
+            img={
+              "https://media.istockphoto.com/id/610864024/photo/couple-kayaking-together.jpg?s=612x612&w=0&k=20&c=zeioetaU5WM6uUnZAGoWBHnkilMeK1pexGX1ZitPU1o="
+            }
+            link={"/articles/summer"}
+          />
+          <ArticleCard
+            title={"Article"}
+            img={
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"
+            }
+            link={"/articles/"}
+          />
+          <ArticleCard
+            title={"Article"}
+            img={
+              "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Concord_Pacific_Master_Plan_Area.jpg/1200px-Concord_Pacific_Master_Plan_Area.jpg"
+            }
+            link={"/articles/"}
+          />
         </div>
       </div>
     </div>
   );
 };
 
-export default Article;
+ Article;

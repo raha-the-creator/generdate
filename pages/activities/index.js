@@ -26,7 +26,6 @@ export async function getStaticProps() {
 }
 
 export default function Locations({ locations }) {
-  console.log(locations);
   const [query, setQuery] = useState("");
   const [selectedTags, setSelectedTags] = useState([]);
   const [filteredLocations, setFilteredLocations] = useState(locations);
@@ -184,8 +183,8 @@ export default function Locations({ locations }) {
                 {paginatedPosts.map((location) => (
                   <ActivityCard
                     key={location.sys.id}
-                    link={`/contentful/${location.fields.slug}`}
-                    as={`/contentful/${location.fields.slug}`}
+                    link={`/activities/${location.fields.slug}`}
+                    as={`/activities/${location.fields.slug}`}
                     img={
                       "https:" + location.fields.featureImage.fields.file.url
                     }
@@ -221,19 +220,6 @@ export default function Locations({ locations }) {
           </div>
         </div>
       </main>
-
-      {/* {locations.map((location) => (
-        <ActivityCard
-          key={location.sys.id}
-          link={`/contentful/${location.fields.slug}`}
-          as={`/contentful/${location.fields.slug}`}
-          img={"https:" + location.fields.featureImage.fields.file.url}
-          header={location.fields.name}
-          price={location.fields.price}
-          city={location.fields.city}
-          tags={location.fields.tags}
-        />
-      ))} */}
     </>
   );
 }
