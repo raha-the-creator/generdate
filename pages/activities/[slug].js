@@ -48,13 +48,13 @@ export async function getStaticProps({ params }) {
 
     return {
       props: { location: items[0] },
-      revalidate: 5,
+      revalidate: 1,
     };
   } catch (error) {
     console.error("Error fetching data:", error);
     return {
       props: { location: null },
-      revalidate: 5,
+      revalidate: 1,
     };
   }
 }
