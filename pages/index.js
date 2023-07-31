@@ -20,7 +20,7 @@ export async function getStaticProps() {
   return {
     props: {
       locations: res.items.slice(0, 3),
-      revalidate: 5
+      revalidate: 1
     },
   };
 }
