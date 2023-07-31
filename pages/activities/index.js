@@ -135,7 +135,7 @@ export default function Locations({ locations }) {
             <div className="z-40 sticky top-16 p-2 bg-white">
               <div className="flex items-center">
                 <h2 class="text-left text-xl font-roboto-mono font-bold my-2">
-                  Activities to explore
+                  Activities to explore!
                 </h2>
               </div>
               <div class="flex flex-col md:flex-row">
