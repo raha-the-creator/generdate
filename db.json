@@ -1,0 +1,853 @@
+{
+    "activities": [
+      {
+        "id": 0,
+        "name": "Sea to Sky Gondola",
+        "address": "36800 BC-99, Squamish, BC V8B 0B6",
+        "tags": [
+          "Outdoor",
+          "View"
+        ],
+        "price": "$$$",
+        "location": "Squamish",
+        "feature": "https://www.vancouverplanner.com/wp-content/uploads/2019/04/sea-to-sky-lookout.jpg",
+        "bestTime": "Day",
+        "about": "The Sea-to-Sky Corridor, often referred to as the Corridor or the Sea to Sky Country, is a region in British Columbia spreading from Horseshoe Bay through Whistler to the Pemberton Valley and sometimes beyond to include Birken and D'Arcy. From Whistler on up, the region overlaps with the older and more historic Lillooet Country, of which Squamish, at the region's centre, was once the southward extension in the days when it was the rail-port terminus from the Interior, via Lillooet, and accessible from the Lower Mainland only by sea. Most of the region is in the Squamish-Lillooet Regional District, although south of Britannia Beach a small part of the region is in the Greater Vancouver Regional District.",
+        "notes": "You should visit Sea to Sky Gondola in Vancouver for its breathtaking panoramic views of the coastal mountains and Howe Sound fjord, as well as for the exciting outdoor activities such as hiking, snowshoeing, and suspension bridge walking.",
+        "mapsLink": "https://goo.gl/maps/2h9wSUxh8K4U9wd9A"
+      },
+      {
+        "id": 1,
+        "name": "Steveston Pizza Company (Richmond)",
+        "address": "3400 Moncton St #100, Richmond, BC V7E 3A2",
+        "tags": [
+          "Indoor",
+          "Eating"
+        ],
+        "price": "$$",
+        "location": "Richmond",
+        "feature": "https://ssmscdn.yp.ca/image/resize/15b2b515-8ed2-478c-b60f-99eb418e77dc/ypui-d-mp-pic-gal-lg/steveston-pizza-co-ltd-4.jpg",
+        "bestTime": "Business hours",
+        "about": "Steveston Pizza Company is a popular pizzeria in Richmond, known for its creative and delicious pizzas such as the award-winning C6 pizza, which features smoked salmon, capers, and cream cheese. The restaurant uses fresh, locally-sourced ingredients and offers a cozy, family-friendly atmosphere. With its great food and friendly service, Steveston Pizza Company is definitely worth a visit for any pizza lover in the Vancouver area.",
+        "notes": "You should visit Steveston Pizza Company in Richmond for its award-winning and creative pizzas, made with fresh, locally-sourced ingredients. The restaurant also offers a cozy, family-friendly atmosphere and friendly service, making it a great spot for any pizza lover in the Vancouver area.",
+        "mapsLink": "https://goo.gl/maps/7vNAdhh9V53nBmqy8"
+      },
+      {
+        "id": 2,
+        "name": "per se Social Corner",
+        "address": "891 Homer St, Vancouver, BC V6B 2W2",
+        "tags": [
+          "Indoor",
+          "Eating"
+        ],
+        "price": "$$",
+        "location": "Vancouver",
+        "feature": "https://tryhiddengems.com/wp-content/uploads/2017/11/PerSeSocialCorner2-1024x768.jpg",
+        "bestTime": "Business hours",
+        "about": "Per se Social Corner is an Italian restaurant located in Vancouver, British Columbia, serving authentic Italian cuisine and handcrafted cocktails in a stylish and modern setting. The restaurant's menu features a variety of classic Italian dishes made with fresh, locally-sourced ingredients, including handmade pastas, wood-fired pizzas, and seafood dishes. With its great food, drinks, and atmosphere, Per se Social Corner is a must-visit for any Italian food lover in the Vancouver area.",
+        "notes": "You should visit Per se Social Corner in Vancouver for its authentic Italian cuisine made with fresh, locally-sourced ingredients and its stylish and modern atmosphere. The restaurant's menu features a variety of classic Italian dishes and handcrafted cocktails, making it a great spot for any Italian food lover in the Vancouver area.",
+        "mapsLink": "https://goo.gl/maps/2n8RqPCYQGkfUrct6"
+      },
+      {
+        "id": 3,
+        "name": "Say Hello Sweets",
+        "address": "620 Quebec St, Vancouver, BC V6A 4E7",
+        "tags": [
+          "Indoor",
+          "Eating"
+        ],
+        "price": "$",
+        "location": "Vancouver",
+        "feature": "https://s3-media0.fl.yelpcdn.com/bphoto/kkRw_lLPawmDTyDoCtaL0Q/o.jpg",
+        "bestTime": "Business hours",
+        "about": "Say Hello Sweets is a vegan ice cream shop in Vancouver, offering a wide range of delicious and unique ice cream flavors made with coconut milk and other plant-based ingredients. The shop also serves a variety of baked goods and desserts, including ice cream sandwiches and sundaes. With its creative flavors and vegan options, Say Hello Sweets is a must-visit for any ice cream lover in Vancouver.",
+        "notes": "You should visit Say Hello Sweets in Vancouver for its delicious and unique vegan ice cream flavors made with coconut milk and other plant-based ingredients. The shop also offers a variety of baked goods and desserts, making it a great spot for any dessert lover in Vancouver.",
+        "mapsLink": "https://goo.gl/maps/TeuD8HyzJWc5zCRa9"
+      },
+      {
+        "id": 4,
+        "name": "TAKO - Taqueria Korean",
+        "address": "601 Expo Blvd, Vancouver, BC V6B 6B8",
+        "tags": [
+          "Indoor",
+          "Eating"
+        ],
+        "price": "$",
+        "location": "Vancouver",
+        "feature": "https://foodology.ca/wp-content/uploads/2016/09/tako-vancouver-1-620x413.jpg",
+        "bestTime": "Business hours",
+        "about": "TAKO Taqueria Korean is a fusion restaurant in Vancouver, offering a unique blend of Korean and Mexican cuisine. The restaurant's menu features a variety of dishes such as Korean-style tacos, burritos, and bowls, made with fresh, locally-sourced ingredients. With its creative fusion dishes and friendly service, TAKO Taqueria Korean is a great spot for anyone looking for a tasty and unique dining experience in Vancouver.",
+        "notes": "You should visit TAKO Taqueria Korean in Vancouver for its unique blend of Korean and Mexican cuisine, including dishes like Korean-style tacos, burritos, and bowls. The restaurant uses fresh, locally-sourced ingredients and offers a friendly atmosphere, making it a great spot for a tasty and unique dining experience in Vancouver.",
+        "mapsLink": "https://goo.gl/maps/fAa1AKvXp6yUFw5X9"
+      },
+      {
+        "id": 5,
+        "name": "Stanley Park Rose Garden",
+        "address": "610 Pipeline Rd, Vancouver, BC V6G 3E2",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://www.tripsavvy.com/thmb/La9_VjoViU4BMpOJsClJkYooYUA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Stanley_Rose_Garden1-56a9ba2a5f9b58b7d0fe668a.JPG",
+        "bestTime": "Evening",
+        "about": "The Stanley Park Rose Garden is a beautiful garden located in the heart of Stanley Park in Vancouver, featuring over 3,500 roses of more than 150 varieties. The garden is a popular destination for tourists and locals alike, offering a peaceful and serene environment to enjoy the beauty of nature. With its stunning floral displays and scenic views of the park, the Stanley Park Rose Garden is a must-visit for any nature lover in Vancouver.",
+        "notes": "You should visit Stanley Park Rose Garden in Vancouver for its stunning displays of over 3,500 roses of more than 150 varieties, and for the peaceful and serene environment it offers within Stanley Park. The garden is a great spot for any nature lover looking to enjoy the beauty of nature in Vancouver.",
+        "mapsLink": "https://goo.gl/maps/JeDrjShEKdWLonqN6"
+      },
+      {
+        "id": 6,
+        "name": "Steveston Harbour",
+        "address": "3820 Bayview St, Richmond, BC V7E 4R7",
+        "tags": [
+          "Outdoor",
+          "Exploring"
+        ],
+        "price": "FREE",
+        "location": "Richmond",
+        "feature": "https://www.visitrichmondbc.com/wp-content/uploads/2021/11/TR2016_Steveston_Pier_1_1059-1200x800.jpg",
+        "bestTime": "Evening",
+        "about": "Steveston Harbour is a historic fishing village located in the town of Steveston in Richmond, British Columbia. The harbour is home to a bustling fishing industry, as well as a variety of shops, restaurants, and attractions, including the Gulf of Georgia Cannery National Historic Site. With its picturesque waterfront, rich history, and lively atmosphere, Steveston Harbour is a must-visit for anyone exploring the Vancouver area.",
+        "notes": "\\You should visit Steveston Harbour in Richmond for its picturesque waterfront, historic fishing village, and lively atmosphere with a variety of shops, restaurants, and attractions, making it a must-visit destination for anyone exploring the Vancouver area.",
+        "mapsLink": "https://goo.gl/maps/n4fVnianQdzE3WBg7"
+      },
+      {
+        "id": 7,
+        "name": "Deep Cove Government Dock",
+        "address": "4425 Gallant Ave, North Vancouver, BC V7G 1L2",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "North Vancouver",
+        "feature": "https://www.dnv.org/sites/default/files/uploads/images/Gallant%20Wharf.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Deep Cove Government Dock is a popular spot for boaters and outdoor enthusiasts, located in the charming village of Deep Cove in North Vancouver. The dock offers stunning views of the surrounding mountains and the peaceful waters of Indian Arm, as well as easy access to a variety of outdoor activities, including kayaking, paddleboarding, and hiking. With its natural beauty and outdoor recreation opportunities, Deep Cove Government Dock is a must-visit for anyone exploring the Vancouver area.",
+        "notes": "You should visit Deep Cove Government Dock in North Vancouver for its stunning views of the surrounding mountains and peaceful waters of Indian Arm, and for its easy access to a variety of outdoor activities, including kayaking, paddleboarding, and hiking. The dock is a must-visit for any outdoor enthusiast exploring the Vancouver area.",
+        "mapsLink": "https://goo.gl/maps/ykuKSUai7YQ6m1UaA"
+      },
+      {
+        "id": 8,
+        "name": "Vancouver Aquarium",
+        "address": "845 Avison Way, Vancouver, BC V6G 3E2",
+        "tags": [
+          "Indoor",
+          "Entertainment"
+        ],
+        "price": "$$$",
+        "location": "Vancouver",
+        "feature": "https://www.vancouverplanner.com/wp-content/uploads/2019/07/vancouver-aquarium-2.jpeg",
+        "bestTime": "Business hours",
+        "about": "The Vancouver Aquarium is a popular attraction located in Stanley Park, Vancouver, that is home to over 50,000 animals from around the world, including dolphins, beluga whales, and sea otters. The aquarium offers a variety of exhibits and programs that provide education and conservation efforts, including marine mammal rescue and rehabilitation programs. With its diverse marine life and commitment to conservation, the Vancouver Aquarium is a must-visit for anyone interested in marine biology and wildlife conservation.",
+        "notes": "You should visit Vancouver Aquarium in Stanley Park, Vancouver, to see over 50,000 marine animals from around the world, including dolphins, beluga whales, and sea otters. The aquarium also offers a variety of educational exhibits and programs, making it a must-visit for anyone interested in marine biology and wildlife conservation.",
+        "mapsLink": "https://goo.gl/maps/KnpmKKkicAShbza6A"
+      },
+      {
+        "id": 9,
+        "name": "Stanley Park Seawall",
+        "address": "Stanley Park Dr, Vancouver, BC",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,q_65,w_845/v1/clients/vancouverbc/vancouver-seawall_8a72a089-e965-4304-ba82-17a1cf70a519.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "The Vancouver Seawall is a popular outdoor recreation spot that stretches for over 28 kilometers along the city's waterfront. The Seawall offers stunning views of the ocean, mountains, and city skyline, and is popular with joggers, cyclists, and rollerbladers. With its beautiful views and opportunities for outdoor activity, the Vancouver Seawall is a must-visit for anyone exploring the city.",
+        "notes": "You should visit Vancouver Seawall to enjoy its stunning views of the ocean, mountains, and city skyline, and to take part in outdoor activities such as jogging, cycling, and rollerblading. The Seawall is a must-visit destination for anyone exploring Vancouver and looking to enjoy the beauty of the city's waterfront.",
+        "mapsLink": "https://goo.gl/maps/GniXBvjTERYNH56A8"
+      },
+      {
+        "id": 10,
+        "name": "Lighthouse Park | West Vancouver",
+        "address": "4902 Beacon Ln, West Vancouver, BC V7W 1K5",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "West Vancouver",
+        "feature": "https://www.insidevancouver.ca/wp-content/uploads/2021/03/lighthouse_2.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Lighthouse Park is a scenic park located in West Vancouver that offers stunning views of the ocean and surrounding mountains. The park is home to a historic lighthouse, as well as a network of hiking trails that wind through the forest and along the waterfront. With its natural beauty and opportunities for outdoor recreation, Lighthouse Park is a must-visit for anyone exploring the Vancouver area.",
+        "notes": "You should visit Lighthouse Park in West Vancouver for its stunning views of the ocean and surrounding mountains, as well as its network of hiking trails that wind through the forest and along the waterfront. The park is a must-visit destination for any outdoor enthusiast exploring the Vancouver area.",
+        "mapsLink": "https://goo.gl/maps/NbZXDEXDxGuDiQ5u6"
+      },
+      {
+        "id": 11,
+        "name": "Murrin Provincial Park",
+        "address": "Browning Lake Trail, Britannia Beach, BC V0N 1J0",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Britannia Beach",
+        "feature": "https://worldadventurists.com/wp-content/uploads/2021/09/MurrinPP-01.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Murrin Provincial Park is a small park located near Squamish, BC that offers stunning views of Howe Sound and the surrounding mountains. The park is popular with rock climbers and hikers, with a number of trails that wind through the forest and around the park's beautiful lakes. With its natural beauty and opportunities for outdoor recreation, Murrin Provincial Park is a must-visit for anyone exploring the Sea to Sky region.",
+        "notes": "You should visit Murrin Provincial Park near Squamish for its stunning views of Howe Sound and the surrounding mountains, as well as its opportunities for rock climbing and hiking. The park is a must-visit destination for any outdoor enthusiast exploring the Sea to Sky region.",
+        "mapsLink": "https://goo.gl/maps/HFpfnfXh1Anqdxuu6"
+      },
+      {
+        "id": 12,
+        "name": "Porteau Cove Marine Park",
+        "address": "Unnamed Road, Squamish-Lillooet D, BC",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Squamish-Lillooet D",
+        "feature": "https://www.exploresquamish.com/files/dmo_listing_and_extra_images/PorteauCove-1500x1000.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Porteau Cove Marine Park is a scenic park located along the Sea to Sky Highway that offers stunning views of Howe Sound and the surrounding mountains. The park is popular with scuba divers, who come to explore the park's underwater wrecks and marine life. With its natural beauty and opportunities for outdoor recreation, Porteau Cove Marine Park is a must-visit for anyone exploring the Sea to Sky region.",
+        "notes": "You should visit Porteau Cove Marine Park for its stunning views of Howe Sound and the surrounding mountains, as well as its opportunities for scuba diving and other outdoor activities. The park is a must-visit destination for any nature lover exploring the Sea to Sky region.",
+        "mapsLink": "https://goo.gl/maps/6b9QtRCuPejHAA3WA"
+      },
+      {
+        "id": 13,
+        "name": "Whytecliff Park | West Vancouver",
+        "address": "7102 Marine Dr, West Vancouver, BC V7W 2T3",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "West Vancouver",
+        "feature": "https://whytecliffpark.com/img/whytecliff-park-banner.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Whytecliff Park is a picturesque waterfront park located in West Vancouver that offers stunning views of the ocean and surrounding mountains. The park is popular with divers, who come to explore the park's underwater world and marine life. With its natural beauty and opportunities for outdoor recreation, Whytecliff Park is a must-visit for anyone exploring the Vancouver area.",
+        "notes": "You should visit Whytecliff Park in West Vancouver for its picturesque waterfront views of the ocean and surrounding mountains, as well as its opportunities for diving and exploring the park's underwater world and marine life. The park is a must-visit destination for any nature lover exploring the Vancouver area.",
+        "mapsLink": "https://goo.gl/maps/RR5CCfFpmAbiCgYYA"
+      },
+      {
+        "id": 14,
+        "name": "Whytecliff Lookout Point",
+        "address": "7210 Arbutus Rd, West Vancouver, BC V7W 2L5",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "West Vancouver",
+        "feature": "https://rstorage.filemobile.com/storage/34378506/15",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Whytecliff Lookout Point is a scenic viewpoint located in Whytecliff Park in West Vancouver that offers stunning views of Howe Sound and the surrounding mountains. The viewpoint can be accessed via a short hike from the park's main parking lot. With its breathtaking views and accessibility, Whytecliff Lookout Point is a must-visit for anyone exploring the Vancouver area.",
+        "notes": "You should visit Whytecliff Lookout Point in Whytecliff Park for its stunning views of Howe Sound and the surrounding mountains, and for its easy accessibility via a short hike from the park's main parking lot. The lookout point is a must-visit destination for any nature lover exploring the Vancouver area.",
+        "mapsLink": "https://goo.gl/maps/GxFjUXguD82QLzSY9"
+      },
+      {
+        "id": 15,
+        "name": "Horseshoe Bay Public Dock",
+        "address": "West Vancouver, BC V7V 1A1",
+        "tags": [
+          "Outdoor",
+          "Exploring"
+        ],
+        "price": "FREE",
+        "location": "West Vancouver",
+        "feature": "https://m.psecn.photoshelter.com/img-get2/I00005F6CzjOww8Q/fit=1000x750/horseshoe-bay-beach-panorama-34108.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Horseshoe Bay Public Dock is a picturesque waterfront dock located in the charming village of Horseshoe Bay, West Vancouver. The dock offers stunning views of the ocean and surrounding mountains and is a popular spot for fishing, boating, and other water activities. With its natural beauty and opportunities for outdoor recreation, Horseshoe Bay Public Dock is a must-visit destination for anyone exploring the Vancouver area.",
+        "notes": "You should visit Horseshoe Bay Public Dock in West Vancouver for its beautiful waterfront views of the ocean and surrounding mountains, as well as its opportunities for fishing, boating, and other water activities. The dock is a must-visit destination for anyone looking to enjoy the natural beauty of the Vancouver area.",
+        "mapsLink": "https://goo.gl/maps/NW7kvj1Za2ebvz6G9"
+      },
+      {
+        "id": 16,
+        "name": "Park Royal",
+        "address": "2002 Park Royal S, West Vancouver, BC V7T 2W4",
+        "tags": [
+          "Indoor",
+          "Shopping"
+        ],
+        "price": "$$",
+        "location": "West Vancouver",
+        "feature": "https://onni.com/evelyn/wp-content/uploads/2011/10/banner-parkroyal-1024x482.png",
+        "bestTime": "Business hours",
+        "about": "Park Royal is a shopping mall located in West Vancouver, featuring a wide range of high-end stores, restaurants, and entertainment options. The mall's unique design and beautiful landscaping make it a popular destination for both locals and visitors. With its luxurious offerings and vibrant atmosphere, Park Royal is a must-visit destination for anyone looking for a top-notch shopping and dining experience in Vancouver.",
+        "notes": "You should visit Park Royal in West Vancouver for its high-end stores, restaurants, and entertainment options. The mall's unique design and beautiful landscaping make it a popular destination for anyone looking for a luxurious shopping and dining experience in Vancouver.",
+        "mapsLink": "https://goo.gl/maps/px3vKbeCV3rmyJ7G6"
+      },
+      {
+        "id": 17,
+        "name": "Lafarge Lake Park",
+        "address": "1251-1263 Pinetree Way, Coquitlam, BC V3B 7Y3",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Coquitlam",
+        "feature": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWld-sGDRMIYiPGQPrxDiw66f8VOdUDeqKhrnv1Cz-zvvHEzkMRrLGS2RENr7FvqowdnI&usqp=CAU",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Lafarge Lake Park is a beautiful park located in Coquitlam, featuring a large lake, walking trails, and plenty of open green space for picnics and other outdoor activities. The park is a popular destination for families, hikers, and nature lovers, with its stunning views of the surrounding mountains and wildlife. With its peaceful atmosphere and ample recreational opportunities, Lafarge Lake Park is a must-visit destination for anyone looking to explore the natural beauty of the Vancouver area.",
+        "notes": "You should visit Lafarge Lake Park for its scenic walking trails, beautiful lake, and peaceful atmosphere. The park offers a perfect setting for a relaxing outdoor outing and provides ample opportunities for outdoor activities like picnics and hiking.",
+        "mapsLink": "https://goo.gl/maps/axTCdswNWtjWqtF1A"
+      },
+      {
+        "id": 18,
+        "name": "Queen Elizabeth Park",
+        "address": "4600 Cambie St, Vancouver, BC V5Z 2Z1",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Queen_Elizabeth_Park.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Queen Elizabeth Park is a beautiful park in Vancouver with stunning gardens, landscaped green spaces, and a conservatory. It offers panoramic views of the city skyline, mountains, and the surrounding area, making it an ideal location for sightseeing and photography. The park is a popular destination for outdoor enthusiasts, families, and visitors who enjoy nature, culture, and recreation.",
+        "notes": "You should visit Queen Elizabeth Park for its breathtaking panoramic views of Vancouver and the surrounding mountains, as well as its beautiful gardens and conservatory. The park is a great place to relax, take in the scenery, and enjoy a peaceful escape from the city.",
+        "mapsLink": "https://goo.gl/maps/8yauHebgEEyYTfJN6"
+      },
+      {
+        "id": 19,
+        "name": "McArthurGlen Designer Outlet Vancouver",
+        "address": "7899 Templeton Station Rd #1000, Richmond, BC V7B 0B7",
+        "tags": [
+          "Indoor",
+          "Shopping"
+        ],
+        "price": "$$",
+        "location": "Richmond",
+        "feature": "https://www.stantec.com/content/dam/stantec/images/projects/0057/mcarthurglen-designer-outlet-vancouver-airport-106505.jpg",
+        "bestTime": "Business hours",
+        "about": "McArthurGlen Designer Outlet Vancouver is a shopping center featuring a variety of designer and luxury brands at discounted prices. Located near the Vancouver International Airport, the outlet is easily accessible by public transportation or car. With over 80 stores to choose from, shoppers can find a wide range of clothing, accessories, and home goods.",
+        "notes": "You should visit McArthurGlen Designer Outlet Vancouver if you enjoy shopping for designer and luxury brands at discounted prices. It's also conveniently located near the Vancouver International Airport.",
+        "mapsLink": "https://goo.gl/maps/4d46RJosCVEoHwCi6"
+      },
+      {
+        "id": 20,
+        "name": "Metropolis at Metrotown",
+        "address": "4700 Kingsway, Burnaby, BC V5H 4M5",
+        "tags": [
+          "Indoor",
+          "Shopping"
+        ],
+        "price": "$$",
+        "location": "Burnaby",
+        "feature": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0b/c9/84/fe/metropolis-at-metrotown.jpg?w=1200&h=-1&s=1",
+        "bestTime": "Business hours",
+        "about": "Metropolis at Metrotown is the largest shopping mall in British Columbia and one of the largest in Canada, with over 400 stores and services. The mall is conveniently located in Burnaby and is easily accessible by public transit. It also features a variety of dining options and entertainment attractions, such as a movie theatre and an indoor amusement park.",
+        "notes": "Metropolis at Metrotown is the largest shopping mall in British Columbia, offering a wide variety of stores and restaurants for visitors to enjoy. The mall is also easily accessible via public transportation, making it a convenient destination for locals and tourists alike.",
+        "mapsLink": "https://goo.gl/maps/v2KETAhQprh5XSoj6"
+      },
+      {
+        "id": 21,
+        "name": "Rick Bronson's - House of Comedy BC",
+        "address": "530 Columbia St, New Westminster, BC V3L 1B2",
+        "tags": [
+          "Indoor",
+          "Entertainment"
+        ],
+        "price": "$",
+        "location": "New Westminster",
+        "feature": "https://i0.wp.com/vancouversbestplaces.com/wp-content/uploads/2020/02/New-West-Columbia-Theatre.jpg?w=640&ssl=1",
+        "bestTime": "Business hours",
+        "about": "Rick Bronson's House of Comedy in BC is a popular comedy club located in New Westminster. It features live stand-up comedy performances by local and international comedians and offers a full menu and drinks. The club is known for its intimate setting and great entertainment.",
+        "notes": "Rick Bronson's - House of Comedy BC is a great place to enjoy a night out with friends or family, with top-notch comedy acts and delicious food and drinks. It's the perfect spot for anyone who loves to laugh and wants to have a fun and memorable evening.",
+        "mapsLink": "https://goo.gl/maps/NeVhPC8sbFw7J5vE9"
+      },
+      {
+        "id": 22,
+        "name": "Westminster Pier Park",
+        "address": "1 6th St, New Westminster, BC V3M 6Z6",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "New Westminster",
+        "feature": "https://live.staticflickr.com/3782/9675890792_cfc398e389_b.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Westminster Pier Park is a popular waterfront park located in New Westminster, British Columbia. It features a variety of amenities including a playground, picnic areas, and an off-leash dog park. Visitors can also enjoy stunning views of the Fraser River and the city's skyline from the park.",
+        "notes": "Westminster Pier Park is a beautiful waterfront park that offers stunning views of the Fraser River and the city skyline. Visitors can enjoy a variety of outdoor activities, including walking trails, playgrounds, picnic areas, and a spray park.",
+        "mapsLink": "https://goo.gl/maps/K5omyBu7dHoqGR2K8"
+      },
+      {
+        "id": 23,
+        "name": "Public Service Commission of Canada",
+        "address": "757 HASTINGS ST W, Vancouver, BC V6C 1A1",
+        "tags": [
+          "Outdoor",
+          "Pictures"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "http://www.sinclaircentre.com/wp-content/uploads/2014/09/outsideslider.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "The Public Service Commission of Canada is a federal organization that is responsible for promoting and safeguarding a merit-based, representative, and non-partisan public service. It supports the recruitment, assessment, and development of qualified candidates for the public service, as well as overseeing the appointment process. The Commission also works to ensure fairness and transparency in public service hiring and promotions.",
+        "notes": "Great place to take picture",
+        "mapsLink": "https://goo.gl/maps/4xbD12RbFPQ52ftk6"
+      },
+      {
+        "id": 24,
+        "name": "Vancouver Art Gallery",
+        "address": "750 Hornby St, Vancouver, BC V6Z 2H7",
+        "tags": [
+          "Indoor",
+          "Entertainment"
+        ],
+        "price": "$$$",
+        "location": "Vancouver",
+        "feature": "https://media.cntraveler.com/photos/5c240136e223c55afc3e4206/16:9/w_2560,c_limit/Vancouver-Art-Gallery_VAG-ARCH-2006-015.jpg",
+        "bestTime": "Business hours",
+        "about": "The Vancouver Art Gallery is a public art museum located in downtown Vancouver, British Columbia. It is the largest art museum in Western Canada and has a collection of over 12,000 works, with a focus on Canadian and British Columbian artists. The museum also hosts a range of temporary exhibitions throughout the year, showcasing works from a variety of artistic movements and periods.",
+        "notes": "You should visit Vancouver Art Gallery to explore its impressive collection of contemporary and historical art from both local and international artists. It also hosts numerous exhibitions, talks, and events throughout the year.",
+        "mapsLink": "https://goo.gl/maps/6jbsXkuJx9X5PzbH6"
+      },
+      {
+        "id": 25,
+        "name": "Coal Harbour Marina",
+        "address": "1525 Coal Harbour Quay, Vancouver, BC V6G 3E7",
+        "tags": [
+          "Outdoor",
+          "Exploring"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://www.tripsavvy.com/thmb/rb6WHRvfiPdlYMO_uGr3Dws5jWM=/3856x2599/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-545534248-5bb16c0c46e0fb0026a9caee.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Coal Harbour Marina is located in downtown Vancouver, offering a range of services for boaters including boat rentals, charters, and moorage facilities. The marina provides stunning views of Vancouver's skyline and the North Shore Mountains. Visitors can enjoy a stroll along the seawall or dine at one of the nearby waterfront restaurants.",
+        "notes": "You should visit Coal Harbour Marina to take in the picturesque views of the marina and the surrounding mountains, and to explore the many boats and yachts that call this marina home. It's also a great starting point for a stroll along the Vancouver seawall or to visit nearby attractions such as Stanley Park or the Vancouver Aquarium.",
+        "mapsLink": "https://goo.gl/maps/Gbi59ZXLeU3YBTsj8"
+      },
+      {
+        "id": 26,
+        "name": "Vancouver Harbour Flight Centre",
+        "address": "1055 Canada Pl, Vancouver, BC V6C 3T4",
+        "tags": [
+          "Outdoor",
+          "Exploring"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://vhfc.ca/wp-content/uploads/2013/09/downtown-vancouver-seaplane-terminal-d8.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Vancouver Harbour Flight Centre is a seaplane terminal located in downtown Vancouver. From here, visitors can enjoy scenic flights over Vancouver, the Gulf Islands, and even Victoria. The terminal also offers scheduled service to various destinations in the region.",
+        "notes": "You should visit Vancouver Harbour Flight Centre to experience a unique view of the city from the air, and to embark on scenic tours of the surrounding mountains, islands, and coastlines. It's a great opportunity to see Vancouver's stunning natural beauty from a different perspective.",
+        "mapsLink": "https://goo.gl/maps/BvAqz6dRfDJmE8qU6"
+      },
+      {
+        "id": 27,
+        "name": "Canada Place",
+        "address": "999 Canada Pl, Vancouver, BC V6C 3T4",
+        "tags": [
+          "Outdoor",
+          "Walk"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://pbs.twimg.com/media/FBmRNpaVkAIEoRu?format=jpg&name=4096x4096",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Canada Place Vancouver is a prominent landmark in the city that serves as a cruise ship terminal, convention center, and tourist attraction. The distinctive white sails of the building are a recognizable feature of the Vancouver skyline, and the complex offers stunning views of the harbor and North Shore mountains. Visitors can enjoy a variety of attractions and amenities, including shopping, dining, and guided tours.",
+        "notes": "Great place to go for a walk",
+        "mapsLink": "https://goo.gl/maps/71n7H7b2FgdTMF7E6"
+      },
+      {
+        "id": 28,
+        "name": "Burnaby Lake Regional Park",
+        "address": "4519 Piper Ave, Burnaby, BC V5A 3B5",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Burnaby",
+        "feature": "https://burnabylakepark.ca/wp-content/uploads/2017/07/BLRP-IMG_9712-PiperSpitPhotographers-0615-1640.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Burnaby Lake Regional Park is a large nature reserve located in the heart of Burnaby, British Columbia, Canada. The park is home to a diverse array of flora and fauna, including over 200 species of birds. Visitors can enjoy hiking, birdwatching, canoeing, fishing, and other outdoor activities in the park's tranquil surroundings.",
+        "notes": "You should visit Burnaby Lake Regional Park because it's a beautiful natural oasis in the midst of an urban area, offering a range of outdoor activities and stunning views of the lake and wildlife. It's a great place to escape the hustle and bustle of the city and immerse yourself in nature.",
+        "mapsLink": "https://goo.gl/maps/eF4eaQqqQfWYhrwAA"
+      },
+      {
+        "id": 29,
+        "name": "The Amazing Brentwood",
+        "address": "4567 Lougheed Hwy., Burnaby, BC V5C 3Z6",
+        "tags": [
+          "Indoor",
+          "Shopping"
+        ],
+        "price": "$$",
+        "location": "Burnaby",
+        "feature": "https://www.stantec.com/content/dam/stantec/images/projects/0112/the-amazing-brentwood-183642.jpg",
+        "bestTime": "Business hours",
+        "about": "The Amazing Brentwood is a mixed-use development located in Burnaby, British Columbia, Canada. It is the largest real estate project ever undertaken in the city, featuring luxury residential towers, a shopping center, office space, and public plazas. The complex is a hub of urban activity and a popular destination for shopping, dining, and entertainment.",
+        "notes": "You should visit The Amazing Brentwood because it's a one-stop destination for all your shopping, dining, and entertainment needs, featuring a wide range of high-end retailers, restaurants, and amenities. Its sleek and modern design and central location make it a must-visit destination for locals and visitors alike.",
+        "mapsLink": "https://goo.gl/maps/RbnKUSvt5BXey3xN8"
+      },
+      {
+        "id": 30,
+        "name": "Lamajoun",
+        "address": "11782 River Rd #128, Richmond, BC V6X 1Z7",
+        "tags": [
+          "Indoor",
+          "Eating"
+        ],
+        "price": "$$",
+        "location": "Richmond",
+        "feature": "https://i0.wp.com/media.scoutmagazine.ca/2018/08/Lamajoun_Richmond_SCOUT_Magazine_01.jpg?resize=1280%2C960&ssl=1",
+        "bestTime": "Business hours",
+        "about": "Lamajoun is a family-owned and operated Armenian restaurant located in the heart of Richmond, British Columbia, Canada. The restaurant is known for its delicious and authentic Armenian cuisine, including a variety of meat, vegetarian, and vegan dishes. The cozy and welcoming atmosphere, along with the friendly service, make Lamajoun a popular spot for locals and visitors alike.",
+        "notes": "You should visit Lamajoun restaurant in Richmond because it offers a unique dining experience with delicious and authentic Armenian cuisine that caters to various dietary preferences. The cozy and welcoming atmosphere, combined with the friendly service, makes it a great spot for a relaxing and enjoyable meal.",
+        "mapsLink": "https://goo.gl/maps/CbbVY9c1aBMm3zwS6"
+      },
+      {
+        "id": 31,
+        "name": "Spanish Banks Beach",
+        "address": "Vancouver, BC",
+        "tags": [
+          "Outdoor",
+          "Beach"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://cloudinary-assets.dostuffmedia.com/res/dostuff-media/image/upload/venue-387215/1472078152.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Spanish Banks Beach is a beautiful, sandy beach located in Vancouver, British Columbia, Canada. The beach is known for its stunning views of the North Shore mountains and the city skyline, as well as its calm waters and scenic walking trails. Visitors can enjoy a range of activities at Spanish Banks Beach, including swimming, kayaking, picnicking, and beachcombing.",
+        "notes": "You should visit Spanish Banks Beach for its stunning views of the North Shore mountains and the city skyline, as well as its calm waters and sandy shores. It's a great spot to relax, take a walk, have a picnic, or engage in various water activities.",
+        "mapsLink": "https://goo.gl/maps/UUoDwFegzW58mep38"
+      },
+      {
+        "id": 32,
+        "name": "English Bay Beach",
+        "address": "Beach Ave, Vancouver, BC V6C 3C1",
+        "tags": [
+          "Outdoor",
+          "Beach"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://www.worldbeachguide.com/photos/english-bay-vancouver.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "English Bay Beach is a popular beach in Vancouver, British Columbia, Canada, located along the city's seawall. The beach is known for its stunning sunsets, sandy shores, and clear, refreshing waters. Visitors can enjoy a range of activities at English Bay Beach, including swimming, sunbathing, playing beach volleyball, and people-watching.",
+        "notes": "You should visit English Bay Beach for its beautiful sunsets, sandy shores, and clear waters. It's a great place to relax, soak up the sun, and engage in various beach activities.",
+        "mapsLink": "https://goo.gl/maps/zWQy3gd2m2XG2WfH8"
+      },
+      {
+        "id": 33,
+        "name": "Granville Island",
+        "address": "Vancouver, BC",
+        "tags": [
+          "Outdoor",
+          "Exploring"
+        ],
+        "price": "$",
+        "location": "Vancouver",
+        "feature": "http://thetyee.ca/News/2019/07/28/GranvilleIslandSign.JPG",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Granville Island is a bustling island and shopping district in Vancouver, British Columbia, Canada. The island is home to a public market, art studios, theaters, restaurants, and boutique shops, making it a hub for entertainment and culture. Visitors can enjoy a range of activities at Granville Island, including shopping, dining, taking in live performances, and enjoying the scenic views of False Creek.",
+        "notes": "You should visit Granville Island for its unique and vibrant atmosphere, with a variety of shops, restaurants, and cultural attractions to explore. It's a great place to spend a day or an evening, taking in the sights and sounds of one of Vancouver's most iconic destinations.",
+        "mapsLink": "https://goo.gl/maps/pnzJuGPwrFCDSeum6"
+      },
+      {
+        "id": 34,
+        "name": "Creekside Park",
+        "address": "1455 Quebec St, Vancouver, BC V6A 3Z7",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://www.vmcdn.ca/f/files/via/images/crab-park.jpg;w=1000;h=563;mode=crop",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Creekside Park is a waterfront park located in the Olympic Village neighborhood of Vancouver, British Columbia, Canada. The park features a scenic boardwalk, a large playground, a beach volleyball court, and a bike rental shop, among other amenities. Visitors can enjoy stunning views of False Creek and the surrounding mountains while engaging in a range of outdoor activities.",
+        "notes": "You should visit Creekside Park for its picturesque waterfront location and range of outdoor activities, including walking along the boardwalk, playing in the playground, or renting a bike to explore the area. It's a great spot to relax, take in the views, and enjoy some fresh air in the heart of Vancouver.",
+        "mapsLink": "https://goo.gl/maps/b8eYqmcSMzVbDu778"
+      },
+      {
+        "id": 35,
+        "name": "Gastown",
+        "address": "3 Water St, Vancouver, BC V6B 1A1",
+        "tags": [
+          "Outdoor",
+          "Exploring"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://www.tripsavvy.com/thmb/0lL3DNBzt1lIvTFvYD9h97s3OKc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/DSC00471web-5c1422a746e0fb0001498198.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Gastown is a historic neighborhood located in Vancouver, British Columbia, Canada. It is known for its Victorian architecture, cobblestone streets, and trendy restaurants, bars, and boutiques. Visitors can take a guided tour of the neighborhood, explore its unique shops and galleries, or sample the local cuisine at one of its many acclaimed eateries.",
+        "notes": "You should visit Gastown Vancouver for its charming Victorian architecture, cobblestone streets, and unique blend of trendy shops, restaurants, and galleries. It's a great place to immerse yourself in Vancouver's history and culture while enjoying some of the city's best food, drink, and shopping experiences.",
+        "mapsLink": "https://goo.gl/maps/niGpMHxQxTFyGb617"
+      },
+      {
+        "id": 36,
+        "name": "Gastown Steam Clock",
+        "address": "305 Water St, Vancouver, BC V6B 1B9",
+        "tags": [
+          "Outdoor",
+          "Pictures"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://lh3.googleusercontent.com/-ev-ls-NAM9A/WXMAwWJFJzI/AAAAAAABTKI/aJs9kNBGKx0DHkFMQr7czwkFLUANbF3EACHMYCw/w1200-h630-p-k-no-nu/gastown-steam-clock-46?imgmax=800",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "The Gastown Steam Clock is a famous landmark located in the heart of Vancouver's Gastown neighborhood. The clock was built in 1977 and is powered by steam, making it one of the only functioning steam clocks in the world. Visitors can watch the clock chime every 15 minutes and take photos with the unique, vintage-inspired clock face.",
+        "notes": "You should visit the Gastown Steam Clock for its unique and vintage-inspired design, as well as its status as a famous Vancouver landmark. It's a great place to take photos and immerse yourself in the history and culture of the Gastown neighborhood.",
+        "mapsLink": "https://goo.gl/maps/TZBBXR9rtiRfVNx5A"
+      },
+      {
+        "id": 37,
+        "name": "Vancouver Seawall",
+        "address": "Vancouver, BC V6G 3E2",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,q_65,w_845/v1/clients/vancouverbc/vancouver-seawall_8a72a089-e965-4304-ba82-17a1cf70a519.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "The Vancouver Seawall is a 28 km-long path that winds its way around the perimeter of Stanley Park and stretches along the waterfront of downtown Vancouver. The Seawall offers stunning views of the city skyline, the North Shore mountains, and the Pacific Ocean, making it a popular destination for walkers, joggers, and cyclists. Along the way, visitors can explore a variety of parks, beaches, and landmarks, including the Lions Gate Bridge and the Vancouver Convention Centre.",
+        "notes": "You should visit the Vancouver Seawall for its breathtaking views of the city skyline, mountains, and ocean, and for the variety of parks, beaches, and landmarks to explore along the way. It's a great way to get some exercise, enjoy the fresh air, and experience the natural beauty of Vancouver.",
+        "mapsLink": "https://goo.gl/maps/USPqRg7oL1fkynFj8"
+      },
+      {
+        "id": 38,
+        "name": "Prospect Point Lookout",
+        "address": "5601 Stanley Park Dr, Vancouver, BC V6G 3E2",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://prospectpoint.com/wp-content/uploads/2015/04/Prospect-Point-view-gallery.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Prospect Point Lookout is a popular viewpoint located in Stanley Park, Vancouver, offering stunning panoramic views of the city skyline, North Shore Mountains, and Burrard Inlet. The viewpoint is situated near the Lions Gate Bridge, one of the most iconic landmarks in the city. Visitors can access the viewpoint via a short walk or drive from the park's entrance and can enjoy a range of activities, including hiking, biking, and picnicking.",
+        "notes": "You should visit Prospect Point Lookout for its stunning panoramic views of the city, mountains, and Burrard Inlet, and for the opportunity to see the iconic Lions Gate Bridge up close. It's a great spot for taking photos, enjoying a picnic, or simply taking in the natural beauty of Vancouver.",
+        "mapsLink": "https://goo.gl/maps/qFjqZCCf6HNHyDzdA"
+      },
+      {
+        "id": 39,
+        "name": "Stanley Park - Lions Gate viewpoint",
+        "address": "49°18'39.9\"N 123°08'33.4\"W",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Vancouver",
+        "feature": "https://www.trucknews.com/wp-content/uploads/2020/06/iStock-1155473995.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "The Stanley Park - Lions Gate viewpoint offers breathtaking views of the Lions Gate Bridge, a suspension bridge that spans the Burrard Inlet and connects downtown Vancouver to the North Shore. The viewpoint is located in Stanley Park, a 400-hectare park in the heart of Vancouver that offers a range of outdoor activities and attractions, including beaches, trails, gardens, and cultural landmarks. Visitors can access the viewpoint via a short walk or drive from the park's entrance and can enjoy the panoramic views of the bridge and surrounding landscape.",
+        "notes": "You should visit the Stanley Park - Lions Gate viewpoint for its breathtaking views of the Lions Gate Bridge and the surrounding landscape, as well as the chance to explore Stanley Park and its many attractions. It's a must-visit destination for anyone visiting Vancouver.",
+        "mapsLink": "https://goo.gl/maps/vnoLpzaJeUusvpq3A"
+      },
+      {
+        "id": 40,
+        "name": "Lonsdale - table with a great view",
+        "address": "49°18'31.4\"N 123°04'41.5\"W",
+        "tags": [
+          "Outdoor",
+          "View"
+        ],
+        "price": "FREE",
+        "location": "North Vancouver",
+        "feature": "https://www.jilarezai.com/resources/clients_data/26/listing_images/2199/749x497_1503-138-e-esplanade-lower-lonsdale-north-vancouver-1-39901.jpg",
+        "bestTime": "Sunset and evening",
+        "about": "Lonsdale is a vibrant neighborhood located in North Vancouver, just across the Burrard Inlet from downtown Vancouver. It is home to a range of restaurants, shops, and cultural attractions, including the Lonsdale Quay Market, which offers a variety of fresh food and artisanal goods. Visitors can also enjoy outdoor activities in the neighborhood, such as hiking, skiing, and kayaking.",
+        "notes": "Great view opens up from this table",
+        "mapsLink": "https://goo.gl/maps/sWcJJyFJBjT49wBT8"
+      },
+      {
+        "id": 41,
+        "name": "Burrard Dry Dock Pier",
+        "address": "15 Wallace Mews, North Vancouver, BC V7L 0B2",
+        "tags": [
+          "Outdoor",
+          "View"
+        ],
+        "price": "FREE",
+        "location": "North Vancouver",
+        "feature": "https://i.pinimg.com/originals/04/23/ab/0423abf665d862b1ad8bb077258a28d2.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "The Burrard Dry Dock Pier is a historic pier located in North Vancouver, once home to one of the largest shipyards in Western Canada. Today, the pier has been transformed into a popular public space, featuring a waterfront park, a fishing pier, and a number of shops and restaurants. Visitors can also take in views of the downtown Vancouver skyline and the Burrard Inlet from the pier.",
+        "notes": "You should visit Burrard Dry Dock Pier for its picturesque waterfront views and historic significance, as well as the chance to enjoy outdoor activities and explore the shops and restaurants in the area. It's a great spot to relax and take in the natural beauty of Vancouver's North Shore.",
+        "mapsLink": "https://goo.gl/maps/1TkZt1hPppDqHoXL8"
+      },
+      {
+        "id": 42,
+        "name": "The Shipyards",
+        "address": "125 Victory Ship Way, North Vancouver, BC V7L 0B3",
+        "tags": [
+          "Outdoor",
+          "Exploring"
+        ],
+        "price": "FREE",
+        "location": "North Vancouver",
+        "feature": "https://images.dailyhive.com/20190722140718/the-shipyards-north-vancouver-f.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "The Shipyards is a bustling public gathering place located in the heart of North Vancouver's Lower Lonsdale neighborhood. Once home to a thriving shipbuilding industry, the area has been transformed into a lively community hub, featuring a public plaza, an outdoor skating rink, and a variety of restaurants and shops. Visitors can enjoy live music, cultural events, and stunning views of downtown Vancouver and the Burrard Inlet.",
+        "notes": "ou should visit The Shipyards for its vibrant atmosphere, beautiful views, and wide range of activities and entertainment options. Whether you're looking to relax and enjoy a meal with friends or participate in a cultural event, there's something for everyone at this popular North Vancouver destination.",
+        "mapsLink": "https://goo.gl/maps/2GYV4ezYpfsdWE2x5"
+      },
+      {
+        "id": 43,
+        "name": "Capilano Suspension Bridge Park",
+        "address": "3735 Capilano Rd, North Vancouver, BC V7R 4J1",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "$$",
+        "location": "North Vancouver",
+        "feature": "https://media.cntraveler.com/photos/5c23b2fc4cebb85796fe4e47/16:9/w_2560,c_limit/FX674X.jpg",
+        "bestTime": "Sunset and evening",
+        "about": "Capilano Suspension Bridge Park is a popular tourist attraction located in North Vancouver, BC. The park features a suspension bridge that stretches 140 meters over the Capilano River, as well as a treetop adventure course, a cliffwalk, and a variety of other outdoor activities. Visitors can also enjoy cultural performances and learn about the history and culture of the area.",
+        "notes": "You should visit Capilano Suspension Bridge Park to experience the thrill of walking across a suspension bridge high above the Capilano River, and to enjoy a variety of outdoor activities and cultural events in a beautiful natural setting. The park offers something for everyone, from adventure seekers to nature lovers to history buffs.",
+        "mapsLink": "https://goo.gl/maps/BCSdUyKjxAXXzxpo9"
+      },
+      {
+        "id": 44,
+        "name": "Cypress Lookout",
+        "address": "Cypress Bowl Rd, British Columbia",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "West Vancouver",
+        "feature": "https://farm8.staticflickr.com/7868/40269365473_f81f7ba2fd_b.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Cypress Lookout is a popular viewpoint located on Cypress Mountain in West Vancouver, BC. From the lookout, visitors can enjoy panoramic views of Vancouver, the Burrard Inlet, and the surrounding mountains. The area is particularly stunning at sunset, when the sky turns shades of pink and orange and the city lights come alive.",
+        "notes": "You should visit Cypress Lookout to enjoy breathtaking panoramic views of Vancouver and the surrounding mountains. The area is particularly beautiful at sunset and is a great spot for taking photos or enjoying a picnic.",
+        "mapsLink": "https://goo.gl/maps/F5TRsP55mH4hHk1q7"
+      },
+      {
+        "id": 45,
+        "name": "Millennium Park",
+        "address": "West Vancouver, BC V7V 1A1",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "West Vancouver",
+        "feature": "https://westvancouver.ca/sites/default/files/navigator/images/jlp.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Millennium Park is a large, multi-use park located in the heart of West Vancouver, BC. The park features a variety of sports fields, including baseball diamonds, soccer pitches, and tennis courts, as well as a playground, a skate park, and a running track. Visitors can also enjoy walking trails and scenic views of the nearby mountains and ocean.",
+        "notes": "You should visit Millennium Park to enjoy a variety of sports fields, a playground, a skate park, and a running track. Additionally, the park offers scenic views of the nearby mountains and ocean.",
+        "mapsLink": "https://goo.gl/maps/ffN5WkQrHur8WdEU7"
+      },
+      {
+        "id": 46,
+        "name": "King Pins Bowling",
+        "address": "1312 Lonsdale Ave P200, North Vancouver, BC V7M 2H8",
+        "tags": [
+          "Indoor",
+          "Arcade"
+        ],
+        "price": "$",
+        "location": "North Vancouver",
+        "feature": "https://kingpinsbowl.ca/wp-content/uploads/2022/09/king-pins-lanes-scaled.jpg",
+        "bestTime": "Business hours",
+        "about": "King Pins Bowling is a popular bowling alley located in North Vancouver, BC. The facility features 10-pin bowling lanes, as well as arcade games, pool tables, and a licensed bar and restaurant. King Pins Bowling is a great destination for a fun night out with friends or family.",
+        "notes": "You should visit King Pins Bowling in North Vancouver to enjoy a night of bowling, arcade games, and delicious food and drinks. It's a great place for a fun outing with friends or family.",
+        "mapsLink": "https://goo.gl/maps/NCJYjZbcNZHjmbDw6"
+      },
+      {
+        "id": 47,
+        "name": "The Rec Room at Brentwood",
+        "address": "1920 Willingdon Ave Unit 2106, Burnaby, BC V5C 0K6",
+        "tags": [
+          "Indoor",
+          "Arcade"
+        ],
+        "price": "$$",
+        "location": "Burnaby",
+        "feature": "https://604now.com/wp-content/uploads/2021/06/rec-room-brentwood-the-yard3.e.jpg",
+        "bestTime": "Business hours",
+        "about": "The Rec Room at Brentwood is a massive entertainment complex located in Burnaby, BC. The facility features over 50,000 square feet of space, including a variety of games, activities, and dining options. Visitors can enjoy arcade games, virtual reality experiences, live events, and more.",
+        "notes": "You should visit The Rec Room at Brentwood if you're looking for a fun and exciting entertainment experience. With a wide range of activities and dining options available, there's something for everyone to enjoy.",
+        "mapsLink": "https://goo.gl/maps/PXcvL8WiuZXBSYmP6"
+      },
+      {
+        "id": 48,
+        "name": "Sasamat Lake",
+        "address": "Sasamat Lake, Port Moody, BC",
+        "tags": [
+          "Outdoor",
+          "Park"
+        ],
+        "price": "FREE",
+        "location": "Port Moody",
+        "feature": "https://i.cbc.ca/1.5662952.1598058724!/cumulusImage/httpImage/sasamat-lake.jpg",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Sasamat Lake is a beautiful and serene freshwater lake located in Belcarra Regional Park in Port Moody. The lake is surrounded by forests and hiking trails, offering visitors the opportunity to explore the natural beauty of the area. Swimming, boating, fishing, and picnicking are popular activities at Sasamat Lake.",
+        "notes": "Sasamat Lake is a beautiful freshwater lake surrounded by lush greenery, making it a great spot for nature lovers to visit. The lake is also a popular spot for swimming, kayaking, and stand-up paddleboarding, providing plenty of opportunities for outdoor activities.",
+        "mapsLink": "https://goo.gl/maps/R31uQ6aWpQBjt2Q68"
+      },
+      {
+        "id": 49,
+        "name": "Catfe",
+        "address": "UNIT #2035 – SECOND FLOOR, INTERNATIONAL VILLAGE MALL, 88 W Pender St, Vancouver, BC V6B 6N9",
+        "tags": [
+          "Indoor",
+          "Entertainment"
+        ],
+        "price": "$$",
+        "location": "Vancouver",
+        "feature": "https://images.squarespace-cdn.com/content/v1/555050d2e4b06f76bea1ba86/1530063161393-J8JUBE8BZVPN5A8EDUWU/catfecover.jpg?format=1500w",
+        "bestTime": "Business hours",
+        "about": "Catfe is a cat cafe located in downtown Vancouver where visitors can enjoy coffee or tea in the company of adoptable cats. It was the first cat cafe to open in Vancouver and has since become a popular destination for cat lovers. The cafe also hosts various events and workshops related to cats and animal welfare.",
+        "notes": "You should visit Catfe in downtown Vancouver if you love cats and coffee. It's a unique and relaxing experience to enjoy coffee while playing with cats.",
+        "mapsLink": "https://goo.gl/maps/DvtCQZcxoN3P8uuo8"
+      },
+      {
+        "id": 50,
+        "name": "Breka Bakery",
+        "address": "855 Davie St, Vancouver, BC V6Z 1B7",
+        "tags": [
+          "Indoor",
+          "Eating"
+        ],
+        "price": "$$",
+        "location": "Vancouver",
+        "feature": "https://www.christinachandra.com/wp-content/uploads/2021/11/Breka-Bakery-Mount-Pleasant-e1636002664229.jpeg",
+        "bestTime": "Business hours",
+        "about": "Regularly voted among Vancouver’s best bakeries and cafes, it offers high-quality and reasonably priced coffee, breads, donuts, pastries, sandwiches, cakes, cookies and more – 24 hours a day, 7 days a week, 365 days a year – in each of its 7 locations on Fraser Street, Bute Street, Davie Street, West 4th Avenue, Denman Street, Main Street and West Hastings Street.",
+        "notes": "Breka Bakery & Café is a local family business born in 2006 in the lively Vancouver neighbourhood of Sunset.",
+        "mapsLink": "https://goo.gl/maps/r4fDADdmgxMGJuk38"
+      },
+      {
+        "id": 51,
+        "name": "Darvish Lounge",
+        "address": "2808 St Johns St, Port Moody, BC V3H 2C1",
+        "tags": [
+          "Indoor",
+          "Entertainment"
+        ],
+        "price": "$$$",
+        "location": "Port Moody",
+        "feature": "https://lh3.googleusercontent.com/p/AF1QipMP_WRGTJBkWHPNJ4Q2KsnAOXhoXv5FVbqw7A2t=s1360-w1360-h1020",
+        "bestTime": "Business hours",
+        "about": "Relaxed haunt with Persian decor, hookah smoking & nonalcoholic beverages available.",
+        "notes": "Relaxed haunt with Persian decor, hookah smoking & nonalcoholic beverages available.",
+        "mapsLink": "https://goo.gl/maps/ohRxMCZZiyHoQZWL7"
+      },
+      {
+        "id": 52,
+        "name": "Burnaby Mountain Park",
+        "address": "100 Centennial Way, Burnaby, BC V5A 2X9",
+        "tags": [
+          "Outdoor",
+          "Park",
+          "View"
+        ],
+        "price": "FREE",
+        "location": "Burnaby",
+        "feature": "https://www.vmcdn.ca/f/files/burnabynow/images/environment/burnaby-mountain.jpg;w=936;h=624;mode=crop",
+        "bestTime": "Day time, close to sunset, evening",
+        "about": "Green space offering a rose garden, playground & picnic sites, plus sculptures, city views & trails.",
+        "notes": "Green space offering a rose garden, playground & picnic sites, plus sculptures, city views & trails.",
+        "mapsLink": "https://goo.gl/maps/oXs3ki7D9kqnbXtw6"
+      }
+    ]
+  }

@@ -3,6 +3,8 @@ import logo from "../public/logo.svg";
 import Image from "next/image";
 import Link from "next/link";
 
+import gif from "../public/logo.gif";
+
 function NavLink({ to, children }) {
   return (
     <a href={to} className={`mx-6 font-montserrat font-regular`}>
@@ -22,7 +24,7 @@ function MobileNav({ open, setOpen }) {
         {" "}
         {/*logo container*/}
         <Link className="text-xl font-semibold" href="/">
-          <Image
+          {/* <Image
             alt="logo"
             src={logo}
             width={80}
@@ -31,7 +33,8 @@ function MobileNav({ open, setOpen }) {
               maxWidth: "100%",
               height: "auto",
             }}
-          />
+          /> */}
+          <Image src={gif} alt="gif" width={80} height={80} />
         </Link>
       </div>
       <div className="flex flex-col ml-4">
@@ -102,7 +105,7 @@ export default function Navbar() {
       <MobileNav open={open} setOpen={setOpen} />
       <div className="w-3/12 flex items-center">
         <Link className="text-2xl font-semibold" href="/">
-          <Image
+          {/* <Image
             alt="logo"
             src={logo}
             width={70}
@@ -111,7 +114,8 @@ export default function Navbar() {
               maxWidth: "100%",
               height: "auto",
             }}
-          />
+          /> */}
+          <Image src={gif} alt="gif" width={80} height={80} />
         </Link>
       </div>
       <div className="w-9/12 flex justify-end items-center">
@@ -140,7 +144,9 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex">
-          <NavLink class="font-montserrat font-semibold" to="/">Home</NavLink>
+          <NavLink class="font-montserrat font-semibold" to="/">
+            Home
+          </NavLink>
           <NavLink to="/activities">Search</NavLink>
           <NavLink to="/random">Generate Ideas</NavLink>
           <NavLink to="/articles">Articles</NavLink>
